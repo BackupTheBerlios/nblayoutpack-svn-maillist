@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [nblayoutpack-svn] r9 - in FormLayout/trunk: . src/de/berlios/nblayoutpack/formlayout
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/nblayoutpack-svn/2005-June/index.html" >
+   <LINK REL="made" HREF="mailto:nblayoutpack-svn%40lists.berlios.de?Subject=Re%3A%20%5Bnblayoutpack-svn%5D%20r9%20-%20in%20FormLayout/trunk%3A%20.%20src/de/berlios/nblayoutpack/formlayout&In-Reply-To=%3C200506251632.j5PGW2mU009249%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000007.html">
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[nblayoutpack-svn] r9 - in FormLayout/trunk: . src/de/berlios/nblayoutpack/formlayout</H1>
+    <B>Illya Kysil at BerliOS</B> 
+    <A HREF="mailto:nblayoutpack-svn%40lists.berlios.de?Subject=Re%3A%20%5Bnblayoutpack-svn%5D%20r9%20-%20in%20FormLayout/trunk%3A%20.%20src/de/berlios/nblayoutpack/formlayout&In-Reply-To=%3C200506251632.j5PGW2mU009249%40sheep.berlios.de%3E"
+       TITLE="[nblayoutpack-svn] r9 - in FormLayout/trunk: . src/de/berlios/nblayoutpack/formlayout">ikysil at sheep.berlios.de
+       </A><BR>
+    <I>Sat Jun 25 18:32:02 CEST 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000007.html">[nblayoutpack-svn] r8 - in TableLayout/trunk: . lib nb3.6 nb4.0/nblayoutpack nb4.0/nblayoutpack/nbproject nb4.1/nblayoutpack nb4.1/nblayoutpack/nbproject src/de/berlios/nblayoutpack/tablelayout src/de/berlios/nblayoutpack/tablelayout/nb3.6 src/de/berlios/nblayoutpack/tablelayout/nb4.x
+</A></li>
+        
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#8">[ date ]</a>
+              <a href="thread.html#8">[ thread ]</a>
+              <a href="subject.html#8">[ subject ]</a>
+              <a href="author.html#8">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: ikysil
+Date: 2005-06-25 18:31:47 +0200 (Sat, 25 Jun 2005)
+New Revision: 9
+
+Modified:
+   FormLayout/trunk/build.properties
+   FormLayout/trunk/src/de/berlios/nblayoutpack/formlayout/FormLayoutSupport.java
+Log:
+[BUG] #4210 FormLayout - GridX and GridY can't change.
+      acceptComponentLayoutChange doesn't accepted values of 1 - fixed.
+
+Modified: FormLayout/trunk/build.properties
+===================================================================
+--- FormLayout/trunk/build.properties	2005-06-25 14:43:01 UTC (rev 8)
++++ FormLayout/trunk/build.properties	2005-06-25 16:31:47 UTC (rev 9)
+@@ -2,4 +2,4 @@
+ name=nblayoutpack-formlayout
+ src=src
+ 
+-spec.version=2.0.0
+\ No newline at end of file
++spec.version=2.0.1
+\ No newline at end of file
+
+Modified: FormLayout/trunk/src/de/berlios/nblayoutpack/formlayout/FormLayoutSupport.java
+===================================================================
+--- FormLayout/trunk/src/de/berlios/nblayoutpack/formlayout/FormLayoutSupport.java	2005-06-25 14:43:01 UTC (rev 8)
++++ FormLayout/trunk/src/de/berlios/nblayoutpack/formlayout/FormLayoutSupport.java	2005-06-25 16:31:47 UTC (rev 9)
+@@ -663,7 +663,7 @@
+     boolean isValid = true;
+     if(ev.getPropertyName().equals(&quot;CellConstraints.gridX&quot;)){
+       int gridX = ((Integer)ev.getNewValue()).intValue();
+-      isValid = (gridX &gt; 1) &amp;&amp; (gridX + flConstr.gridWidth - 1 &lt;= formLayout.getColumnCount());
++      isValid = (gridX &gt; 0) &amp;&amp; (gridX + flConstr.gridWidth - 1 &lt;= formLayout.getColumnCount());
+     }
+     if(ev.getPropertyName().equals(&quot;CellConstraints.gridWidth&quot;)){
+       int gridWidth = ((Integer)ev.getNewValue()).intValue();
+@@ -671,7 +671,7 @@
+     }
+     if(ev.getPropertyName().equals(&quot;CellConstraints.gridY&quot;)){
+       int gridY = ((Integer)ev.getNewValue()).intValue();
+-      isValid = (gridY &gt; 1) &amp;&amp; (gridY + flConstr.gridHeight - 1 &lt;= formLayout.getRowCount());
++      isValid = (gridY &gt; 0) &amp;&amp; (gridY + flConstr.gridHeight - 1 &lt;= formLayout.getRowCount());
+     }
+     if(ev.getPropertyName().equals(&quot;CellConstraints.gridHeight&quot;)){
+       int gridHeight = ((Integer)ev.getNewValue()).intValue();
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000007.html">[nblayoutpack-svn] r8 - in TableLayout/trunk: . lib nb3.6 nb4.0/nblayoutpack nb4.0/nblayoutpack/nbproject nb4.1/nblayoutpack nb4.1/nblayoutpack/nbproject src/de/berlios/nblayoutpack/tablelayout src/de/berlios/nblayoutpack/tablelayout/nb3.6 src/de/berlios/nblayoutpack/tablelayout/nb4.x
+</A></li>
+	
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#8">[ date ]</a>
+              <a href="thread.html#8">[ thread ]</a>
+              <a href="subject.html#8">[ subject ]</a>
+              <a href="author.html#8">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/nblayoutpack-svn">More information about the nblayoutpack-svn
+mailing list</a><br>
+</body></html>

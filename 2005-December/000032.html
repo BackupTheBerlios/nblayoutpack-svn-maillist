@@ -1,0 +1,1777 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [nblayoutpack-svn] r33 - in RiverLayout/trunk: . lib nb5.0 nb5.0/nblayoutpack-riverlayout nb5.0/nblayoutpack-riverlayout/nbproject nb5.0/nblayoutpack-riverlayout-library nb5.0/nblayoutpack-riverlayout-library/nbproject nb5.0/nblayoutpack-riverlayout-library/release nb5.0/nblayoutpack-riverlayout-library/release/modules nb5.0/nblayoutpack-riverlayout-library/release/modules/ext nb5.0/nblayoutpack-riverlayout-library/release/modules/ext/nblayoutpack nb5.0/nblayoutpack-riverlayout-library/src nb5.0/nblayoutpack-riverlayout-library/src/de nb5.0/nblayoutpack-riverlayout-library/src/de/berlios nb5.0/nblayoutpack-riverlayout-library/src/de/berlios/nblayoutpack nb5.0/nblayoutpack-riverlayout-library/src/de/berlios/nblayoutpack/riverlayout nb5.0/nblayoutpack-riverlayout-library/src/de/berlios/nblayoutpack/riverlayout/library nb5.0/nblayoutpack-riverlayout-suite nb5.0/nblayoutpack-riverlayout-suite/nbproject src src/de src/de/berlios src/de/berlios/nblayoutpack src/de/berlios/nblayoutpack/river! layout src/de/berlios/nblayoutpack/riverlayout/editors src/de/berlios/nblayoutpack/riverlayout/nb5.x src/de/berlios/nblayoutpack/riverlayout/nb5.x/palette
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/nblayoutpack-svn/2005-December/index.html" >
+   <LINK REL="made" HREF="mailto:nblayoutpack-svn%40lists.berlios.de?Subject=Re%3A%20%5Bnblayoutpack-svn%5D%20r33%20-%20in%20RiverLayout/trunk%3A%20.%20lib%20nb5.0%20nb5.0/nblayoutpack-riverlayout%20nb5.0/nblayoutpack-riverlayout/nbproject%20nb5.0/nblayoutpack-riverlayout-library%20nb5.0/nblayoutpack-riverlayout-library/nbproject%20nb5.0/nblayoutpack-riverlayout-library/release%20nb5.0/nblayoutpack-riverlayout-library/release/modules%20nb5.0/nblayoutpack-riverlayout-library/release/modules/ext%20nb5.0/nblayoutpack-riverlayout-library/release/modules/ext/nblayoutpack%20nb5.0/nblayoutpack-riverlayout-library/src%20nb5.0/nblayoutpack-riverlayout-library/src/de%20nb5.0/nblayoutpack-riverlayout-library/src/de/berlios%20nb5.0/nblayoutpack-riverlayout-library/src/de/berlios/nblayoutpack%20nb5.0/nblayoutpack-riverlayout-library/src/de/berlios/nblayoutpack/riverlayout%20nb5.0/nblayoutpack-riverlayout-library/src/de/berlios/nblayoutpack/riverlayout/library%20nb5.0/nblayoutpack-riverlayout-suite%20nb5.0/nblayoutpack-riverlayout-suite/nbproject%20src%20src/de%20src/de/berlios%20src/de/berlios/nblayoutpack%20src/de/berlios/nblayoutpack/river%21%0A%20layout%20src/de/berlios/nblayoutpack/riverlayout/editors%20src/de/berlios/nblayoutpack/riverlayout/nb5.x%20src/de/berlios/nblayoutpack/riverlayout/nb5.x/palette&In-Reply-To=%3C200512301441.jBUEfqRk021554%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000031.html">
+   <LINK REL="Next"  HREF="000033.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[nblayoutpack-svn] r33 - in RiverLayout/trunk: . lib nb5.0 nb5.0/nblayoutpack-riverlayout nb5.0/nblayoutpack-riverlayout/nbproject nb5.0/nblayoutpack-riverlayout-library nb5.0/nblayoutpack-riverlayout-library/nbproject nb5.0/nblayoutpack-riverlayout-library/release nb5.0/nblayoutpack-riverlayout-library/release/modules nb5.0/nblayoutpack-riverlayout-library/release/modules/ext nb5.0/nblayoutpack-riverlayout-library/release/modules/ext/nblayoutpack nb5.0/nblayoutpack-riverlayout-library/src nb5.0/nblayoutpack-riverlayout-library/src/de nb5.0/nblayoutpack-riverlayout-library/src/de/berlios nb5.0/nblayoutpack-riverlayout-library/src/de/berlios/nblayoutpack nb5.0/nblayoutpack-riverlayout-library/src/de/berlios/nblayoutpack/riverlayout nb5.0/nblayoutpack-riverlayout-library/src/de/berlios/nblayoutpack/riverlayout/library nb5.0/nblayoutpack-riverlayout-suite nb5.0/nblayoutpack-riverlayout-suite/nbproject src src/de src/de/berlios src/de/berlios/nblayoutpack src/de/berlios/nblayoutpack/river! layout src/de/berlios/nblayoutpack/riverlayout/editors src/de/berlios/nblayoutpack/riverlayout/nb5.x src/de/berlios/nblayoutpack/riverlayout/nb5.x/palette</H1>
+    <B>ikysil at BerliOS</B> 
+    <A HREF="mailto:nblayoutpack-svn%40lists.berlios.de?Subject=Re%3A%20%5Bnblayoutpack-svn%5D%20r33%20-%20in%20RiverLayout/trunk%3A%20.%20lib%20nb5.0%20nb5.0/nblayoutpack-riverlayout%20nb5.0/nblayoutpack-riverlayout/nbproject%20nb5.0/nblayoutpack-riverlayout-library%20nb5.0/nblayoutpack-riverlayout-library/nbproject%20nb5.0/nblayoutpack-riverlayout-library/release%20nb5.0/nblayoutpack-riverlayout-library/release/modules%20nb5.0/nblayoutpack-riverlayout-library/release/modules/ext%20nb5.0/nblayoutpack-riverlayout-library/release/modules/ext/nblayoutpack%20nb5.0/nblayoutpack-riverlayout-library/src%20nb5.0/nblayoutpack-riverlayout-library/src/de%20nb5.0/nblayoutpack-riverlayout-library/src/de/berlios%20nb5.0/nblayoutpack-riverlayout-library/src/de/berlios/nblayoutpack%20nb5.0/nblayoutpack-riverlayout-library/src/de/berlios/nblayoutpack/riverlayout%20nb5.0/nblayoutpack-riverlayout-library/src/de/berlios/nblayoutpack/riverlayout/library%20nb5.0/nblayoutpack-riverlayout-suite%20nb5.0/nblayoutpack-riverlayout-suite/nbproject%20src%20src/de%20src/de/berlios%20src/de/berlios/nblayoutpack%20src/de/berlios/nblayoutpack/river%21%0A%20layout%20src/de/berlios/nblayoutpack/riverlayout/editors%20src/de/berlios/nblayoutpack/riverlayout/nb5.x%20src/de/berlios/nblayoutpack/riverlayout/nb5.x/palette&In-Reply-To=%3C200512301441.jBUEfqRk021554%40sheep.berlios.de%3E"
+       TITLE="[nblayoutpack-svn] r33 - in RiverLayout/trunk: . lib nb5.0 nb5.0/nblayoutpack-riverlayout nb5.0/nblayoutpack-riverlayout/nbproject nb5.0/nblayoutpack-riverlayout-library nb5.0/nblayoutpack-riverlayout-library/nbproject nb5.0/nblayoutpack-riverlayout-library/release nb5.0/nblayoutpack-riverlayout-library/release/modules nb5.0/nblayoutpack-riverlayout-library/release/modules/ext nb5.0/nblayoutpack-riverlayout-library/release/modules/ext/nblayoutpack nb5.0/nblayoutpack-riverlayout-library/src nb5.0/nblayoutpack-riverlayout-library/src/de nb5.0/nblayoutpack-riverlayout-library/src/de/berlios nb5.0/nblayoutpack-riverlayout-library/src/de/berlios/nblayoutpack nb5.0/nblayoutpack-riverlayout-library/src/de/berlios/nblayoutpack/riverlayout nb5.0/nblayoutpack-riverlayout-library/src/de/berlios/nblayoutpack/riverlayout/library nb5.0/nblayoutpack-riverlayout-suite nb5.0/nblayoutpack-riverlayout-suite/nbproject src src/de src/de/berlios src/de/berlios/nblayoutpack src/de/berlios/nblayoutpack/river! layout src/de/berlios/nblayoutpack/riverlayout/editors src/de/berlios/nblayoutpack/riverlayout/nb5.x src/de/berlios/nblayoutpack/riverlayout/nb5.x/palette">ikysil at berlios.de
+       </A><BR>
+    <I>Fri Dec 30 15:41:52 CET 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000031.html">[nblayoutpack-svn] r32 - RiverLayout
+</A></li>
+        <LI>Next message: <A HREF="000033.html">[nblayoutpack-svn] r34 - in RiverLayout/trunk: . images nb5.0/nblayoutpack-riverlayout nb5.0/nblayoutpack-riverlayout-library nb5.0/nblayoutpack-riverlayout-suite src/de/berlios/nblayoutpack/riverlayout/resources
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#32">[ date ]</a>
+              <a href="thread.html#32">[ thread ]</a>
+              <a href="subject.html#32">[ subject ]</a>
+              <a href="author.html#32">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: ikysil
+Date: 2005-12-30 15:41:50 +0100 (Fri, 30 Dec 2005)
+New Revision: 33
+
+Added:
+   RiverLayout/trunk/build.properties
+   RiverLayout/trunk/lib/
+   RiverLayout/trunk/lib/license.txt
+   RiverLayout/trunk/lib/riverlayout-1.1.jar
+   RiverLayout/trunk/license.txt
+   RiverLayout/trunk/nb5.0/
+   RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-library/
+   RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-library/build.xml
+   RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-library/license.txt
+   RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-library/manifest.mf
+   RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-library/nbproject/
+   RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-library/nbproject/build-impl.xml
+   RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-library/nbproject/genfiles.properties
+   RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-library/nbproject/project.properties
+   RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-library/nbproject/project.xml
+   RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-library/nbproject/suite.properties
+   RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-library/release/
+   RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-library/release/modules/
+   RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-library/release/modules/ext/
+   RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-library/release/modules/ext/nblayoutpack/
+   RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-library/release/modules/ext/nblayoutpack/riverlayout-1.1.jar
+   RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-library/src/
+   RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-library/src/de/
+   RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-library/src/de/berlios/
+   RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-library/src/de/berlios/nblayoutpack/
+   RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-library/src/de/berlios/nblayoutpack/riverlayout/
+   RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-library/src/de/berlios/nblayoutpack/riverlayout/library/
+   RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-library/src/de/berlios/nblayoutpack/riverlayout/library/Bundle.properties
+   RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-library/src/de/berlios/nblayoutpack/riverlayout/library/layer.xml
+   RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-library/src/de/berlios/nblayoutpack/riverlayout/library/riverlayout.xml
+   RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-suite/
+   RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-suite/build.xml
+   RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-suite/nbproject/
+   RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-suite/nbproject/build-impl.xml
+   RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-suite/nbproject/genfiles.properties
+   RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-suite/nbproject/platform.properties
+   RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-suite/nbproject/project.properties
+   RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-suite/nbproject/project.xml
+   RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout/
+   RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout/build.xml
+   RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout/manifest.mf
+   RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout/nbproject/
+   RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout/nbproject/build-impl.xml
+   RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout/nbproject/genfiles.properties
+   RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout/nbproject/project.properties
+   RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout/nbproject/project.xml
+   RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout/nbproject/suite.properties
+   RiverLayout/trunk/src/
+   RiverLayout/trunk/src/de/
+   RiverLayout/trunk/src/de/berlios/
+   RiverLayout/trunk/src/de/berlios/nblayoutpack/
+   RiverLayout/trunk/src/de/berlios/nblayoutpack/riverlayout/
+   RiverLayout/trunk/src/de/berlios/nblayoutpack/riverlayout/Bundle.properties
+   RiverLayout/trunk/src/de/berlios/nblayoutpack/riverlayout/RiverLayoutIntrospector.java
+   RiverLayout/trunk/src/de/berlios/nblayoutpack/riverlayout/RiverLayoutModule.java
+   RiverLayout/trunk/src/de/berlios/nblayoutpack/riverlayout/RiverLayoutSupport.java
+   RiverLayout/trunk/src/de/berlios/nblayoutpack/riverlayout/editors/
+   RiverLayout/trunk/src/de/berlios/nblayoutpack/riverlayout/editors/HAlignEditor.java
+   RiverLayout/trunk/src/de/berlios/nblayoutpack/riverlayout/editors/VAlignEditor.java
+   RiverLayout/trunk/src/de/berlios/nblayoutpack/riverlayout/nb5.x/
+   RiverLayout/trunk/src/de/berlios/nblayoutpack/riverlayout/nb5.x/RiverLayoutClasses.txt
+   RiverLayout/trunk/src/de/berlios/nblayoutpack/riverlayout/nb5.x/layer.xml
+   RiverLayout/trunk/src/de/berlios/nblayoutpack/riverlayout/nb5.x/palette/
+   RiverLayout/trunk/src/de/berlios/nblayoutpack/riverlayout/nb5.x/palette/RiverLayout.palette_item
+   RiverLayout/trunk/src/de/berlios/nblayoutpack/riverlayout/resources/
+Log:
+[NEW]    RiverLayout: initial supporting module implementation.
+
+Added: RiverLayout/trunk/build.properties
+===================================================================
+--- RiverLayout/trunk/build.properties	2005-12-30 14:31:11 UTC (rev 32)
++++ RiverLayout/trunk/build.properties	2005-12-30 14:41:50 UTC (rev 33)
+@@ -0,0 +1,5 @@
++package=de/berlios/nblayoutpack/riverlayout
++name=nblayoutpack-riverlayout
++src=src
++
++spec.version=1.0.0
+\ No newline at end of file
+
+Added: RiverLayout/trunk/lib/license.txt
+===================================================================
+--- RiverLayout/trunk/lib/license.txt	2005-12-30 14:31:11 UTC (rev 32)
++++ RiverLayout/trunk/lib/license.txt	2005-12-30 14:41:50 UTC (rev 33)
+@@ -0,0 +1,11 @@
++RiverLayout License
++---------------------------------------
++
++RiverLayout is released under the LGPL licence. You may therefore freely
++use it in both non-commerical and commercial applications and you don't
++need to open up your source code. Improvements made to RiverLayout should
++however be returned to the project for the benefit of everyone.
++
++Copyright (C) 2005 David Ekholm.
++
++---------------------------------------
+
+Added: RiverLayout/trunk/lib/riverlayout-1.1.jar
+===================================================================
+(Binary files differ)
+
+
+Property changes on: RiverLayout/trunk/lib/riverlayout-1.1.jar
+___________________________________________________________________
+Name: svn:mime-type
+   + application/octet-stream
+
+Added: RiverLayout/trunk/license.txt
+===================================================================
+--- RiverLayout/trunk/license.txt	2005-12-30 14:31:11 UTC (rev 32)
++++ RiverLayout/trunk/license.txt	2005-12-30 14:41:50 UTC (rev 33)
+@@ -0,0 +1,19 @@
++NetBeans Layout Pack License
++---------------------------------------
++
++Version: SPL 1.0
++
++NetBeans Layout Pack, the Module, is subject to the Sun Public License
++Version 1.0 (the &quot;License&quot;); you may not use this Module except
++in compliance with the License. You may obtain a copy of the License
++at <A HREF="http://www.sun.com/">http://www.sun.com/</A>
++
++Software distributed under the License is distributed on an &quot;AS IS&quot; basis,
++WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
++for the specific language governing rights and limitations under the
++License.
++
++The Initial Developer of the Module is Illya Kysil.
++Portions created by the Initial Developer are
++Copyright (C) 2004-2005 the Initial Developer.
++All Rights Reserved.
+
+Added: RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout/build.xml
+===================================================================
+--- RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout/build.xml	2005-12-30 14:31:11 UTC (rev 32)
++++ RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout/build.xml	2005-12-30 14:41:50 UTC (rev 33)
+@@ -0,0 +1,16 @@
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
++&lt;!-- You may freely edit this file. See harness/README in the NetBeans platform --&gt;
++&lt;!-- for some information on what you could do (e.g. targets to override). --&gt;
++&lt;!-- If you delete this file and reopen the project it will be recreated. --&gt;
++&lt;project name=&quot;de.berlios.nblayoutpack.riverlayout&quot; default=&quot;netbeans&quot; basedir=&quot;.&quot;&gt;
++    &lt;description&gt;Builds, tests, and runs the project de.berlios.nblayoutpack.riverlayout.&lt;/description&gt;
++    &lt;import file=&quot;nbproject/build-impl.xml&quot;/&gt;
++
++    &lt;property file=&quot;../../build.properties&quot;/&gt;
++    &lt;tstamp&gt;
++      &lt;format property=&quot;buildnumber&quot; pattern=&quot;yyyyMMdd.HHmm&quot;/&gt;
++    &lt;/tstamp&gt;
++    &lt;property name=&quot;impl.version&quot; value=&quot;${spec.version}.${buildnumber}&quot;/&gt;
++    &lt;property name=&quot;spec.version.base&quot; value=&quot;${spec.version}&quot;/&gt;
++
++&lt;/project&gt;
+
+Added: RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout/manifest.mf
+===================================================================
+--- RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout/manifest.mf	2005-12-30 14:31:11 UTC (rev 32)
++++ RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout/manifest.mf	2005-12-30 14:41:50 UTC (rev 33)
+@@ -0,0 +1,5 @@
++Manifest-Version: 1.0
++OpenIDE-Module: de.berlios.nblayoutpack.riverlayout/1
++OpenIDE-Module-Layer: de/berlios/nblayoutpack/riverlayout/nb5.x/layer.xml
++OpenIDE-Module-Localizing-Bundle: de/berlios/nblayoutpack/riverlayout/Bundle.properties
++OpenIDE-Module-Install: de/berlios/nblayoutpack/riverlayout/RiverLayoutModule.class
+
+
+Property changes on: RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout/nbproject
+___________________________________________________________________
+Name: svn:ignore
+   + private
+
+
+Added: RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout/nbproject/build-impl.xml
+===================================================================
+--- RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout/nbproject/build-impl.xml	2005-12-30 14:31:11 UTC (rev 32)
++++ RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout/nbproject/build-impl.xml	2005-12-30 14:41:50 UTC (rev 33)
+@@ -0,0 +1,30 @@
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
++&lt;!--
++*** GENERATED FROM project.xml - DO NOT EDIT  ***
++***         EDIT ../build.xml INSTEAD         ***
++--&gt;
++&lt;project name=&quot;de.berlios.nblayoutpack.riverlayout-impl&quot; basedir=&quot;..&quot; xmlns:nbmproject=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-project/2">http://www.netbeans.org/ns/nb-module-project/2</A>&quot;&gt;
++    &lt;property file=&quot;nbproject/private/suite-private.properties&quot;/&gt;
++    &lt;property file=&quot;nbproject/suite.properties&quot;/&gt;
++    &lt;fail unless=&quot;suite.dir&quot;&gt;You must set 'suite.dir' to point to your containing module suite&lt;/fail&gt;
++    &lt;property file=&quot;${suite.dir}/nbproject/private/platform-private.properties&quot;/&gt;
++    &lt;property file=&quot;${suite.dir}/nbproject/platform.properties&quot;/&gt;
++    &lt;macrodef name=&quot;property&quot; uri=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-project/2">http://www.netbeans.org/ns/nb-module-project/2</A>&quot;&gt;
++        &lt;attribute name=&quot;name&quot;/&gt;
++        &lt;attribute name=&quot;value&quot;/&gt;
++        &lt;sequential&gt;
++            &lt;property name=&quot;@{name}&quot; value=&quot;${@{value}}&quot;/&gt;
++        &lt;/sequential&gt;
++    &lt;/macrodef&gt;
++    &lt;property file=&quot;${user.properties.file}&quot;/&gt;
++    &lt;nbmproject:property name=&quot;harness.dir&quot; value=&quot;nbplatform.${nbplatform.active}.harness.dir&quot;/&gt;
++    &lt;nbmproject:property name=&quot;netbeans.dest.dir&quot; value=&quot;nbplatform.${nbplatform.active}.netbeans.dest.dir&quot;/&gt;
++    &lt;fail message=&quot;You must define 'nbplatform.${nbplatform.active}.harness.dir'&quot;&gt;
++        &lt;condition&gt;
++            &lt;not&gt;
++                &lt;available file=&quot;${harness.dir}&quot; type=&quot;dir&quot;/&gt;
++            &lt;/not&gt;
++        &lt;/condition&gt;
++    &lt;/fail&gt;
++    &lt;import file=&quot;${harness.dir}/build.xml&quot;/&gt;
++&lt;/project&gt;
+
+Added: RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout/nbproject/genfiles.properties
+===================================================================
+--- RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout/nbproject/genfiles.properties	2005-12-30 14:31:11 UTC (rev 32)
++++ RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout/nbproject/genfiles.properties	2005-12-30 14:41:50 UTC (rev 33)
+@@ -0,0 +1,8 @@
++build.xml.data.CRC32=d2a7cf6f
++build.xml.script.CRC32=f93f646a
++build.xml.stylesheet.CRC32=1101b4cf
++# This file is used by a NetBeans-based IDE to track changes in generated files such as build-impl.xml.
++# Do not edit this file. You may delete it but then the IDE will never regenerate such files for you.
++nbproject/build-impl.xml.data.CRC32=00f8b62e
++nbproject/build-impl.xml.script.CRC32=ea6e207d
++nbproject/build-impl.xml.stylesheet.CRC32=d126b16b
+
+Added: RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout/nbproject/project.properties
+===================================================================
+--- RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout/nbproject/project.properties	2005-12-30 14:31:11 UTC (rev 32)
++++ RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout/nbproject/project.properties	2005-12-30 14:41:50 UTC (rev 33)
+@@ -0,0 +1,10 @@
++license.file=../../license.txt
++nbm.homepage=<A HREF="http://nblayoutpack.berlios.de">http://nblayoutpack.berlios.de</A>
++nbm.module.author=Illya Kysil
++
++src.dir=../../src
++
++build.package.compress=true
++build.package.index=true
++
++nbm=${name}-nb5.0beta-${impl.version}.nbm
+
+Added: RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout/nbproject/project.xml
+===================================================================
+--- RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout/nbproject/project.xml	2005-12-30 14:31:11 UTC (rev 32)
++++ RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout/nbproject/project.xml	2005-12-30 14:41:50 UTC (rev 33)
+@@ -0,0 +1,62 @@
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
++&lt;project xmlns=&quot;<A HREF="http://www.netbeans.org/ns/project/1">http://www.netbeans.org/ns/project/1</A>&quot;&gt;
++    &lt;type&gt;org.netbeans.modules.apisupport.project&lt;/type&gt;
++    &lt;configuration&gt;
++        &lt;data xmlns=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-project/2">http://www.netbeans.org/ns/nb-module-project/2</A>&quot;&gt;
++            &lt;code-name-base&gt;de.berlios.nblayoutpack.riverlayout&lt;/code-name-base&gt;
++            &lt;suite-component/&gt;
++            &lt;module-dependencies&gt;
++                &lt;dependency&gt;
++                    &lt;code-name-base&gt;de.berlios.nblayoutpack.riverlayout.library&lt;/code-name-base&gt;
++                    &lt;build-prerequisite/&gt;
++                    &lt;compile-dependency/&gt;
++                    &lt;run-dependency&gt;
++                        &lt;implementation-version/&gt;
++                    &lt;/run-dependency&gt;
++                &lt;/dependency&gt;
++                &lt;dependency&gt;
++                    &lt;code-name-base&gt;org.netbeans.modules.form&lt;/code-name-base&gt;
++                    &lt;build-prerequisite/&gt;
++                    &lt;compile-dependency/&gt;
++                    &lt;run-dependency&gt;
++                        &lt;release-version&gt;2&lt;/release-version&gt;
++                        &lt;implementation-version/&gt;
++                    &lt;/run-dependency&gt;
++                &lt;/dependency&gt;
++                &lt;dependency&gt;
++                    &lt;code-name-base&gt;org.openide.explorer&lt;/code-name-base&gt;
++                    &lt;build-prerequisite/&gt;
++                    &lt;compile-dependency/&gt;
++                    &lt;run-dependency&gt;
++                        &lt;specification-version&gt;6.2&lt;/specification-version&gt;
++                    &lt;/run-dependency&gt;
++                &lt;/dependency&gt;
++                &lt;dependency&gt;
++                    &lt;code-name-base&gt;org.openide.modules&lt;/code-name-base&gt;
++                    &lt;build-prerequisite/&gt;
++                    &lt;compile-dependency/&gt;
++                    &lt;run-dependency&gt;
++                        &lt;specification-version&gt;6.2&lt;/specification-version&gt;
++                    &lt;/run-dependency&gt;
++                &lt;/dependency&gt;
++                &lt;dependency&gt;
++                    &lt;code-name-base&gt;org.openide.nodes&lt;/code-name-base&gt;
++                    &lt;build-prerequisite/&gt;
++                    &lt;compile-dependency/&gt;
++                    &lt;run-dependency&gt;
++                        &lt;specification-version&gt;6.2&lt;/specification-version&gt;
++                    &lt;/run-dependency&gt;
++                &lt;/dependency&gt;
++                &lt;dependency&gt;
++                    &lt;code-name-base&gt;org.openide.util&lt;/code-name-base&gt;
++                    &lt;build-prerequisite/&gt;
++                    &lt;compile-dependency/&gt;
++                    &lt;run-dependency&gt;
++                        &lt;specification-version&gt;6.2&lt;/specification-version&gt;
++                    &lt;/run-dependency&gt;
++                &lt;/dependency&gt;
++            &lt;/module-dependencies&gt;
++            &lt;public-packages/&gt;
++        &lt;/data&gt;
++    &lt;/configuration&gt;
++&lt;/project&gt;
+
+Added: RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout/nbproject/suite.properties
+===================================================================
+--- RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout/nbproject/suite.properties	2005-12-30 14:31:11 UTC (rev 32)
++++ RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout/nbproject/suite.properties	2005-12-30 14:41:50 UTC (rev 33)
+@@ -0,0 +1 @@
++suite.dir=${basedir}/../nblayoutpack-riverlayout-suite
+
+Added: RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-library/build.xml
+===================================================================
+--- RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-library/build.xml	2005-12-30 14:31:11 UTC (rev 32)
++++ RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-library/build.xml	2005-12-30 14:41:50 UTC (rev 33)
+@@ -0,0 +1,8 @@
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
++&lt;!-- You may freely edit this file. See harness/README in the NetBeans platform --&gt;
++&lt;!-- for some information on what you could do (e.g. targets to override). --&gt;
++&lt;!-- If you delete this file and reopen the project it will be recreated. --&gt;
++&lt;project name=&quot;de.berlios.nblayoutpack.riverlayout.library&quot; default=&quot;netbeans&quot; basedir=&quot;.&quot;&gt;
++    &lt;description&gt;Builds, tests, and runs the project de.berlios.nblayoutpack.riverlayout.library.&lt;/description&gt;
++    &lt;import file=&quot;nbproject/build-impl.xml&quot;/&gt;
++&lt;/project&gt;
+
+Added: RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-library/license.txt
+===================================================================
+--- RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-library/license.txt	2005-12-30 14:31:11 UTC (rev 32)
++++ RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-library/license.txt	2005-12-30 14:41:50 UTC (rev 33)
+@@ -0,0 +1,9 @@
++RiverLayout License
++---------------------------------------
++
++RiverLayout is released under the LGPL licence. You may therefore freely
++use it in both non-commerical and commercial applications and you don't
++need to open up your source code. Improvements made to RiverLayout should
++however be returned to the project for the benefit of everyone.
++
++Copyright (C) 2005 David Ekholm.
+
+Added: RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-library/manifest.mf
+===================================================================
+--- RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-library/manifest.mf	2005-12-30 14:31:11 UTC (rev 32)
++++ RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-library/manifest.mf	2005-12-30 14:41:50 UTC (rev 33)
+@@ -0,0 +1,6 @@
++Manifest-Version: 1.0
++OpenIDE-Module: de.berlios.nblayoutpack.riverlayout.library
++OpenIDE-Module-Implementation-Version: 1
++OpenIDE-Module-Localizing-Bundle: de/berlios/nblayoutpack/riverlayout/library/Bundle.properties
++OpenIDE-Module-Layer: de/berlios/nblayoutpack/riverlayout/library/layer.xml
++
+
+
+Property changes on: RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-library/nbproject
+___________________________________________________________________
+Name: svn:ignore
+   + private
+
+
+Added: RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-library/nbproject/build-impl.xml
+===================================================================
+--- RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-library/nbproject/build-impl.xml	2005-12-30 14:31:11 UTC (rev 32)
++++ RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-library/nbproject/build-impl.xml	2005-12-30 14:41:50 UTC (rev 33)
+@@ -0,0 +1,30 @@
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
++&lt;!--
++*** GENERATED FROM project.xml - DO NOT EDIT  ***
++***         EDIT ../build.xml INSTEAD         ***
++--&gt;
++&lt;project name=&quot;de.berlios.nblayoutpack.riverlayout.library-impl&quot; basedir=&quot;..&quot; xmlns:nbmproject=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-project/2">http://www.netbeans.org/ns/nb-module-project/2</A>&quot;&gt;
++    &lt;property file=&quot;nbproject/private/suite-private.properties&quot;/&gt;
++    &lt;property file=&quot;nbproject/suite.properties&quot;/&gt;
++    &lt;fail unless=&quot;suite.dir&quot;&gt;You must set 'suite.dir' to point to your containing module suite&lt;/fail&gt;
++    &lt;property file=&quot;${suite.dir}/nbproject/private/platform-private.properties&quot;/&gt;
++    &lt;property file=&quot;${suite.dir}/nbproject/platform.properties&quot;/&gt;
++    &lt;macrodef name=&quot;property&quot; uri=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-project/2">http://www.netbeans.org/ns/nb-module-project/2</A>&quot;&gt;
++        &lt;attribute name=&quot;name&quot;/&gt;
++        &lt;attribute name=&quot;value&quot;/&gt;
++        &lt;sequential&gt;
++            &lt;property name=&quot;@{name}&quot; value=&quot;${@{value}}&quot;/&gt;
++        &lt;/sequential&gt;
++    &lt;/macrodef&gt;
++    &lt;property file=&quot;${user.properties.file}&quot;/&gt;
++    &lt;nbmproject:property name=&quot;harness.dir&quot; value=&quot;nbplatform.${nbplatform.active}.harness.dir&quot;/&gt;
++    &lt;nbmproject:property name=&quot;netbeans.dest.dir&quot; value=&quot;nbplatform.${nbplatform.active}.netbeans.dest.dir&quot;/&gt;
++    &lt;fail message=&quot;You must define 'nbplatform.${nbplatform.active}.harness.dir'&quot;&gt;
++        &lt;condition&gt;
++            &lt;not&gt;
++                &lt;available file=&quot;${harness.dir}&quot; type=&quot;dir&quot;/&gt;
++            &lt;/not&gt;
++        &lt;/condition&gt;
++    &lt;/fail&gt;
++    &lt;import file=&quot;${harness.dir}/build.xml&quot;/&gt;
++&lt;/project&gt;
+
+Added: RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-library/nbproject/genfiles.properties
+===================================================================
+--- RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-library/nbproject/genfiles.properties	2005-12-30 14:31:11 UTC (rev 32)
++++ RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-library/nbproject/genfiles.properties	2005-12-30 14:41:50 UTC (rev 33)
+@@ -0,0 +1,8 @@
++build.xml.data.CRC32=83d42751
++build.xml.script.CRC32=f28f2192
++build.xml.stylesheet.CRC32=1101b4cf
++# This file is used by a NetBeans-based IDE to track changes in generated files such as build-impl.xml.
++# Do not edit this file. You may delete it but then the IDE will never regenerate such files for you.
++nbproject/build-impl.xml.data.CRC32=83d42751
++nbproject/build-impl.xml.script.CRC32=69021bd2
++nbproject/build-impl.xml.stylesheet.CRC32=d126b16b
+
+Added: RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-library/nbproject/project.properties
+===================================================================
+--- RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-library/nbproject/project.properties	2005-12-30 14:31:11 UTC (rev 32)
++++ RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-library/nbproject/project.properties	2005-12-30 14:41:50 UTC (rev 33)
+@@ -0,0 +1,5 @@
++is.autoload=true
++license.file=${basedir}/license.txt
++nbm.homepage=<A HREF="http://www.datadosen.se/riverlayout/">http://www.datadosen.se/riverlayout/</A>
++nbm.module.author=David Ekholm
++spec.version.base=1.1
+
+Added: RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-library/nbproject/project.xml
+===================================================================
+--- RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-library/nbproject/project.xml	2005-12-30 14:31:11 UTC (rev 32)
++++ RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-library/nbproject/project.xml	2005-12-30 14:41:50 UTC (rev 33)
+@@ -0,0 +1,18 @@
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
++&lt;project xmlns=&quot;<A HREF="http://www.netbeans.org/ns/project/1">http://www.netbeans.org/ns/project/1</A>&quot;&gt;
++    &lt;type&gt;org.netbeans.modules.apisupport.project&lt;/type&gt;
++    &lt;configuration&gt;
++        &lt;data xmlns=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-project/2">http://www.netbeans.org/ns/nb-module-project/2</A>&quot;&gt;
++            &lt;code-name-base&gt;de.berlios.nblayoutpack.riverlayout.library&lt;/code-name-base&gt;
++            &lt;suite-component/&gt;
++            &lt;module-dependencies/&gt;
++            &lt;public-packages&gt;
++                &lt;package&gt;se.datadosen.component&lt;/package&gt;
++            &lt;/public-packages&gt;
++            &lt;class-path-extension&gt;
++                &lt;runtime-relative-path&gt;ext/nblayoutpack/riverlayout-1.1.jar&lt;/runtime-relative-path&gt;
++                &lt;binary-origin&gt;release/modules/ext/nblayoutpack/riverlayout-1.1.jar&lt;/binary-origin&gt;
++            &lt;/class-path-extension&gt;
++        &lt;/data&gt;
++    &lt;/configuration&gt;
++&lt;/project&gt;
+
+Added: RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-library/nbproject/suite.properties
+===================================================================
+--- RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-library/nbproject/suite.properties	2005-12-30 14:31:11 UTC (rev 32)
++++ RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-library/nbproject/suite.properties	2005-12-30 14:41:50 UTC (rev 33)
+@@ -0,0 +1 @@
++suite.dir=${basedir}/../nblayoutpack-riverlayout-suite
+
+Added: RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-library/release/modules/ext/nblayoutpack/riverlayout-1.1.jar
+===================================================================
+(Binary files differ)
+
+
+Property changes on: RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-library/release/modules/ext/nblayoutpack/riverlayout-1.1.jar
+___________________________________________________________________
+Name: svn:mime-type
+   + application/octet-stream
+
+Added: RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-library/src/de/berlios/nblayoutpack/riverlayout/library/Bundle.properties
+===================================================================
+--- RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-library/src/de/berlios/nblayoutpack/riverlayout/library/Bundle.properties	2005-12-30 14:31:11 UTC (rev 32)
++++ RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-library/src/de/berlios/nblayoutpack/riverlayout/library/Bundle.properties	2005-12-30 14:41:50 UTC (rev 33)
+@@ -0,0 +1,2 @@
++OpenIDE-Module-Display-Category=NetBeans Layout Pack
++OpenIDE-Module-Name=RiverLayout 1.1 library
+
+Added: RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-library/src/de/berlios/nblayoutpack/riverlayout/library/layer.xml
+===================================================================
+--- RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-library/src/de/berlios/nblayoutpack/riverlayout/library/layer.xml	2005-12-30 14:31:11 UTC (rev 32)
++++ RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-library/src/de/berlios/nblayoutpack/riverlayout/library/layer.xml	2005-12-30 14:41:50 UTC (rev 33)
+@@ -0,0 +1,12 @@
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
++&lt;!DOCTYPE filesystem PUBLIC &quot;-//NetBeans//DTD Filesystem 1.1//EN&quot; &quot;<A HREF="http://www.netbeans.org/dtds/filesystem-1_1.dtd">http://www.netbeans.org/dtds/filesystem-1_1.dtd</A>&quot;&gt;
++&lt;filesystem&gt;
++
++  &lt;folder name=&quot;org-netbeans-api-project-libraries&quot;&gt;
++    &lt;folder name=&quot;Libraries&quot;&gt;
++      &lt;file name=&quot;riverlayout.xml&quot; url=&quot;riverlayout.xml&quot;/&gt;
++    &lt;/folder&gt;
++  &lt;/folder&gt;
++
++&lt;/filesystem&gt;
++
+
+Added: RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-library/src/de/berlios/nblayoutpack/riverlayout/library/riverlayout.xml
+===================================================================
+--- RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-library/src/de/berlios/nblayoutpack/riverlayout/library/riverlayout.xml	2005-12-30 14:31:11 UTC (rev 32)
++++ RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-library/src/de/berlios/nblayoutpack/riverlayout/library/riverlayout.xml	2005-12-30 14:41:50 UTC (rev 33)
+@@ -0,0 +1,13 @@
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
++
++&lt;!DOCTYPE library PUBLIC &quot;-//NetBeans//DTD Library Declaration 1.0//EN&quot; &quot;<A HREF="http://www.netbeans.org/dtds/library-declaration-1_0.dtd">http://www.netbeans.org/dtds/library-declaration-1_0.dtd</A>&quot;&gt;
++
++&lt;library version=&quot;1.0&quot;&gt;
++    &lt;name&gt;RiverLayout 1.1&lt;/name&gt;
++    &lt;type&gt;j2se&lt;/type&gt;
++    &lt;localizing-bundle&gt;de/berlios/nblayoutpack/riverlayout/library/Bundle&lt;/localizing-bundle&gt;
++    &lt;volume&gt;
++        &lt;type&gt;classpath&lt;/type&gt;
++        &lt;resource&gt;jar:<A HREF="nbinst:///modules/ext/nblayoutpack/riverlayout-1.1.jar!/&lt;/resource">nbinst:///modules/ext/nblayoutpack/riverlayout-1.1.jar!/&lt;/resource</A>&gt;
++    &lt;/volume&gt;
++&lt;/library&gt;
+
+Added: RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-suite/build.xml
+===================================================================
+--- RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-suite/build.xml	2005-12-30 14:31:11 UTC (rev 32)
++++ RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-suite/build.xml	2005-12-30 14:41:50 UTC (rev 33)
+@@ -0,0 +1,8 @@
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
++&lt;!-- You may freely edit this file. See harness/README in the NetBeans platform --&gt;
++&lt;!-- for some information on what you could do (e.g. targets to override). --&gt;
++&lt;!-- If you delete this file and reopen the project it will be recreated. --&gt;
++&lt;project name=&quot;nblayoutpack-riverlayout-suite&quot; basedir=&quot;.&quot;&gt;
++    &lt;description&gt;Builds the module suite nblayoutpack-riverlayout-suite.&lt;/description&gt;
++    &lt;import file=&quot;nbproject/build-impl.xml&quot;/&gt;
++&lt;/project&gt;
+
+
+Property changes on: RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-suite/nbproject
+___________________________________________________________________
+Name: svn:ignore
+   + private
+
+
+Added: RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-suite/nbproject/build-impl.xml
+===================================================================
+--- RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-suite/nbproject/build-impl.xml	2005-12-30 14:31:11 UTC (rev 32)
++++ RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-suite/nbproject/build-impl.xml	2005-12-30 14:41:50 UTC (rev 33)
+@@ -0,0 +1,27 @@
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
++&lt;!--
++*** GENERATED FROM project.xml - DO NOT EDIT  ***
++***         EDIT ../build.xml INSTEAD         ***
++--&gt;
++&lt;project name=&quot;nblayoutpack-riverlayout-suite-impl&quot; basedir=&quot;..&quot; xmlns:sproject=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-suite-project/1">http://www.netbeans.org/ns/nb-module-suite-project/1</A>&quot;&gt;
++    &lt;property file=&quot;nbproject/private/platform-private.properties&quot;/&gt;
++    &lt;property file=&quot;nbproject/platform.properties&quot;/&gt;
++    &lt;macrodef name=&quot;property&quot; uri=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-suite-project/1">http://www.netbeans.org/ns/nb-module-suite-project/1</A>&quot;&gt;
++        &lt;attribute name=&quot;name&quot;/&gt;
++        &lt;attribute name=&quot;value&quot;/&gt;
++        &lt;sequential&gt;
++            &lt;property name=&quot;@{name}&quot; value=&quot;${@{value}}&quot;/&gt;
++        &lt;/sequential&gt;
++    &lt;/macrodef&gt;
++    &lt;property file=&quot;${user.properties.file}&quot;/&gt;
++    &lt;sproject:property name=&quot;harness.dir&quot; value=&quot;nbplatform.${nbplatform.active}.harness.dir&quot;/&gt;
++    &lt;sproject:property name=&quot;netbeans.dest.dir&quot; value=&quot;nbplatform.${nbplatform.active}.netbeans.dest.dir&quot;/&gt;
++    &lt;fail message=&quot;You must define 'nbplatform.${nbplatform.active}.harness.dir'&quot;&gt;
++        &lt;condition&gt;
++            &lt;not&gt;
++                &lt;available file=&quot;${harness.dir}&quot; type=&quot;dir&quot;/&gt;
++            &lt;/not&gt;
++        &lt;/condition&gt;
++    &lt;/fail&gt;
++    &lt;import file=&quot;${harness.dir}/suite.xml&quot;/&gt;
++&lt;/project&gt;
+
+Added: RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-suite/nbproject/genfiles.properties
+===================================================================
+--- RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-suite/nbproject/genfiles.properties	2005-12-30 14:31:11 UTC (rev 32)
++++ RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-suite/nbproject/genfiles.properties	2005-12-30 14:41:50 UTC (rev 33)
+@@ -0,0 +1,8 @@
++build.xml.data.CRC32=02df6fa3
++build.xml.script.CRC32=2c75aaa6
++build.xml.stylesheet.CRC32=9af4a295
++# This file is used by a NetBeans-based IDE to track changes in generated files such as build-impl.xml.
++# Do not edit this file. You may delete it but then the IDE will never regenerate such files for you.
++nbproject/build-impl.xml.data.CRC32=02df6fa3
++nbproject/build-impl.xml.script.CRC32=8ababe72
++nbproject/build-impl.xml.stylesheet.CRC32=66c54bd3
+
+Added: RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-suite/nbproject/platform.properties
+===================================================================
+--- RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-suite/nbproject/platform.properties	2005-12-30 14:31:11 UTC (rev 32)
++++ RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-suite/nbproject/platform.properties	2005-12-30 14:41:50 UTC (rev 33)
+@@ -0,0 +1 @@
++nbplatform.active=default
+
+Added: RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-suite/nbproject/project.properties
+===================================================================
+--- RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-suite/nbproject/project.properties	2005-12-30 14:31:11 UTC (rev 32)
++++ RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-suite/nbproject/project.properties	2005-12-30 14:41:50 UTC (rev 33)
+@@ -0,0 +1,5 @@
++modules=\
++    ${project.de.berlios.nblayoutpack.riverlayout.library}:\
++    ${project.de.berlios.nblayoutpack.riverlayout}
++project.de.berlios.nblayoutpack.riverlayout=../nblayoutpack-riverlayout
++project.de.berlios.nblayoutpack.riverlayout.library=../nblayoutpack-riverlayout-library
+
+Added: RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-suite/nbproject/project.xml
+===================================================================
+--- RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-suite/nbproject/project.xml	2005-12-30 14:31:11 UTC (rev 32)
++++ RiverLayout/trunk/nb5.0/nblayoutpack-riverlayout-suite/nbproject/project.xml	2005-12-30 14:41:50 UTC (rev 33)
+@@ -0,0 +1,9 @@
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
++&lt;project xmlns=&quot;<A HREF="http://www.netbeans.org/ns/project/1">http://www.netbeans.org/ns/project/1</A>&quot;&gt;
++    &lt;type&gt;org.netbeans.modules.apisupport.project.suite&lt;/type&gt;
++    &lt;configuration&gt;
++        &lt;data xmlns=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-suite-project/1">http://www.netbeans.org/ns/nb-module-suite-project/1</A>&quot;&gt;
++            &lt;name&gt;nblayoutpack-riverlayout-suite&lt;/name&gt;
++        &lt;/data&gt;
++    &lt;/configuration&gt;
++&lt;/project&gt;
+
+Added: RiverLayout/trunk/src/de/berlios/nblayoutpack/riverlayout/Bundle.properties
+===================================================================
+--- RiverLayout/trunk/src/de/berlios/nblayoutpack/riverlayout/Bundle.properties	2005-12-30 14:31:11 UTC (rev 32)
++++ RiverLayout/trunk/src/de/berlios/nblayoutpack/riverlayout/Bundle.properties	2005-12-30 14:41:50 UTC (rev 33)
+@@ -0,0 +1,48 @@
++# Resource bundle for package de.berlios.nblayoutpack.riverlayout
++OpenIDE-Module-Display-Category=NetBeans Layout Pack
++OpenIDE-Module-Name=RiverLayout 1.1 support
++OpenIDE-Module-Long-Description=RiverLayout layout manager support.
++Mount/java/riverlayout.xml=RiverLayout 1.1
++Palette/Layouts/se-datadosen-component-RiverLayout.instance=RiverLayout
++
++PROP_hGap=Horizontal Gap
++HINT_hGap=
++
++PROP_vGap=Vertical Gap
++HINT_vGap=
++
++PROP_extraInsets=Extra Insets
++HINT_extraInsets=
++
++PROP_constraints=Constraints
++HINT_constraints=
++
++PROP_lineBreak=Line Break
++HINT_lineBreak=
++
++PROP_parBreak=Paragraph Break
++HINT_parBreak=
++
++PROP_tabStop=Tab Stop
++HINT_tabStop
++
++PROP_hFill=Fill Horizontally
++HINT_hFill=
++
++PROP_vFill=Fill Vertically
++HINT_vFill=
++
++PROP_hAlign=Horizontal alignment
++HINT_hAlign=
++
++PROP_vAlign=Vertical alignment
++HINT_vAlign=
++
++VALUE_hAlign_DEFAULT=Default
++VALUE_hAlign_CENTER=Center
++VALUE_hAlign_LEFT=Left
++VALUE_hAlign_RIGHT=Right
++
++VALUE_vAlign_DEFAULT=Default
++VALUE_vAlign_CENTER=Center
++VALUE_vAlign_TOP=Top
+
+Added: RiverLayout/trunk/src/de/berlios/nblayoutpack/riverlayout/RiverLayoutIntrospector.java
+===================================================================
+--- RiverLayout/trunk/src/de/berlios/nblayoutpack/riverlayout/RiverLayoutIntrospector.java	2005-12-30 14:31:11 UTC (rev 32)
++++ RiverLayout/trunk/src/de/berlios/nblayoutpack/riverlayout/RiverLayoutIntrospector.java	2005-12-30 14:41:50 UTC (rev 33)
+@@ -0,0 +1,54 @@
++/*
++ * RiverLayoutIntrospector.java
++ *
++ * Created on December 30, 2005, 1:04 PM
++ */
++
++package de.berlios.nblayoutpack.riverlayout;
++
++import java.awt.*;
++import java.lang.reflect.*;
++
++import org.openide.ErrorManager;
++
++import se.datadosen.component.*;
++
++/**
++ *
++ * @author Illya Kysil
++ */
++public class RiverLayoutIntrospector {
++
++    private static Constructor layoutConstructor;
++
++    private static Method setExtraInsetsMethod;
++
++    /** Creates a new instance of RiverLayoutIntrospector */
++    private RiverLayoutIntrospector() {
++    }
++
++    public static Constructor getLayoutConstructor() {
++        if (layoutConstructor == null) {
++            try {
++                layoutConstructor = RiverLayout.class.getConstructor(new Class[]{int.class, int.class});
++            }
++            catch (NoSuchMethodException e){
++                ErrorManager.getDefault().notify(ErrorManager.INFORMATIONAL, e);
++            }
++        }
++        return layoutConstructor;
++    }
++
++    public static Method getSetExtraInsetsMethod() {
++        if (setExtraInsetsMethod == null) {
++            try {
++                setExtraInsetsMethod = RiverLayout.class.getMethod(&quot;setExtraInsets&quot;, new Class[]{Insets.class});
++            }
++            catch (NoSuchMethodException e){
++                ErrorManager.getDefault().notify(ErrorManager.INFORMATIONAL, e);
++            }
++        }
++        return setExtraInsetsMethod;
++    }
++
++}
+
+Added: RiverLayout/trunk/src/de/berlios/nblayoutpack/riverlayout/RiverLayoutModule.java
+===================================================================
+--- RiverLayout/trunk/src/de/berlios/nblayoutpack/riverlayout/RiverLayoutModule.java	2005-12-30 14:31:11 UTC (rev 32)
++++ RiverLayout/trunk/src/de/berlios/nblayoutpack/riverlayout/RiverLayoutModule.java	2005-12-30 14:41:50 UTC (rev 33)
+@@ -0,0 +1,37 @@
++/*
++ * RiverLayoutModule.java
++ *
++ * Created on December 30, 2005, 12:02 PM
++ */
++
++package de.berlios.nblayoutpack.riverlayout;
++
++import org.openide.modules.ModuleInstall;
++
++import org.netbeans.modules.form.layoutsupport.LayoutSupportRegistry;
++
++/**
++ *
++ * @author Illya Kysil
++ */
++public class RiverLayoutModule extends ModuleInstall {
++
++    /** Creates a new instance of RiverLayoutModule */
++    public RiverLayoutModule() {
++    }
++
++    public void restored(){
++        LayoutSupportRegistry.registerSupportForLayout(
++                &quot;se.datadosen.component.RiverLayout&quot;,
++                &quot;de.berlios.nblayoutpack.riverlayout.RiverLayoutSupport&quot;
++        );
++    }
++
++    public void close(){
++        LayoutSupportRegistry.registerSupportForLayout(
++                &quot;se.datadosen.component.RiverLayout&quot;,
++                LayoutSupportRegistry.DEFAULT_SUPPORT
++        );
++    }
++
++}
+
+Added: RiverLayout/trunk/src/de/berlios/nblayoutpack/riverlayout/RiverLayoutSupport.java
+===================================================================
+--- RiverLayout/trunk/src/de/berlios/nblayoutpack/riverlayout/RiverLayoutSupport.java	2005-12-30 14:31:11 UTC (rev 32)
++++ RiverLayout/trunk/src/de/berlios/nblayoutpack/riverlayout/RiverLayoutSupport.java	2005-12-30 14:41:50 UTC (rev 33)
+@@ -0,0 +1,735 @@
++/*
++ * RiverLayoutSupport.java
++ *
++ * Created on December 30, 2005, 12:05 PM
++ */
++
++package de.berlios.nblayoutpack.riverlayout;
++
++import java.awt.*;
++import java.beans.*;
++import java.lang.reflect.*;
++import java.text.*;
++import java.util.*;
++
++import javax.swing.*;
++
++import org.openide.ErrorManager;
++import org.openide.nodes.*;
++import org.openide.util.Utilities;
++
++import org.netbeans.modules.form.*;
++import org.netbeans.modules.form.codestructure.*;
++import org.netbeans.modules.form.layoutsupport.*;
++
++import se.datadosen.component.*;
++import se.datadosen.util.*;
++
++import de.berlios.nblayoutpack.riverlayout.editors.*;
++
++/**
++ *
++ * @author Illya Kysil
++ */
++public class RiverLayoutSupport extends AbstractLayoutSupport {
++
++    /** The icon for RiverLayout. */
++    private static String iconURL =
++            &quot;de/berlios/nblayoutpack/riverlayout/resources/riverlayout16.png&quot;; // NOI18N
++    /** The icon for RiverLayout. */
++    private static String icon32URL =
++            &quot;de/berlios/nblayoutpack/riverlayout/resources/riverlayout32.png&quot;; // NOI18N
++
++    private int hgap;
++
++    private int vgap;
++
++    private Insets extraInsets;
++
++    /** Creates a new instance of RiverLayoutSupport */
++    public RiverLayoutSupport() {
++        RiverLayout riverLayout = new RiverLayout();
++        hgap = riverLayout.getHgap(); 
++        vgap = riverLayout.getVgap(); 
++        extraInsets = riverLayout.getExtraInsets(); 
++    }
++
++    public Class getSupportedClass() {
++        return se.datadosen.component.RiverLayout.class;
++    }
++
++    public int getHgap() {
++        return hgap;
++    }
++
++    public void setHgap(int hgap) {
++        this.hgap = hgap;
++    }
++
++    public int getVgap() {
++        return vgap;
++    }
++
++    public void setVgap(int vgap) {
++        this.vgap = vgap;
++    }
++
++    public Insets getExtraInsets() {
++        return extraInsets;
++    }
++
++    public void setExtraInsets(Insets extraInsets) {
++        this.extraInsets = extraInsets;
++    }
++
++    /** Provides an icon to be used for the layout node in Component
++     * Inspector. Only 16x16 color icon is required.
++     * @param type is one of BeanInfo constants: ICON_COLOR_16x16,
++     *        ICON_COLOR_32x32, ICON_MONO_16x16, ICON_MONO_32x32
++     * @return icon to be displayed for node in Component Inspector
++     */
++    public Image getIcon(int type) {
++        switch (type) {
++            case BeanInfo.ICON_COLOR_16x16:
++            case BeanInfo.ICON_MONO_16x16:
++                return Utilities.loadImage(iconURL);
++            default:
++                return Utilities.loadImage(icon32URL);
++        }
++    }
++
++    public static ResourceBundle getBundle() {
++        return org.openide.util.NbBundle.getBundle(RiverLayoutSupport.class);
++    }
++
++    /** Sets up the layout (without adding components) on a real container,
++     * according to the internal metadata representation. This method must
++     * override AbstractLayoutSupport because FormLayout instance cannot
++     * be used universally - new instance must be created for each container.
++     * @param container instance of a real container to be set
++     * @param containerDelegate effective container delegate of the container;
++     *        for layout managers we always use container delegate instead of
++     *        the container
++     */
++    public void setLayoutToContainer(Container container, Container containerDelegate) {
++        try {
++            containerDelegate.setLayout(cloneLayoutInstance(container, containerDelegate));
++        }
++        catch(Exception e) {
++            ErrorManager.getDefault().notify(ErrorManager.WARNING, e);
++        }
++    }
++
++    protected LayoutManager cloneLayoutInstance(Container container, Container containerDelegate) {
++        RiverLayout result = new RiverLayout(hgap, vgap);
++        result.setExtraInsets(extraInsets);
++        return result;
++    }
++
++    protected LayoutManager createDefaultLayoutInstance() throws Exception {
++        return new RiverLayout();
++    }
++
++    private static final String baseVarName = &quot;_riverLayoutInstance&quot;;
++
++    /** Creates code structures for a new layout manager (opposite to
++     * readInitLayoutCode). As the RiverLayout is not a bean, this method must
++     * override from AbstractLayoutSupport.
++     * @param layoutCode CodeGroup to be filled with relevant
++     *        initialization code;
++     * @return new CodeExpression representing the FormLayout
++     */
++    protected CodeExpression createInitLayoutCode(CodeGroup layoutCode){
++        CodeStructure codeStructure = getCodeStructure();
++        FormProperty[] properties = getProperties();
++        CodeExpression[] constrParams = new CodeExpression[2];
++        constrParams[0] = codeStructure.createExpression(FormCodeSupport.createOrigin(properties[0]));
++        constrParams[1] = codeStructure.createExpression(FormCodeSupport.createOrigin(properties[1]));
++        CodeExpression varExpression = codeStructure.createExpression(RiverLayoutIntrospector.getLayoutConstructor(), constrParams);
++        String varName = baseVarName;
++        CodeVariable var = codeStructure.getVariable(varName);
++        int i = 1;
++        while(var != null){
++            varName = baseVarName + (i++);
++            var = codeStructure.getVariable(varName);
++        };
++        var = codeStructure.createVariable(CodeVariable.LOCAL /*| CodeVariable.EXPLICIT_DECLARATION*/, RiverLayout.class, varName);
++        codeStructure.attachExpressionToVariable(varExpression, var);
++        layoutCode.addStatement(0, var.getAssignment(varExpression));
++        CodeExpression[] setExtraInsetsParams = new CodeExpression[1];
++        setExtraInsetsParams[0] = codeStructure.createExpression(FormCodeSupport.createOrigin(properties[2]));
++        layoutCode.addStatement(codeStructure.createStatement(varExpression, RiverLayoutIntrospector.getSetExtraInsetsMethod(), setExtraInsetsParams));
++        return varExpression;
++    }
++
++    protected void readInitLayoutCode(CodeExpression codeExpression, CodeGroup layoutCode){
++        CodeVariable var = codeExpression.getVariable();
++        layoutCode.addStatement(0, var.getAssignment(codeExpression));
++        CodeExpression[] constructorParams = var.getAssignment(codeExpression).getStatementParameters();
++        FormProperty[] properties = getProperties();
++        FormCodeSupport.readPropertyExpression(constructorParams[0], properties[0], false);
++        FormCodeSupport.readPropertyExpression(constructorParams[1], properties[1], true);
++        Iterator it = CodeStructure.getDefinedStatementsIterator(codeExpression);
++        while(it.hasNext()){
++            CodeStatement statement = (CodeStatement)it.next();
++            if(isMethod(statement, RiverLayoutIntrospector.getSetExtraInsetsMethod())){
++                FormCodeSupport.readPropertyStatement(statement, properties[2], true);
++            }
++            layoutCode.addStatement(statement);
++        }
++        updateLayoutInstance();
++    }
++
++    public boolean isMethod(CodeStatement statement, Method method){
++        Object obj = statement.getMetaObject();
++        if (obj != null &amp;&amp; obj instanceof Method) {
++            Method other = (Method)obj;
++            // Compare class names only since classes can be loaded by different ClassLoaders
++            if ((method.getDeclaringClass().getName().equals(other.getDeclaringClass().getName()))
++                &amp;&amp; (method.getName() == other.getName())) {
++                if (!method.getReturnType().equals(other.getReturnType())) {
++                    return false;
++                }
++                Class[] params1 = method.getParameterTypes();
++                Class[] params2 = other.getParameterTypes();
++                if (params1.length == params2.length) {
++                    for (int i = 0; i &lt; params1.length; i++) {
++                        if (params1[i] != params2[i])
++                            return false;
++                    }
++                    return true;
++                }
++            }
++        }
++        return false;
++    }
++
++    /** Called from createComponentCode method, creates code for a component
++     * layout constraints (opposite to readConstraintsCode).
++     * @param constrCode CodeGroup to be filled with constraints code; not
++     *        needed here because AbsoluteConstraints object is represented
++     *        only by a single constructor code expression and no statements
++     * @param constr layout constraints metaobject representing the constraints
++     * @param compExp CodeExpression object representing the component; not
++     *        needed here
++     * @return created CodeExpression representing the layout constraints
++     */
++    protected CodeExpression createConstraintsCode(CodeGroup constrCode,
++            LayoutConstraints constr, CodeExpression compExp, int index) {
++        if (!(constr instanceof RiverLayoutSupportConstraints))
++            return null;
++        
++        RiverLayoutSupportConstraints rlsConstr = (RiverLayoutSupportConstraints) constr;
++        // code expressions for constructor parameters are created in
++        // RiverLayoutSupportConstraints
++        CodeExpression[] params = rlsConstr.createPropertyExpressions(getCodeStructure());
++        return params[0];
++    }
++    
++    protected LayoutConstraints readConstraintsCode(CodeExpression constrExp, CodeGroup constrCode, CodeExpression compExp) {
++        RiverLayoutSupportConstraints constr = new RiverLayoutSupportConstraints();
++        // reading is done in RiverLayoutSupportConstraints
++        constr.readCodeExpression(constrExp, constrCode);
++        return constr;
++    }
++    
++    private FormProperty[] properties;
++    
++    protected FormProperty[] getProperties() {
++        if (properties == null){
++            properties = createProperties();
++        }
++        return properties;
++    }
++    
++    protected FormProperty[] createProperties() {
++        FormProperty[] properties = new FormProperty[] {
++            new FormProperty(&quot;hgap&quot;, // NOI18N
++                    Integer.class,
++                    getBundle().getString(&quot;PROP_hGap&quot;), // NOI18N
++                    getBundle().getString(&quot;HINT_hGap&quot;)) { // NOI18N
++                
++                public Object getTargetValue() {
++                    return new Integer(hgap);
++                }
++                public void setTargetValue(Object value) {
++                    hgap = ((Integer) value).intValue();
++                }
++                public void setPropertyContext(FormPropertyContext ctx) {
++                    // disabling this method due to limited persistence
++                    // capabilities (compatibility with previous versions)
++                }
++            },
++            
++            new FormProperty(&quot;vgap&quot;, // NOI18N
++                    Integer.class,
++                    getBundle().getString(&quot;PROP_vGap&quot;), // NOI18N
++                    getBundle().getString(&quot;HINT_vGap&quot;)) { // NOI18N
++                
++                public Object getTargetValue() {
++                    return new Integer(vgap);
++                }
++                public void setTargetValue(Object value) {
++                    vgap = ((Integer) value).intValue();
++                }
++                public void setPropertyContext(FormPropertyContext ctx) {
++                    // disabling this method due to limited persistence
++                    // capabilities (compatibility with previous versions)
++                }
++            },
++            
++            new FormProperty(&quot;extraInsets&quot;, // NOI18N
++                    Insets.class,
++                    getBundle().getString(&quot;PROP_extraInsets&quot;), // NOI18N
++                    getBundle().getString(&quot;HINT_extraInsets&quot;)) { // NOI18N
++                
++                public Object getTargetValue() {
++                    return extraInsets;
++                }
++                public void setTargetValue(Object value) {
++                    extraInsets = (Insets) value;
++                }
++                public void setPropertyContext(FormPropertyContext ctx) {
++                    // disabling this method due to limited persistence
++                    // capabilities (compatibility with previous versions)
++                }
++            }
++        };
++        return properties;
++    }
++    
++    public LayoutConstraints createDefaultConstraints() {
++        return new RiverLayoutSupportConstraints();
++    }
++
++    /** Provides resizing options for given component. It can combine the
++     * bit-flag constants RESIZE_UP, RESIZE_DOWN, RESIZE_LEFT, RESIZE_RIGHT.
++     * @param container instance of a real container in which the
++     *        component is to be resized
++     * @param containerDelegate effective container delegate of the container
++     *        (e.g. like content pane of JFrame)
++     * @param component real component to be resized
++     * @param index position of the component in its container
++     * @return resizing options for the component; 0 if no resizing is possible
++     */
++    public int getResizableDirections(Container container, Container containerDelegate,
++            Component component, int index) {
++        //TODO: evaluate feasibility
++        return 0;
++    }
++
++    /** This method should paint a feedback for a component dragged over
++     * a container (or just for mouse cursor being moved over container).
++     * In principle, it should present given component layout constraints or
++     * index graphically.
++     * @param container instance of a real container over/in which the
++     *        component is dragged
++     * @param containerDelegate effective container delegate of the container
++     *        (e.g. like content pane of JFrame) - here the feedback is painted
++     * @param component the real component being dragged, can be null
++     * @param newConstraints component layout constraints to be presented
++     * @param newIndex component's index position to be presented
++     *        (if newConstraints == null)
++     * @param g Graphics object for painting (with color and line style set)
++     * @return whether any feedback was painted (may return false if the
++     *         constraints or index are invalid, or if the painting is not
++     *         implemented)
++     */
++    public boolean paintDragFeedback(Container container, Container containerDelegate,
++            Component component, LayoutConstraints newConstraints, int newIndex, Graphics g) {
++        //TODO: evaluate feasibility
++        return false;
++    }
++
++    /** This method should calculate layout constraints for a component dragged
++     * over a container (or just for mouse cursor being moved over container).
++     * @param container instance of a real container over/in which the
++     *        component is dragged
++     * @param containerDelegate effective container delegate of the container
++     *        (e.g. like content pane of JFrame)
++     * @param component the real component being dragged, can be null
++     * @param index position (index) of the component in its current container;
++     *        -1 if there's no dragged component
++     * @param posInCont position of mouse in the container delegate
++     * @param posInComp position of mouse in the dragged component; null if
++     *        there's no dragged component
++     * @return new LayoutConstraints object corresponding to the position of
++     *         the component in the container; may return null if the layout
++     *         does not use component constraints, or if default constraints
++     *         should be used
++     */
++    public LayoutConstraints getNewConstraints(Container container, Container containerDelegate,
++            Component component, int index, Point posInCont, Point posInComp) {
++        //TODO: evaluate feasibility
++        return null;
++    }
++
++    /** This method should calculate layout constraints for a component being
++     * resized.
++     * @param container instance of a real container in which the
++     *        component is to be resized
++     * @param containerDelegate effective container delegate of the container
++     *        (e.g. like content pane of JFrame)
++     * @param component real component to be resized
++     * @param index position of the component in its container
++     * @param sizeChanges Insets object with size differences
++     * @param posInCont position of mouse in the container delegate
++     * @return component layout constraints for resized component; null if
++     *         resizing is not possible or not implemented
++     */
++    public LayoutConstraints getResizedConstraints(Container container, Container containerDelegate,
++            Component component, int index, Insets sizeChanges, Point posInCont) {
++        //TODO: evaluate feasibility
++        return null;
++    }
++
++    /** This method is called when switching layout - giving an opportunity to
++     * convert the previous constrainst of components to constraints of the new
++     * layout (this layout). The default implementation does nothing.
++     * @param previousConstraints [input] layout constraints of components in
++     *                                    the previous layout
++     * @param currentConstraints [output] array of converted constraints for
++     *                                    the new layout - to be filled
++     * @param components [input] real components in a real container having the
++     *                           previous layout
++     */
++    public void convertConstraints(LayoutConstraints[] previousConstraints,
++            LayoutConstraints[] currentConstraints, Component[] components) {
++        if ((components == null) || (components.length == 0)){
++            return;
++        }
++        //TODO
++//        ConstraintsConverter converter = new DefaultConstraintsConverter();
++//        converter.convertConstraints(getLayoutContext(), this, previousConstraints, currentConstraints, components);
++    }
++    
++    public static String encodeConstraints(RiverLayoutSupportConstraints rlsc) {
++        StringBuffer sb = new StringBuffer();
++        appendIf(sb, rlsc.lineBreak, RiverLayout.LINE_BREAK);
++        appendIf(sb, rlsc.parBreak, RiverLayout.PARAGRAPH_BREAK);
++        appendIf(sb, rlsc.tabStop, RiverLayout.TAB_STOP);
++        appendIf(sb, rlsc.hFill, RiverLayout.HFILL);
++        appendIf(sb, rlsc.vFill, RiverLayout.VFILL);
++        appendIf(sb, rlsc.hAlign == RiverLayoutSupportConstraints.HALIGN_LEFT, RiverLayout.LEFT);
++        appendIf(sb, rlsc.hAlign == RiverLayoutSupportConstraints.HALIGN_CENTER, RiverLayout.CENTER);
++        appendIf(sb, rlsc.hAlign == RiverLayoutSupportConstraints.HALIGN_RIGHT, RiverLayout.RIGHT);
++        appendIf(sb, rlsc.vAlign == RiverLayoutSupportConstraints.VALIGN_CENTER, RiverLayout.VCENTER);
++        appendIf(sb, rlsc.vAlign == RiverLayoutSupportConstraints.VALIGN_TOP, RiverLayout.VTOP);
++        return sb.toString().trim();
++    }
++
++    private static StringBuffer appendIf(StringBuffer sb, boolean flag, String value) {
++        if (flag) {
++            sb.append(value).append(&quot; &quot;);
++        }
++        return sb;
++    }
++
++    public static RiverLayoutSupportConstraints decodeConstraints(String value) {
++        RiverLayoutSupportConstraints result = new RiverLayoutSupportConstraints();
++        StringTokenizer st = new StringTokenizer(value.trim(), &quot; &quot;);
++        for (; st.hasMoreTokens(); ) {
++            String token = st.nextToken();
++            if (token.equalsIgnoreCase(RiverLayout.LINE_BREAK)) {
++                result.lineBreak = true;
++            }
++            if (token.equalsIgnoreCase(RiverLayout.PARAGRAPH_BREAK)) {
++                result.parBreak = true;
++            }
++            if (token.equalsIgnoreCase(RiverLayout.TAB_STOP)) {
++                result.tabStop = true;
++            }
++            if (token.equalsIgnoreCase(RiverLayout.HFILL)) {
++                result.hFill = true;
++            }
++            if (token.equalsIgnoreCase(RiverLayout.VFILL)) {
++                result.vFill = true;
++            }
++            if (token.equalsIgnoreCase(RiverLayout.LEFT)) {
++                result.hAlign = RiverLayoutSupportConstraints.HALIGN_LEFT;
++            }
++            if (token.equalsIgnoreCase(RiverLayout.CENTER)) {
++                result.hAlign = RiverLayoutSupportConstraints.HALIGN_CENTER;
++            }
++            if (token.equalsIgnoreCase(RiverLayout.RIGHT)) {
++                result.hAlign = RiverLayoutSupportConstraints.HALIGN_RIGHT;
++            }
++            if (token.equalsIgnoreCase(RiverLayout.VCENTER)) {
++                result.vAlign = RiverLayoutSupportConstraints.VALIGN_CENTER;
++            }
++            if (token.equalsIgnoreCase(RiverLayout.VTOP)) {
++                result.vAlign = RiverLayoutSupportConstraints.VALIGN_TOP;
++            }
++        }
++        return result;
++    }
++
++    public static class RiverLayoutSupportConstraints implements LayoutConstraints {
++
++        public static final int HALIGN_DEFAULT = 0;
++        public static final int HALIGN_LEFT    = 1;
++        public static final int HALIGN_CENTER  = 2;
++        public static final int HALIGN_RIGHT   = 3;
++
++        public static final int VALIGN_DEFAULT = 0;
++        public static final int VALIGN_TOP     = 1;
++        public static final int VALIGN_CENTER  = 2;
++
++        private Node.Property[] properties;
++
++        // br - Add a line break
++        public boolean lineBreak;
++        // p - Add a paragraph break
++        public boolean parBreak;
++        // tab - Add a tab stop (handy for constructing forms with labels followed by fields)
++        public boolean tabStop;
++
++        // hfill - Extend component horizontally
++        // vfill - Extent component vertically (currently only one allowed)
++        public boolean hFill;
++        public boolean vFill;
++        
++        // left - Align following components to the left (default)
++        // center - Align following components horizontally centered
++        // right - Align following components to the right
++        public int hAlign = HALIGN_DEFAULT;
++
++        // vtop - Align following components vertically top aligned
++        // vcenter - Align following components vertically centered (default) 
++        public int vAlign = VALIGN_DEFAULT;
++
++        /**
++         * Creates a new instance of RiverLayoutSupportConstraints
++         */
++        public RiverLayoutSupportConstraints() {
++        }
++
++        public RiverLayoutSupportConstraints(RiverLayoutSupportConstraints prototype) {
++            this (prototype.lineBreak, prototype.parBreak, prototype.tabStop,
++                    prototype.hFill, prototype.vFill, prototype.hAlign, prototype.vAlign);
++        }
++
++        public RiverLayoutSupportConstraints(boolean lineBreak, boolean parBreak,
++                boolean tabStop, boolean hFill, boolean vFill, int hAlign, int vAlign) {
++            this.lineBreak = lineBreak;
++            this.parBreak = parBreak;
++            this.tabStop = tabStop;
++            this.hFill = hFill;
++            this.vFill = vFill;
++            this.hAlign = hAlign;
++            this.vAlign = vAlign;
++        }
++
++        public void copyFrom(RiverLayoutSupportConstraints prototype) {
++            this.lineBreak = prototype.lineBreak;
++            this.parBreak = prototype.parBreak;
++            this.tabStop = prototype.tabStop;
++            this.hFill = prototype.hFill;
++            this.vFill = prototype.vFill;
++            this.hAlign = prototype.hAlign;
++            this.vAlign = prototype.vAlign;
++        }
++
++        public String toString() {
++            StringBuffer sb = new StringBuffer(getClass().getName()).append(&quot;[&quot;);
++            sb.append(&quot;lineBreak=&quot;).append(lineBreak).append(&quot;,&quot;);
++            sb.append(&quot;parBreak=&quot;).append(parBreak).append(&quot;,&quot;);
++            sb.append(&quot;tabStop=&quot;).append(tabStop).append(&quot;,&quot;);
++            sb.append(&quot;hFill=&quot;).append(hFill).append(&quot;,&quot;);
++            sb.append(&quot;vFill=&quot;).append(vFill).append(&quot;,&quot;);
++            sb.append(&quot;hAlign=&quot;).append(hAlign).append(&quot;,&quot;);
++            sb.append(&quot;vAlign=&quot;).append(vAlign).append(&quot;]&quot;);
++            return sb.toString();
++        }
++
++        public Node.Property[] getProperties() {
++            if (properties == null) {
++                properties = createProperties();
++                reinstateProperties();
++            }
++            return properties;
++        }
++
++        public Object getConstraintsObject() {
++            return encodeConstraints(this);
++        }
++
++        public LayoutConstraints cloneConstraints() {
++            return new RiverLayoutSupportConstraints(this);
++        }
++
++        protected Node.Property[] createProperties() {
++            return new Node.Property[] {
++                new FormProperty(&quot;RiverLayoutConstraints.constraints&quot;, // NOI18N
++                        String.class,
++                        getBundle().getString(&quot;PROP_constraints&quot;), // NOI18N
++                        getBundle().getString(&quot;HINT_constraints&quot;)) { // NOI18N
++                    
++                    public Object getTargetValue() {
++                        return encodeConstraints(RiverLayoutSupportConstraints.this);
++                    }
++                    public void setTargetValue(Object value) {
++                        copyFrom(decodeConstraints((String) value));
++                    }
++                    public void setPropertyContext(FormPropertyContext ctx) {
++                        // disabling this method due to limited persistence
++                        // capabilities (compatibility with previous versions)
++                    }
++                },
++
++                new FormProperty(&quot;RiverLayoutConstraints.lineBreak&quot;, // NOI18N
++                        Boolean.class,
++                        getBundle().getString(&quot;PROP_lineBreak&quot;), // NOI18N
++                        getBundle().getString(&quot;HINT_lineBreak&quot;)) { // NOI18N
++                    
++                    public Object getTargetValue() {
++                        return new Boolean(lineBreak);
++                    }
++                    public void setTargetValue(Object value) {
++                        lineBreak = ((Boolean) value).booleanValue();
++                    }
++                    public void setPropertyContext(FormPropertyContext ctx) {
++                        // disabling this method due to limited persistence
++                        // capabilities (compatibility with previous versions)
++                    }
++                },
++
++                new FormProperty(&quot;RiverLayoutConstraints.parBreak&quot;, // NOI18N
++                        Boolean.class,
++                        getBundle().getString(&quot;PROP_parBreak&quot;), // NOI18N
++                        getBundle().getString(&quot;HINT_parBreak&quot;)) { // NOI18N
++                    
++                    public Object getTargetValue() {
++                        return new Boolean(parBreak);
++                    }
++                    public void setTargetValue(Object value) {
++                        parBreak = ((Boolean) value).booleanValue();
++                    }
++                    public void setPropertyContext(FormPropertyContext ctx) {
++                        // disabling this method due to limited persistence
++                        // capabilities (compatibility with previous versions)
++                    }
++                },
++
++                new FormProperty(&quot;RiverLayoutConstraints.tabStop&quot;, // NOI18N
++                        Boolean.class,
++                        getBundle().getString(&quot;PROP_tabStop&quot;), // NOI18N
++                        getBundle().getString(&quot;HINT_tabStop&quot;)) { // NOI18N
++                    
++                    public Object getTargetValue() {
++                        return new Boolean(tabStop);
++                    }
++                    public void setTargetValue(Object value) {
++                        tabStop = ((Boolean) value).booleanValue();
++                    }
++                    public void setPropertyContext(FormPropertyContext ctx) {
++                        // disabling this method due to limited persistence
++                        // capabilities (compatibility with previous versions)
++                    }
++                },
++
++                new FormProperty(&quot;RiverLayoutConstraints.hFill&quot;, // NOI18N
++                        Boolean.class,
++                        getBundle().getString(&quot;PROP_hFill&quot;), // NOI18N
++                        getBundle().getString(&quot;HINT_hFill&quot;)){ // NOI18N
++                    
++                    public Object getTargetValue() {
++                        return new Boolean(hFill);
++                    }
++                    public void setTargetValue(Object value) {
++                        hFill = ((Boolean) value).booleanValue();
++                    }
++                    public void setPropertyContext(FormPropertyContext ctx) {
++                        // disabling this method due to limited persistence
++                        // capabilities (compatibility with previous versions)
++                    }
++                },
++
++                new FormProperty(&quot;RiverLayoutConstraints.vFill&quot;, // NOI18N
++                        Boolean.class,
++                        getBundle().getString(&quot;PROP_vFill&quot;), // NOI18N
++                        getBundle().getString(&quot;HINT_vFill&quot;)){ // NOI18N
++                    
++                    public Object getTargetValue() {
++                        return new Boolean(vFill);
++                    }
++                    public void setTargetValue(Object value) {
++                        vFill = ((Boolean) value).booleanValue();
++                    }
++                    public void setPropertyContext(FormPropertyContext ctx) {
++                        // disabling this method due to limited persistence
++                        // capabilities (compatibility with previous versions)
++                    }
++                },
++
++                new FormProperty(&quot;RiverLayoutConstraints.hAlign&quot;, // NOI18N
++                        Integer.class,
++                        getBundle().getString(&quot;PROP_hAlign&quot;), // NOI18N
++                        getBundle().getString(&quot;HINT_hAlign&quot;)) { // NOI18N
++                    
++                    public Object getTargetValue() {
++                        return new Integer(hAlign);
++                    }
++                    public void setTargetValue(Object value) {
++                        hAlign = ((Integer) value).intValue();
++                    }
++                    public void setPropertyContext(FormPropertyContext ctx) {
++                        // disabling this method due to limited persistence
++                        // capabilities (compatibility with previous versions)
++                    }
++                    public PropertyEditor getExpliciteEditor() {
++                        return new HAlignEditor();
++                    }
++                },
++
++                new FormProperty(&quot;RiverLayoutConstraints.vAlign&quot;, // NOI18N
++                        Integer.class,
++                        getBundle().getString(&quot;PROP_vAlign&quot;), // NOI18N
++                        getBundle().getString(&quot;HINT_vAlign&quot;)) { // NOI18N
++                    
++                    public Object getTargetValue() {
++                        return new Integer(vAlign);
++                    }
++                    public void setTargetValue(Object value) {
++                        vAlign = ((Integer) value).intValue();
++                    }
++                    public void setPropertyContext(FormPropertyContext ctx) {
++                        // disabling this method due to limited persistence
++                        // capabilities (compatibility with previous versions)
++                    }
++                    public PropertyEditor getExpliciteEditor() {
++                        return new VAlignEditor();
++                    }
++                }
++            };
++        }
++
++        private void reinstateProperties() {
++            try {
++                for (int i = 0; i &lt; properties.length; i++) {
++                    FormProperty prop = (FormProperty) properties[i];
++                    prop.reinstateProperty();
++                }
++            }
++            catch (IllegalAccessException e1) {} // should not happen
++            catch (java.lang.reflect.InvocationTargetException e2) {} // should not happen
++        }
++
++        protected final CodeExpression[] createPropertyExpressions(CodeStructure codeStructure) {
++            // first make sure properties are created...
++            getProperties();
++            
++            // ...then create code expressions based on the properties
++            CodeExpression expr = codeStructure.createExpression(FormCodeSupport.createOrigin(properties[0]));
++            return new CodeExpression[]{expr};
++        }
++
++        protected final void readCodeExpression(CodeExpression constrExp, CodeGroup codeGroup) {
++            // first make sure properties are created...
++            getProperties();
++            FormCodeSupport.readPropertyExpression(constrExp, properties[0], false);
++        }
++
++    }
++
++}
+
+Added: RiverLayout/trunk/src/de/berlios/nblayoutpack/riverlayout/editors/HAlignEditor.java
+===================================================================
+--- RiverLayout/trunk/src/de/berlios/nblayoutpack/riverlayout/editors/HAlignEditor.java	2005-12-30 14:31:11 UTC (rev 32)
++++ RiverLayout/trunk/src/de/berlios/nblayoutpack/riverlayout/editors/HAlignEditor.java	2005-12-30 14:41:50 UTC (rev 33)
+@@ -0,0 +1,70 @@
++/*
++ * HAlignEditor.java
++ *
++ * Created on December 30, 2005, 2:43 PM
++ */
++
++package de.berlios.nblayoutpack.riverlayout.editors;
++
++import java.beans.*;
++import java.io.IOException;
++
++import org.w3c.dom.*;
++
++import org.openide.explorer.propertysheet.editors.*;
++
++import org.netbeans.modules.form.*;
++
++import de.berlios.nblayoutpack.riverlayout.*;
++
++/**
++ *
++ * @author Illya Kysil
++ */
++public class HAlignEditor extends PropertyEditorSupport {
++
++    /** Creates a new instance of HAlignEditor */
++    public HAlignEditor() {
++    }
++
++    private final String[] tags = {
++        RiverLayoutSupport.getBundle().getString(&quot;VALUE_hAlign_CENTER&quot;), // NOI18N
++        RiverLayoutSupport.getBundle().getString(&quot;VALUE_hAlign_DEFAULT&quot;), // NOI18N
++        RiverLayoutSupport.getBundle().getString(&quot;VALUE_hAlign_LEFT&quot;), // NOI18N
++        RiverLayoutSupport.getBundle().getString(&quot;VALUE_hAlign_RIGHT&quot;) // NOI18N
++    };
++
++    private final Integer[] values = {
++        new Integer(RiverLayoutSupport.RiverLayoutSupportConstraints.HALIGN_CENTER),
++        new Integer(RiverLayoutSupport.RiverLayoutSupportConstraints.HALIGN_DEFAULT),
++        new Integer(RiverLayoutSupport.RiverLayoutSupportConstraints.HALIGN_LEFT),
++        new Integer(RiverLayoutSupport.RiverLayoutSupportConstraints.HALIGN_RIGHT)
++    };
++
++    public String[] getTags() {
++        return tags;
++    }
++
++    public String getAsText() {
++        Object value = getValue();
++        for (int i = 0; i &lt; values.length; i++) {
++            if (values[i].equals(value)) {
++                return tags[i];
++            }
++        }
++        return null;
++    }
++
++    public void setAsText(String str) {
++        for (int i=0; i &lt; tags.length; i++) {
++            if (tags[i].equals(str)) {
++                setValue(values[i]);
++            }
++        }
++    }
++
++    public String getJavaInitializationString() {
++        return null;
++    }
++
++}
+
+Added: RiverLayout/trunk/src/de/berlios/nblayoutpack/riverlayout/editors/VAlignEditor.java
+===================================================================
+--- RiverLayout/trunk/src/de/berlios/nblayoutpack/riverlayout/editors/VAlignEditor.java	2005-12-30 14:31:11 UTC (rev 32)
++++ RiverLayout/trunk/src/de/berlios/nblayoutpack/riverlayout/editors/VAlignEditor.java	2005-12-30 14:41:50 UTC (rev 33)
+@@ -0,0 +1,68 @@
++/*
++ * VAlignEditor.java
++ *
++ * Created on December 30, 2005, 2:46 PM
++ */
++
++package de.berlios.nblayoutpack.riverlayout.editors;
++
++import java.beans.*;
++import java.io.IOException;
++
++import org.w3c.dom.*;
++
++import org.openide.explorer.propertysheet.editors.*;
++
++import org.netbeans.modules.form.*;
++
++import de.berlios.nblayoutpack.riverlayout.*;
++
++/**
++ *
++ * @author Illya Kysil
++ */
++public class VAlignEditor extends PropertyEditorSupport {
++
++    /** Creates a new instance of VAlignEditor */
++    public VAlignEditor() {
++    }
++
++    private final String[] tags = {
++        RiverLayoutSupport.getBundle().getString(&quot;VALUE_vAlign_CENTER&quot;), // NOI18N
++        RiverLayoutSupport.getBundle().getString(&quot;VALUE_vAlign_DEFAULT&quot;), // NOI18N
++        RiverLayoutSupport.getBundle().getString(&quot;VALUE_vAlign_TOP&quot;) // NOI18N
++    };
++
++    private final Integer[] values = {
++        new Integer(RiverLayoutSupport.RiverLayoutSupportConstraints.VALIGN_CENTER),
++        new Integer(RiverLayoutSupport.RiverLayoutSupportConstraints.VALIGN_DEFAULT),
++        new Integer(RiverLayoutSupport.RiverLayoutSupportConstraints.VALIGN_TOP)
++    };
++
++    public String[] getTags() {
++        return tags;
++    }
++
++    public String getAsText() {
++        Object value = getValue();
++        for (int i = 0; i &lt; values.length; i++) {
++            if (values[i].equals(value)) {
++                return tags[i];
++            }
++        }
++        return null;
++    }
++
++    public void setAsText(String str) {
++        for (int i=0; i &lt; tags.length; i++) {
++            if (tags[i].equals(str)) {
++                setValue(values[i]);
++            }
++        }
++    }
++
++    public String getJavaInitializationString() {
++        return null;
++    }
++
++}
+
+Added: RiverLayout/trunk/src/de/berlios/nblayoutpack/riverlayout/nb5.x/RiverLayoutClasses.txt
+===================================================================
+--- RiverLayout/trunk/src/de/berlios/nblayoutpack/riverlayout/nb5.x/RiverLayoutClasses.txt	2005-12-30 14:31:11 UTC (rev 32)
++++ RiverLayout/trunk/src/de/berlios/nblayoutpack/riverlayout/nb5.x/RiverLayoutClasses.txt	2005-12-30 14:41:50 UTC (rev 33)
+@@ -0,0 +1 @@
++de.berlios.nblayoutpack.riverlayout.**
+\ No newline at end of file
+
+Added: RiverLayout/trunk/src/de/berlios/nblayoutpack/riverlayout/nb5.x/layer.xml
+===================================================================
+--- RiverLayout/trunk/src/de/berlios/nblayoutpack/riverlayout/nb5.x/layer.xml	2005-12-30 14:31:11 UTC (rev 32)
++++ RiverLayout/trunk/src/de/berlios/nblayoutpack/riverlayout/nb5.x/layer.xml	2005-12-30 14:41:50 UTC (rev 33)
+@@ -0,0 +1,22 @@
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
++&lt;!DOCTYPE filesystem PUBLIC &quot;-//NetBeans//DTD Filesystem 1.1//EN&quot; &quot;<A HREF="http://www.netbeans.org/dtds/filesystem-1_1.dtd">http://www.netbeans.org/dtds/filesystem-1_1.dtd</A>&quot;&gt;
++&lt;filesystem&gt;
++
++  &lt;folder name=&quot;FormDesignerPalette&quot;&gt;
++    &lt;folder name=&quot;_Layouts_only_for_internal_use_&quot;&gt;
++      &lt;attr name=&quot;SystemFileSystem.localizingBundle&quot; stringvalue=&quot;de.berlios.nblayoutpack.riverlayout.Bundle&quot;/&gt;
++      &lt;file name=&quot;RiverLayout.palette_item&quot; url=&quot;palette/RiverLayout.palette_item&quot;/&gt;
++    &lt;/folder&gt;
++  &lt;/folder&gt;
++
++  &lt;!-- form class loader type registration --&gt;
++  &lt;folder name=&quot;org-netbeans-modules-form&quot;&gt;
++    &lt;folder name=&quot;classloader&quot;&gt;
++      &lt;folder name=&quot;system&quot;&gt;
++        &lt;file name=&quot;RiverLayoutClasses.txt&quot; url=&quot;RiverLayoutClasses.txt&quot; /&gt;
++      &lt;/folder&gt;
++    &lt;/folder&gt;
++  &lt;/folder&gt;
++
++&lt;/filesystem&gt;
++
+
+Added: RiverLayout/trunk/src/de/berlios/nblayoutpack/riverlayout/nb5.x/palette/RiverLayout.palette_item
+===================================================================
+--- RiverLayout/trunk/src/de/berlios/nblayoutpack/riverlayout/nb5.x/palette/RiverLayout.palette_item	2005-12-30 14:31:11 UTC (rev 32)
++++ RiverLayout/trunk/src/de/berlios/nblayoutpack/riverlayout/nb5.x/palette/RiverLayout.palette_item	2005-12-30 14:41:50 UTC (rev 33)
+@@ -0,0 +1,12 @@
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
++
++&lt;palette_item version=&quot;1.0&quot;&gt;
++  &lt;component classname=&quot;se.datadosen.component.RiverLayout&quot; type=&quot;layout&quot; /&gt;
++  &lt;icon16 urlvalue=&quot;nbres:/de/berlios/nblayoutpack/riverlayout/resources/riverlayout16.png&quot; /&gt;
++  &lt;icon32 urlvalue=&quot;nbres:/de/berlios/nblayoutpack/riverlayout/resources/riverlayout32.png&quot; /&gt;
++  &lt;description localizing-bundle=&quot;de.berlios.nblayoutpack.riverlayout.Bundle&quot;
++               display-name-key=&quot;Palette/Layouts/se-datadosen-component-RiverLayout.instance&quot; /&gt;
++  &lt;classpath&gt;
++      &lt;resource type=&quot;library&quot; name=&quot;RiverLayout 1.1&quot; /&gt;
++  &lt;/classpath&gt;
++&lt;/palette_item&gt;
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000031.html">[nblayoutpack-svn] r32 - RiverLayout
+</A></li>
+	<LI>Next message: <A HREF="000033.html">[nblayoutpack-svn] r34 - in RiverLayout/trunk: . images nb5.0/nblayoutpack-riverlayout nb5.0/nblayoutpack-riverlayout-library nb5.0/nblayoutpack-riverlayout-suite src/de/berlios/nblayoutpack/riverlayout/resources
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#32">[ date ]</a>
+              <a href="thread.html#32">[ thread ]</a>
+              <a href="subject.html#32">[ subject ]</a>
+              <a href="author.html#32">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/nblayoutpack-svn">More information about the nblayoutpack-svn
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,139 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [nblayoutpack-svn] r29 - in FormLayout/trunk: nb3.6 nb4.0/nblayoutpack nb4.1/nblayoutpack src/de/berlios/nblayoutpack/formlayout
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/nblayoutpack-svn/2005-December/index.html" >
+   <LINK REL="made" HREF="mailto:nblayoutpack-svn%40lists.berlios.de?Subject=Re%3A%20%5Bnblayoutpack-svn%5D%20r29%20-%20in%20FormLayout/trunk%3A%20nb3.6%20nb4.0/nblayoutpack%20nb4.1/nblayoutpack%20src/de/berlios/nblayoutpack/formlayout&In-Reply-To=%3C200512301016.jBUAG7pH029399%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   
+   <LINK REL="Next"  HREF="000029.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[nblayoutpack-svn] r29 - in FormLayout/trunk: nb3.6 nb4.0/nblayoutpack nb4.1/nblayoutpack src/de/berlios/nblayoutpack/formlayout</H1>
+    <B>ikysil at BerliOS</B> 
+    <A HREF="mailto:nblayoutpack-svn%40lists.berlios.de?Subject=Re%3A%20%5Bnblayoutpack-svn%5D%20r29%20-%20in%20FormLayout/trunk%3A%20nb3.6%20nb4.0/nblayoutpack%20nb4.1/nblayoutpack%20src/de/berlios/nblayoutpack/formlayout&In-Reply-To=%3C200512301016.jBUAG7pH029399%40sheep.berlios.de%3E"
+       TITLE="[nblayoutpack-svn] r29 - in FormLayout/trunk: nb3.6 nb4.0/nblayoutpack nb4.1/nblayoutpack src/de/berlios/nblayoutpack/formlayout">ikysil at berlios.de
+       </A><BR>
+    <I>Fri Dec 30 11:16:07 CET 2005</I>
+    <P><UL>
+        
+        <LI>Next message: <A HREF="000029.html">[nblayoutpack-svn] r30 - /
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#28">[ date ]</a>
+              <a href="thread.html#28">[ thread ]</a>
+              <a href="subject.html#28">[ subject ]</a>
+              <a href="author.html#28">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: ikysil
+Date: 2005-12-30 11:16:07 +0100 (Fri, 30 Dec 2005)
+New Revision: 29
+
+Modified:
+   FormLayout/trunk/nb3.6/build.xml
+   FormLayout/trunk/nb4.0/nblayoutpack/build.xml
+   FormLayout/trunk/nb4.1/nblayoutpack/build.xml
+   FormLayout/trunk/src/de/berlios/nblayoutpack/formlayout/FormLayoutSupport.java
+Log:
+[CHANGE] FormLayout: corrected typos referring to TableLayout.
+
+Modified: FormLayout/trunk/nb3.6/build.xml
+===================================================================
+--- FormLayout/trunk/nb3.6/build.xml	2005-11-19 21:47:45 UTC (rev 28)
++++ FormLayout/trunk/nb3.6/build.xml	2005-12-30 10:16:07 UTC (rev 29)
+@@ -1,5 +1,5 @@
+ &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+-&lt;project name=&quot;nblayoutpack-tablelayout&quot; basedir=&quot;..&quot; default=&quot;all&quot;&gt;
++&lt;project name=&quot;nblayoutpack-formlayout&quot; basedir=&quot;..&quot; default=&quot;all&quot;&gt;
+ 
+     &lt;!-- Sample Ant script to create a NetBeans module and test it. --&gt;
+     &lt;!-- Sample directory layout: --&gt;
+
+Modified: FormLayout/trunk/nb4.0/nblayoutpack/build.xml
+===================================================================
+--- FormLayout/trunk/nb4.0/nblayoutpack/build.xml	2005-11-19 21:47:45 UTC (rev 28)
++++ FormLayout/trunk/nb4.0/nblayoutpack/build.xml	2005-12-30 10:16:07 UTC (rev 29)
+@@ -12,7 +12,7 @@
+ Microsystems, Inc. All Rights Reserved.
+ --&gt;
+ 
+-&lt;project name=&quot;nblayoutpack-tablelayout&quot; default=&quot;netbeans&quot; basedir=&quot;.&quot;&gt;
++&lt;project name=&quot;nblayoutpack-formlayout&quot; default=&quot;netbeans&quot; basedir=&quot;.&quot;&gt;
+ 
+     &lt;property file=&quot;../../build.properties&quot;/&gt;
+     &lt;tstamp&gt;
+
+Modified: FormLayout/trunk/nb4.1/nblayoutpack/build.xml
+===================================================================
+--- FormLayout/trunk/nb4.1/nblayoutpack/build.xml	2005-11-19 21:47:45 UTC (rev 28)
++++ FormLayout/trunk/nb4.1/nblayoutpack/build.xml	2005-12-30 10:16:07 UTC (rev 29)
+@@ -12,7 +12,7 @@
+ Microsystems, Inc. All Rights Reserved.
+ --&gt;
+ 
+-&lt;project name=&quot;nblayoutpack-tablelayout&quot; default=&quot;netbeans&quot; basedir=&quot;.&quot;&gt;
++&lt;project name=&quot;nblayoutpack-formlayout&quot; default=&quot;netbeans&quot; basedir=&quot;.&quot;&gt;
+ 
+     &lt;property file=&quot;../../build.properties&quot;/&gt;
+     &lt;tstamp&gt;
+
+Modified: FormLayout/trunk/src/de/berlios/nblayoutpack/formlayout/FormLayoutSupport.java
+===================================================================
+--- FormLayout/trunk/src/de/berlios/nblayoutpack/formlayout/FormLayoutSupport.java	2005-11-19 21:47:45 UTC (rev 28)
++++ FormLayout/trunk/src/de/berlios/nblayoutpack/formlayout/FormLayoutSupport.java	2005-12-30 10:16:07 UTC (rev 29)
+@@ -37,7 +37,7 @@
+   /** The icon for FormLayout. */
+   private static String iconURL =
+       &quot;de/berlios/nblayoutpack/formlayout/resources/formlayout16.png&quot;; // NOI18N
+-  /** The icon for TableLayout. */
++  /** The icon for FormLayout. */
+   private static String icon32URL =
+       &quot;de/berlios/nblayoutpack/formlayout/resources/formlayout32.png&quot;; // NOI18N
+ 
+@@ -170,11 +170,11 @@
+   private static final String baseVarName = &quot;_formLayoutInstance&quot;;
+ 
+   /** Creates code structures for a new layout manager (opposite to
+-   * readInitLayoutCode). As the TableLayout is not a bean, this method must
++   * readInitLayoutCode). As the FormLayout is not a bean, this method must
+    * override from AbstractLayoutSupport.
+    * @param layoutCode CodeGroup to be filled with relevant
+    *        initialization code;
+-   * @return new CodeExpression representing the TableLayout
++   * @return new CodeExpression representing the FormLayout
+    */
+   protected CodeExpression createInitLayoutCode(CodeGroup layoutCode){
+     CodeStructure codeStructure = getCodeStructure();
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	<LI>Next message: <A HREF="000029.html">[nblayoutpack-svn] r30 - /
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#28">[ date ]</a>
+              <a href="thread.html#28">[ thread ]</a>
+              <a href="subject.html#28">[ subject ]</a>
+              <a href="author.html#28">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/nblayoutpack-svn">More information about the nblayoutpack-svn
+mailing list</a><br>
+</body></html>

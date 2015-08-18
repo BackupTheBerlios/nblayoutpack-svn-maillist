@@ -1,0 +1,17 @@
+From ikysil at sheep.berlios.de  Thu Dec 23 08:58:18 2004
+From: ikysil at sheep.berlios.de (Illya Kysil at BerliOS)
+Date: Thu, 23 Dec 2004 08:58:18 +0100
+Subject: [Nblayoutpack-svn] r1 - /
+Message-ID: <200412230758.iBN7wIRD013944@sheep.berlios.de>
+
+Author: ikysil
+Date: 2004-12-23 08:58:14 +0100 (Thu, 23 Dec 2004)
+New Revision: 1
+
+Added:
+   build/
+Log:
+[NEW] Folder to contain a compiled modules.
+
+
+

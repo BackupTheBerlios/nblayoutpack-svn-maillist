@@ -1,0 +1,136 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [nblayoutpack-svn] r23 - in TableLayout/trunk: . src/de/berlios/nblayoutpack/tablelayout/nb5.x src/de/berlios/nblayoutpack/tablelayout/nb5.x/palette
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/nblayoutpack-svn/2005-November/index.html" >
+   <LINK REL="made" HREF="mailto:nblayoutpack-svn%40lists.berlios.de?Subject=Re%3A%20%5Bnblayoutpack-svn%5D%20r23%20-%20in%20TableLayout/trunk%3A%20.%20src/de/berlios/nblayoutpack/tablelayout/nb5.x%20src/de/berlios/nblayoutpack/tablelayout/nb5.x/palette&In-Reply-To=%3C200511082142.jA8LgCpI016557%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   
+   <LINK REL="Next"  HREF="000023.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[nblayoutpack-svn] r23 - in TableLayout/trunk: . src/de/berlios/nblayoutpack/tablelayout/nb5.x src/de/berlios/nblayoutpack/tablelayout/nb5.x/palette</H1>
+    <B>Illya Kysil at BerliOS</B> 
+    <A HREF="mailto:nblayoutpack-svn%40lists.berlios.de?Subject=Re%3A%20%5Bnblayoutpack-svn%5D%20r23%20-%20in%20TableLayout/trunk%3A%20.%20src/de/berlios/nblayoutpack/tablelayout/nb5.x%20src/de/berlios/nblayoutpack/tablelayout/nb5.x/palette&In-Reply-To=%3C200511082142.jA8LgCpI016557%40sheep.berlios.de%3E"
+       TITLE="[nblayoutpack-svn] r23 - in TableLayout/trunk: . src/de/berlios/nblayoutpack/tablelayout/nb5.x src/de/berlios/nblayoutpack/tablelayout/nb5.x/palette">ikysil at berlios.de
+       </A><BR>
+    <I>Tue Nov  8 22:42:12 CET 2005</I>
+    <P><UL>
+        
+        <LI>Next message: <A HREF="000023.html">[nblayoutpack-svn] r24 - in FormLayout/trunk: . src/de/berlios/nblayoutpack/formlayout/nb5.x src/de/berlios/nblayoutpack/formlayout/nb5.x/palette
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#22">[ date ]</a>
+              <a href="thread.html#22">[ thread ]</a>
+              <a href="subject.html#22">[ subject ]</a>
+              <a href="author.html#22">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: ikysil
+Date: 2005-11-08 22:42:11 +0100 (Tue, 08 Nov 2005)
+New Revision: 23
+
+Added:
+   TableLayout/trunk/src/de/berlios/nblayoutpack/tablelayout/nb5.x/TableLayoutClasses.txt
+Modified:
+   TableLayout/trunk/build.properties
+   TableLayout/trunk/src/de/berlios/nblayoutpack/tablelayout/nb5.x/layer.xml
+   TableLayout/trunk/src/de/berlios/nblayoutpack/tablelayout/nb5.x/palette/TableLayout.palette_item
+Log:
+[CHANGE] Version bumped.
+[DEFECT] layer.xml and TableLayout.palette_item was incorrect for NB 5.0 - library reference corrected, layout registered in new invisible in palette category.
+[NEW]    Form editor classpath is updated.
+
+Modified: TableLayout/trunk/build.properties
+===================================================================
+--- TableLayout/trunk/build.properties	2005-10-07 20:02:08 UTC (rev 22)
++++ TableLayout/trunk/build.properties	2005-11-08 21:42:11 UTC (rev 23)
+@@ -2,4 +2,4 @@
+ name=nblayoutpack-tablelayout
+ src=src
+ 
+-spec.version=2.1.1
+\ No newline at end of file
++spec.version=2.1.2
+\ No newline at end of file
+
+Added: TableLayout/trunk/src/de/berlios/nblayoutpack/tablelayout/nb5.x/TableLayoutClasses.txt
+===================================================================
+--- TableLayout/trunk/src/de/berlios/nblayoutpack/tablelayout/nb5.x/TableLayoutClasses.txt	2005-10-07 20:02:08 UTC (rev 22)
++++ TableLayout/trunk/src/de/berlios/nblayoutpack/tablelayout/nb5.x/TableLayoutClasses.txt	2005-11-08 21:42:11 UTC (rev 23)
+@@ -0,0 +1 @@
++de.berlios.nblayoutpack.tablelayout.**
+\ No newline at end of file
+
+Modified: TableLayout/trunk/src/de/berlios/nblayoutpack/tablelayout/nb5.x/layer.xml
+===================================================================
+--- TableLayout/trunk/src/de/berlios/nblayoutpack/tablelayout/nb5.x/layer.xml	2005-10-07 20:02:08 UTC (rev 22)
++++ TableLayout/trunk/src/de/berlios/nblayoutpack/tablelayout/nb5.x/layer.xml	2005-11-08 21:42:11 UTC (rev 23)
+@@ -4,7 +4,7 @@
+ &lt;filesystem&gt;
+ 
+   &lt;folder name=&quot;FormDesignerPalette&quot;&gt;
+-    &lt;folder name=&quot;Layouts&quot;&gt;
++    &lt;folder name=&quot;_Layouts_only_for_internal_use_&quot;&gt;
+       &lt;attr name=&quot;SystemFileSystem.localizingBundle&quot; stringvalue=&quot;de.berlios.nblayoutpack.tablelayout.Bundle&quot;/&gt;
+       &lt;file name=&quot;TableLayout.palette_item&quot; url=&quot;palette/TableLayout.palette_item&quot; /&gt;
+     &lt;/folder&gt;
+@@ -16,4 +16,13 @@
+     &lt;/folder&gt;
+   &lt;/folder&gt;
+ 
++  &lt;!-- form class loader type registration --&gt;
++  &lt;folder name=&quot;org-netbeans-modules-form&quot;&gt;
++    &lt;folder name=&quot;classloader&quot;&gt;
++      &lt;folder name=&quot;system&quot;&gt;
++        &lt;file name=&quot;TableLayoutClasses.txt&quot; url=&quot;TableLayoutClasses.txt&quot; /&gt;
++      &lt;/folder&gt;
++    &lt;/folder&gt;
++  &lt;/folder&gt;
++
+ &lt;/filesystem&gt;
+
+Modified: TableLayout/trunk/src/de/berlios/nblayoutpack/tablelayout/nb5.x/palette/TableLayout.palette_item
+===================================================================
+--- TableLayout/trunk/src/de/berlios/nblayoutpack/tablelayout/nb5.x/palette/TableLayout.palette_item	2005-10-07 20:02:08 UTC (rev 22)
++++ TableLayout/trunk/src/de/berlios/nblayoutpack/tablelayout/nb5.x/palette/TableLayout.palette_item	2005-11-08 21:42:11 UTC (rev 23)
+@@ -7,6 +7,6 @@
+   &lt;description localizing-bundle=&quot;de.berlios.nblayoutpack.tablelayout.Bundle&quot;
+                display-name-key=&quot;Palette/Layouts/info-clearthought-layout-TableLayout.instance&quot; /&gt;
+   &lt;classpath&gt;
+-      &lt;resource type=&quot;library&quot; name=&quot;tablelayout&quot; /&gt;
++      &lt;resource type=&quot;library&quot; name=&quot;TableLayout 3.4&quot; /&gt;
+   &lt;/classpath&gt;
+ &lt;/palette_item&gt;
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	<LI>Next message: <A HREF="000023.html">[nblayoutpack-svn] r24 - in FormLayout/trunk: . src/de/berlios/nblayoutpack/formlayout/nb5.x src/de/berlios/nblayoutpack/formlayout/nb5.x/palette
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#22">[ date ]</a>
+              <a href="thread.html#22">[ thread ]</a>
+              <a href="subject.html#22">[ subject ]</a>
+              <a href="author.html#22">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/nblayoutpack-svn">More information about the nblayoutpack-svn
+mailing list</a><br>
+</body></html>

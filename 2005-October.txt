@@ -1,0 +1,776 @@
+From ikysil at berlios.de  Thu Oct  6 21:56:51 2005
+From: ikysil at berlios.de (Illya Kysil at BerliOS)
+Date: Thu, 6 Oct 2005 21:56:51 +0200
+Subject: [nblayoutpack-svn] r17 - in FormLayout/trunk: . nb5.0 nb5.0/nblayoutpack nb5.0/nblayoutpack/nbproject nb5.0/nblayoutpack/nbproject/private src/de/berlios/nblayoutpack/formlayout src/de/berlios/nblayoutpack/formlayout/nb5.x src/de/berlios/nblayoutpack/formlayout/nb5.x/palette
+Message-ID: <200510061956.j96Jup4v027218@sheep.berlios.de>
+
+Author: ikysil
+Date: 2005-10-06 21:56:51 +0200 (Thu, 06 Oct 2005)
+New Revision: 17
+
+Added:
+   FormLayout/trunk/nb5.0/
+   FormLayout/trunk/nb5.0/nblayoutpack/
+   FormLayout/trunk/nb5.0/nblayoutpack/build.xml
+   FormLayout/trunk/nb5.0/nblayoutpack/manifest.mf
+   FormLayout/trunk/nb5.0/nblayoutpack/nbproject/
+   FormLayout/trunk/nb5.0/nblayoutpack/nbproject/build-impl.xml
+   FormLayout/trunk/nb5.0/nblayoutpack/nbproject/genfiles.properties
+   FormLayout/trunk/nb5.0/nblayoutpack/nbproject/platform.properties
+   FormLayout/trunk/nb5.0/nblayoutpack/nbproject/private/
+   FormLayout/trunk/nb5.0/nblayoutpack/nbproject/private/platform-private.properties
+   FormLayout/trunk/nb5.0/nblayoutpack/nbproject/private/private.properties
+   FormLayout/trunk/nb5.0/nblayoutpack/nbproject/private/private.xml
+   FormLayout/trunk/nb5.0/nblayoutpack/nbproject/project.properties
+   FormLayout/trunk/nb5.0/nblayoutpack/nbproject/project.xml
+   FormLayout/trunk/src/de/berlios/nblayoutpack/formlayout/nb5.x/
+   FormLayout/trunk/src/de/berlios/nblayoutpack/formlayout/nb5.x/formlayout.xml
+   FormLayout/trunk/src/de/berlios/nblayoutpack/formlayout/nb5.x/layer.xml
+   FormLayout/trunk/src/de/berlios/nblayoutpack/formlayout/nb5.x/palette/
+   FormLayout/trunk/src/de/berlios/nblayoutpack/formlayout/nb5.x/palette/FormLayout.palette_item
+Log:
+[NEW] NetBeans 5.0 (beta) project and module configuration files.
+
+Added: FormLayout/trunk/nb5.0/nblayoutpack/build.xml
+===================================================================
+--- FormLayout/trunk/nb5.0/nblayoutpack/build.xml	2005-08-05 21:59:13 UTC (rev 16)
++++ FormLayout/trunk/nb5.0/nblayoutpack/build.xml	2005-10-06 19:56:51 UTC (rev 17)
+@@ -0,0 +1,25 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<!-- You may freely edit this file. See harness/README in the NetBeans platform -->
++<!-- for some information on what you could do (e.g. targets to override). -->
++<!-- If you delete this file and reopen the project it will be recreated. -->
++<project name="de.berlios.nblayoutpack.formlayout" default="netbeans" basedir=".">
++    <description>Builds, tests, and runs the project de.berlios.nblayoutpack.formlayout.</description>
++    <import file="nbproject/build-impl.xml"/>
++
++
++    <property file="../../build.properties"/>
++    <tstamp>
++      <format property="buildnumbertimestamp" pattern="yyyyMMdd.HHmm"/>
++    </tstamp>
++    <property name="impl.version" value="${spec.version}.${buildnumbertimestamp}"/>
++
++    <target name="netbeans-extra" depends="init">
++        <mkdir dir="${cluster}/modules/ext/nblayoutpack"/>
++        <copy todir="${cluster}/modules/ext/nblayoutpack">
++          <fileset dir="../../lib">
++            <include name="forms-1.0.5.jar"/>
++          </fileset>
++        </copy>
++    </target>
++
++</project>
+
+Added: FormLayout/trunk/nb5.0/nblayoutpack/manifest.mf
+===================================================================
+--- FormLayout/trunk/nb5.0/nblayoutpack/manifest.mf	2005-08-05 21:59:13 UTC (rev 16)
++++ FormLayout/trunk/nb5.0/nblayoutpack/manifest.mf	2005-10-06 19:56:51 UTC (rev 17)
+@@ -0,0 +1,7 @@
++Manifest-Version: 1.0
++OpenIDE-Module: de.berlios.nblayoutpack.formlayout/2
++OpenIDE-Module-Localizing-Bundle: de/berlios/nblayoutpack/formlayout/Bundle.properties
++OpenIDE-Module-Layer: de/berlios/nblayoutpack/formlayout/nb5.x/layer.xml
++OpenIDE-Module-Install: de/berlios/nblayoutpack/formlayout/FormLayoutModule.class
++OpenIDE-Module-Specification-Version: 2.0.2
++
+
+Added: FormLayout/trunk/nb5.0/nblayoutpack/nbproject/build-impl.xml
+===================================================================
+--- FormLayout/trunk/nb5.0/nblayoutpack/nbproject/build-impl.xml	2005-08-05 21:59:13 UTC (rev 16)
++++ FormLayout/trunk/nb5.0/nblayoutpack/nbproject/build-impl.xml	2005-10-06 19:56:51 UTC (rev 17)
+@@ -0,0 +1,27 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<!--
++*** GENERATED FROM project.xml - DO NOT EDIT  ***
++***         EDIT ../build.xml INSTEAD         ***
++-->
++<project name="de.berlios.nblayoutpack.formlayout-impl" basedir=".." xmlns:nbmproject="http://www.netbeans.org/ns/nb-module-project/2">
++    <property file="nbproject/private/platform-private.properties"/>
++    <property file="nbproject/platform.properties"/>
++    <macrodef name="property" uri="http://www.netbeans.org/ns/nb-module-project/2">
++        <attribute name="name"/>
++        <attribute name="value"/>
++        <sequential>
++            <property name="@{name}" value="${@{value}}"/>
++        </sequential>
++    </macrodef>
++    <property file="${user.properties.file}"/>
++    <nbmproject:property name="harness.dir" value="nbplatform.${nbplatform.active}.harness.dir"/>
++    <nbmproject:property name="netbeans.dest.dir" value="nbplatform.${nbplatform.active}.netbeans.dest.dir"/>
++    <fail message="You must define 'nbplatform.${nbplatform.active}.harness.dir'">
++        <condition>
++            <not>
++                <available file="${harness.dir}" type="dir"/>
++            </not>
++        </condition>
++    </fail>
++    <import file="${harness.dir}/build.xml"/>
++</project>
+
+Added: FormLayout/trunk/nb5.0/nblayoutpack/nbproject/genfiles.properties
+===================================================================
+--- FormLayout/trunk/nb5.0/nblayoutpack/nbproject/genfiles.properties	2005-08-05 21:59:13 UTC (rev 16)
++++ FormLayout/trunk/nb5.0/nblayoutpack/nbproject/genfiles.properties	2005-10-06 19:56:51 UTC (rev 17)
+@@ -0,0 +1,8 @@
++build.xml.data.CRC32=0bd5dd98
++build.xml.script.CRC32=0f678541
++build.xml.stylesheet.CRC32=1101b4cf
++# This file is used by a NetBeans-based IDE to track changes in generated files such as build-impl.xml.
++# Do not edit this file. You may delete it but then the IDE will never regenerate such files for you.
++nbproject/build-impl.xml.data.CRC32=943f078a
++nbproject/build-impl.xml.script.CRC32=eafe6218
++nbproject/build-impl.xml.stylesheet.CRC32=d126b16b
+
+Added: FormLayout/trunk/nb5.0/nblayoutpack/nbproject/platform.properties
+===================================================================
+--- FormLayout/trunk/nb5.0/nblayoutpack/nbproject/platform.properties	2005-08-05 21:59:13 UTC (rev 16)
++++ FormLayout/trunk/nb5.0/nblayoutpack/nbproject/platform.properties	2005-10-06 19:56:51 UTC (rev 17)
+@@ -0,0 +1,2 @@
++nbplatform.active=default
++nbplatform.default.harness.dir=T:/NetBeans/5.0 Beta/harness
+\ No newline at end of file
+
+Added: FormLayout/trunk/nb5.0/nblayoutpack/nbproject/private/platform-private.properties
+===================================================================
+--- FormLayout/trunk/nb5.0/nblayoutpack/nbproject/private/platform-private.properties	2005-08-05 21:59:13 UTC (rev 16)
++++ FormLayout/trunk/nb5.0/nblayoutpack/nbproject/private/platform-private.properties	2005-10-06 19:56:51 UTC (rev 17)
+@@ -0,0 +1 @@
++user.properties.file=C:\\Documents and Settings\\Illya Kysil\\.netbeans\\5.0beta\\build.properties
+
+Added: FormLayout/trunk/nb5.0/nblayoutpack/nbproject/private/private.properties
+===================================================================
+
+Added: FormLayout/trunk/nb5.0/nblayoutpack/nbproject/private/private.xml
+===================================================================
+--- FormLayout/trunk/nb5.0/nblayoutpack/nbproject/private/private.xml	2005-08-05 21:59:13 UTC (rev 16)
++++ FormLayout/trunk/nb5.0/nblayoutpack/nbproject/private/private.xml	2005-10-06 19:56:51 UTC (rev 17)
+@@ -0,0 +1,5 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
++    
++<editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/1"/>
++</project-private>
+
+Added: FormLayout/trunk/nb5.0/nblayoutpack/nbproject/project.properties
+===================================================================
+--- FormLayout/trunk/nb5.0/nblayoutpack/nbproject/project.properties	2005-08-05 21:59:13 UTC (rev 16)
++++ FormLayout/trunk/nb5.0/nblayoutpack/nbproject/project.properties	2005-10-06 19:56:51 UTC (rev 17)
+@@ -0,0 +1,14 @@
++license.file=../../license.txt
++
++nbm.module.author=Illya Kysil
++src.dir=../../src
++
++build.package.compress=true
++build.package.index=true
++
++nbm.homepage=http://nblayoutpack.berlios.de
++nbm.distribution=http://nblayoutpack.berlios.de
++
++extra.module.files=modules/ext/nblayoutpack/forms-1.0.5.jar
++
++nbm=${name}-nb5.0beta-${impl.version}.nbm
+
+Added: FormLayout/trunk/nb5.0/nblayoutpack/nbproject/project.xml
+===================================================================
+--- FormLayout/trunk/nb5.0/nblayoutpack/nbproject/project.xml	2005-08-05 21:59:13 UTC (rev 16)
++++ FormLayout/trunk/nb5.0/nblayoutpack/nbproject/project.xml	2005-10-06 19:56:51 UTC (rev 17)
+@@ -0,0 +1,62 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project xmlns="http://www.netbeans.org/ns/project/1">
++    <type>org.netbeans.modules.apisupport.project</type>
++    <configuration>
++        
++    <data xmlns="http://www.netbeans.org/ns/nb-module-project/2">
++            <code-name-base>de.berlios.nblayoutpack.formlayout</code-name-base>
++            <standalone/>
++            
++            <module-dependencies>
++                <dependency>
++                    <code-name-base>org.netbeans.modules.form</code-name-base>
++                    <build-prerequisite/>
++                    <compile-dependency/>
++                    <run-dependency>
++                        <release-version>2</release-version>
++                        <implementation-version/>
++                    </run-dependency>
++                </dependency>
++                <dependency>
++                    <code-name-base>org.openide.explorer</code-name-base>
++                    <build-prerequisite/>
++                    <compile-dependency/>
++                    <run-dependency>
++                        <specification-version>6.2</specification-version>
++                    </run-dependency>
++                </dependency>
++                <dependency>
++                    <code-name-base>org.openide.modules</code-name-base>
++                    <build-prerequisite/>
++                    <compile-dependency/>
++                    <run-dependency>
++                        <specification-version>6.2</specification-version>
++                    </run-dependency>
++                </dependency>
++                <dependency>
++                    <code-name-base>org.openide.nodes</code-name-base>
++                    <build-prerequisite/>
++                    <compile-dependency/>
++                    <run-dependency>
++                        <specification-version>6.2</specification-version>
++                    </run-dependency>
++                </dependency>
++                <dependency>
++                    <code-name-base>org.openide.util</code-name-base>
++                    <build-prerequisite/>
++                    <compile-dependency/>
++                    <run-dependency>
++                        <specification-version>6.2</specification-version>
++                    </run-dependency>
++                </dependency>
++            </module-dependencies>
++            <class-path-extension>
++              <!-- Deployed path, relative to dir containing module: -->
++              <runtime-relative-path>ext/nblayoutpack/forms-1.0.5.jar</runtime-relative-path>
++              <!-- Path of library in your own sources, relative to project basedir: -->
++              <binary-origin>../../lib/forms-1.0.5.jar</binary-origin>
++            </class-path-extension>
++            <public-packages/>
++        </data>
++    </configuration>
++</project>
+
+Added: FormLayout/trunk/src/de/berlios/nblayoutpack/formlayout/nb5.x/formlayout.xml
+===================================================================
+--- FormLayout/trunk/src/de/berlios/nblayoutpack/formlayout/nb5.x/formlayout.xml	2005-08-05 21:59:13 UTC (rev 16)
++++ FormLayout/trunk/src/de/berlios/nblayoutpack/formlayout/nb5.x/formlayout.xml	2005-10-06 19:56:51 UTC (rev 17)
+@@ -0,0 +1,13 @@
++<?xml version="1.0" encoding="UTF-8"?>
++
++<!DOCTYPE library PUBLIC "-//NetBeans//DTD Library Declaration 1.0//EN" "http://www.netbeans.org/dtds/library-declaration-1_0.dtd">
++
++<library version="1.0">
++    <name>JGoodies Forms 1.0.5</name>
++    <type>j2se</type>
++    <localizing-bundle>de/berlios/nblayoutpack/formlayout/Bundle</localizing-bundle>
++    <volume>
++        <type>classpath</type>
++        <resource>jar:nbinst:///modules/ext/nblayoutpack/forms-1.0.5.jar!/</resource>
++    </volume>
++</library>
+
+Added: FormLayout/trunk/src/de/berlios/nblayoutpack/formlayout/nb5.x/layer.xml
+===================================================================
+--- FormLayout/trunk/src/de/berlios/nblayoutpack/formlayout/nb5.x/layer.xml	2005-08-05 21:59:13 UTC (rev 16)
++++ FormLayout/trunk/src/de/berlios/nblayoutpack/formlayout/nb5.x/layer.xml	2005-10-06 19:56:51 UTC (rev 17)
+@@ -0,0 +1,17 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<?xml-stylesheet type="text/xml" href="http://openide.netbeans.org/fs/filesystem.xsl"?>
++<!DOCTYPE filesystem PUBLIC "-//NetBeans//DTD Filesystem 1.1//EN" "http://www.netbeans.org/dtds/filesystem-1_1.dtd">
++<filesystem>
++
++  <folder name="FormDesignerPalette">
++    <folder name="Layouts">
++        <file name="FormLayout.palette_item" url="palette/FormLayout.palette_item"/>
++    </folder>
++    </folder>
++    <folder name="org-netbeans-api-project-libraries">
++    <folder name="Libraries">
++      <file name="formlayout.xml" url="formlayout.xml"/>
++    </folder>
++  </folder>
++
++</filesystem>
+
+Added: FormLayout/trunk/src/de/berlios/nblayoutpack/formlayout/nb5.x/palette/FormLayout.palette_item
+===================================================================
+--- FormLayout/trunk/src/de/berlios/nblayoutpack/formlayout/nb5.x/palette/FormLayout.palette_item	2005-08-05 21:59:13 UTC (rev 16)
++++ FormLayout/trunk/src/de/berlios/nblayoutpack/formlayout/nb5.x/palette/FormLayout.palette_item	2005-10-06 19:56:51 UTC (rev 17)
+@@ -0,0 +1,12 @@
++<?xml version="1.0" encoding="UTF-8"?>
++
++<palette_item version="1.0">
++  <component classname="com.jgoodies.forms.layout.FormLayout" type="layout" />
++  <icon16 urlvalue="nbres:/de/berlios/nblayoutpack/formlayout/resources/formlayout16.png" />
++  <icon32 urlvalue="nbres:/de/berlios/nblayoutpack/formlayout/resources/formlayout32.png" />
++  <description localizing-bundle="de.berlios.nblayoutpack.formlayout.Bundle"
++               display-name-key="Palette/Layouts/com-jgoodies-forms-layout-FormLayout.instance" />
++  <classpath>
++      <resource type="library" name="formlayout" />
++  </classpath>
++</palette_item>
+
+
+
+From ikysil at berlios.de  Fri Oct  7 08:24:55 2005
+From: ikysil at berlios.de (Illya Kysil at BerliOS)
+Date: Fri, 7 Oct 2005 08:24:55 +0200
+Subject: [nblayoutpack-svn] r18 - in TableLayout/trunk: . nb5.0 nb5.0/nblayoutpack nb5.0/nblayoutpack/nbproject src/de/berlios/nblayoutpack/tablelayout src/de/berlios/nblayoutpack/tablelayout/nb5.x src/de/berlios/nblayoutpack/tablelayout/nb5.x/palette
+Message-ID: <200510070624.j976OtmB023247@sheep.berlios.de>
+
+Author: ikysil
+Date: 2005-10-07 08:24:51 +0200 (Fri, 07 Oct 2005)
+New Revision: 18
+
+Added:
+   TableLayout/trunk/nb5.0/
+   TableLayout/trunk/nb5.0/nblayoutpack/
+   TableLayout/trunk/nb5.0/nblayoutpack/build.xml
+   TableLayout/trunk/nb5.0/nblayoutpack/manifest.mf
+   TableLayout/trunk/nb5.0/nblayoutpack/nbproject/
+   TableLayout/trunk/nb5.0/nblayoutpack/nbproject/build-impl.xml
+   TableLayout/trunk/nb5.0/nblayoutpack/nbproject/genfiles.properties
+   TableLayout/trunk/nb5.0/nblayoutpack/nbproject/platform.properties
+   TableLayout/trunk/nb5.0/nblayoutpack/nbproject/project.properties
+   TableLayout/trunk/nb5.0/nblayoutpack/nbproject/project.xml
+   TableLayout/trunk/src/de/berlios/nblayoutpack/tablelayout/nb5.x/
+   TableLayout/trunk/src/de/berlios/nblayoutpack/tablelayout/nb5.x/layer.xml
+   TableLayout/trunk/src/de/berlios/nblayoutpack/tablelayout/nb5.x/palette/
+   TableLayout/trunk/src/de/berlios/nblayoutpack/tablelayout/nb5.x/palette/TableLayout.palette_item
+   TableLayout/trunk/src/de/berlios/nblayoutpack/tablelayout/nb5.x/tablelayout.xml
+Log:
+[NEW] NetBeans 5.0 (beta) project and module configuration files.
+
+
+Added: TableLayout/trunk/nb5.0/nblayoutpack/build.xml
+===================================================================
+--- TableLayout/trunk/nb5.0/nblayoutpack/build.xml	2005-10-06 19:56:51 UTC (rev 17)
++++ TableLayout/trunk/nb5.0/nblayoutpack/build.xml	2005-10-07 06:24:51 UTC (rev 18)
+@@ -0,0 +1,27 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<!-- You may freely edit this file. See harness/README in the NetBeans platform -->
++<!-- for some information on what you could do (e.g. targets to override). -->
++<!-- If you delete this file and reopen the project it will be recreated. -->
++<project name="de.berlios.nblayoutpack.tablelayout" default="netbeans" basedir=".">
++    <description>Builds, tests, and runs the project de.berlios.nblayoutpack.tablelayout.</description>
++    <import file="nbproject/build-impl.xml"/>
++
++
++    <property file="../../build.properties"/>
++    <tstamp>
++      <format property="buildnumbertimestamp" pattern="yyyyMMdd.HHmm"/>
++    </tstamp>
++    <property name="impl.version" value="${spec.version}.${buildnumbertimestamp}"/>
++
++    <target name="netbeans-extra" depends="init">
++        <mkdir dir="${cluster}/modules/ext/nblayoutpack"/>
++        <copy todir="${cluster}/modules/ext/nblayoutpack">
++          <fileset dir="../../lib">
++            <include name="TableLayout-3.4.jar"/>
++          </fileset>
++        </copy>
++        <mkdir dir="${cluster}/docs/nblayoutpack"/>
++        <copy todir="${cluster}/docs/nblayoutpack" file="../../lib/TableLayout-3.4-javadoc.jar"/>
++    </target>
++
++</project>
+
+Added: TableLayout/trunk/nb5.0/nblayoutpack/manifest.mf
+===================================================================
+--- TableLayout/trunk/nb5.0/nblayoutpack/manifest.mf	2005-10-06 19:56:51 UTC (rev 17)
++++ TableLayout/trunk/nb5.0/nblayoutpack/manifest.mf	2005-10-07 06:24:51 UTC (rev 18)
+@@ -0,0 +1,6 @@
++Manifest-Version: 1.0
++OpenIDE-Module: de.berlios.nblayoutpack.tablelayout/2
++OpenIDE-Module-Localizing-Bundle: de/berlios/nblayoutpack/tablelayout/Bundle.properties
++OpenIDE-Module-Layer: de/berlios/nblayoutpack/tablelayout/nb5.x/layer.xml
++OpenIDE-Module-Install: de/berlios/nblayoutpack/tablelayout/TableLayoutModule.class
++OpenIDE-Module-Specification-Version: 2.1.1
+
+
+Property changes on: TableLayout/trunk/nb5.0/nblayoutpack/nbproject
+___________________________________________________________________
+Name: svn:ignore
+   + private
+
+
+Added: TableLayout/trunk/nb5.0/nblayoutpack/nbproject/build-impl.xml
+===================================================================
+--- TableLayout/trunk/nb5.0/nblayoutpack/nbproject/build-impl.xml	2005-10-06 19:56:51 UTC (rev 17)
++++ TableLayout/trunk/nb5.0/nblayoutpack/nbproject/build-impl.xml	2005-10-07 06:24:51 UTC (rev 18)
+@@ -0,0 +1,27 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<!--
++*** GENERATED FROM project.xml - DO NOT EDIT  ***
++***         EDIT ../build.xml INSTEAD         ***
++-->
++<project name="de.berlios.nblayoutpack.tablelayout-impl" basedir=".." xmlns:nbmproject="http://www.netbeans.org/ns/nb-module-project/2">
++    <property file="nbproject/private/platform-private.properties"/>
++    <property file="nbproject/platform.properties"/>
++    <macrodef name="property" uri="http://www.netbeans.org/ns/nb-module-project/2">
++        <attribute name="name"/>
++        <attribute name="value"/>
++        <sequential>
++            <property name="@{name}" value="${@{value}}"/>
++        </sequential>
++    </macrodef>
++    <property file="${user.properties.file}"/>
++    <nbmproject:property name="harness.dir" value="nbplatform.${nbplatform.active}.harness.dir"/>
++    <nbmproject:property name="netbeans.dest.dir" value="nbplatform.${nbplatform.active}.netbeans.dest.dir"/>
++    <fail message="You must define 'nbplatform.${nbplatform.active}.harness.dir'">
++        <condition>
++            <not>
++                <available file="${harness.dir}" type="dir"/>
++            </not>
++        </condition>
++    </fail>
++    <import file="${harness.dir}/build.xml"/>
++</project>
+
+Added: TableLayout/trunk/nb5.0/nblayoutpack/nbproject/genfiles.properties
+===================================================================
+--- TableLayout/trunk/nb5.0/nblayoutpack/nbproject/genfiles.properties	2005-10-06 19:56:51 UTC (rev 17)
++++ TableLayout/trunk/nb5.0/nblayoutpack/nbproject/genfiles.properties	2005-10-07 06:24:51 UTC (rev 18)
+@@ -0,0 +1,8 @@
++build.xml.data.CRC32=0bd5dd98
++build.xml.script.CRC32=0f678541
++build.xml.stylesheet.CRC32=1101b4cf
++# This file is used by a NetBeans-based IDE to track changes in generated files such as build-impl.xml.
++# Do not edit this file. You may delete it but then the IDE will never regenerate such files for you.
++nbproject/build-impl.xml.data.CRC32=943f078a
++nbproject/build-impl.xml.script.CRC32=eafe6218
++nbproject/build-impl.xml.stylesheet.CRC32=d126b16b
+
+Added: TableLayout/trunk/nb5.0/nblayoutpack/nbproject/platform.properties
+===================================================================
+--- TableLayout/trunk/nb5.0/nblayoutpack/nbproject/platform.properties	2005-10-06 19:56:51 UTC (rev 17)
++++ TableLayout/trunk/nb5.0/nblayoutpack/nbproject/platform.properties	2005-10-07 06:24:51 UTC (rev 18)
+@@ -0,0 +1,2 @@
++nbplatform.active=default
++nbplatform.default.harness.dir=T:/NetBeans/5.0 Beta/harness
+\ No newline at end of file
+
+Added: TableLayout/trunk/nb5.0/nblayoutpack/nbproject/project.properties
+===================================================================
+--- TableLayout/trunk/nb5.0/nblayoutpack/nbproject/project.properties	2005-10-06 19:56:51 UTC (rev 17)
++++ TableLayout/trunk/nb5.0/nblayoutpack/nbproject/project.properties	2005-10-07 06:24:51 UTC (rev 18)
+@@ -0,0 +1,15 @@
++license.file=../../license.txt
++
++nbm.module.author=Illya Kysil
++src.dir=../../src
++
++build.package.compress=true
++build.package.index=true
++
++nbm.homepage=http://nblayoutpack.berlios.de
++nbm.distribution=http://nblayoutpack.berlios.de
++
++extra.module.files=modules/ext/nblayoutpack/TableLayout-3.4.jar,\
++  docs/nblayoutpack/TableLayout-3.4-javadoc.jar
++
++nbm=${name}-nb5.0beta-${impl.version}.nbm
+
+Added: TableLayout/trunk/nb5.0/nblayoutpack/nbproject/project.xml
+===================================================================
+--- TableLayout/trunk/nb5.0/nblayoutpack/nbproject/project.xml	2005-10-06 19:56:51 UTC (rev 17)
++++ TableLayout/trunk/nb5.0/nblayoutpack/nbproject/project.xml	2005-10-07 06:24:51 UTC (rev 18)
+@@ -0,0 +1,72 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project xmlns="http://www.netbeans.org/ns/project/1">
++    <type>org.netbeans.modules.apisupport.project</type>
++    <configuration>
++        
++    
++    <data xmlns="http://www.netbeans.org/ns/nb-module-project/2">
++            <code-name-base>de.berlios.nblayoutpack.tablelayout</code-name-base>
++            <standalone/>
++            
++            
++            <class-path-extension>
++              <!-- Deployed path, relative to dir containing module: -->
++              <runtime-relative-path>ext/nblayoutpack/TableLayout-3.4.jar</runtime-relative-path>
++              <!-- Path of library in your own sources, relative to project basedir: -->
++              <binary-origin>../../lib/TableLayout-3.4.jar</binary-origin>
++            </class-path-extension>
++            <module-dependencies>
++                <dependency>
++                    <code-name-base>org.netbeans.modules.form</code-name-base>
++                    <build-prerequisite/>
++                    <compile-dependency/>
++                    <run-dependency>
++                        <release-version>2</release-version>
++                        <implementation-version/>
++                    </run-dependency>
++                </dependency>
++                <dependency>
++                    <code-name-base>org.openide.explorer</code-name-base>
++                    <build-prerequisite/>
++                    <compile-dependency/>
++                    <run-dependency>
++                        <specification-version>6.2</specification-version>
++                    </run-dependency>
++                </dependency>
++                <dependency>
++                    <code-name-base>org.openide.modules</code-name-base>
++                    <build-prerequisite/>
++                    <compile-dependency/>
++                    <run-dependency>
++                        <specification-version>6.2</specification-version>
++                    </run-dependency>
++                </dependency>
++                <dependency>
++                    <code-name-base>org.openide.nodes</code-name-base>
++                    <build-prerequisite/>
++                    <compile-dependency/>
++                    <run-dependency>
++                        <specification-version>6.2</specification-version>
++                    </run-dependency>
++                </dependency>
++                <dependency>
++                    <code-name-base>org.openide.util</code-name-base>
++                    <build-prerequisite/>
++                    <compile-dependency/>
++                    <run-dependency>
++                        <specification-version>6.2</specification-version>
++                    </run-dependency>
++                </dependency>
++                <dependency>
++                    <code-name-base>org.openide.windows</code-name-base>
++                    <build-prerequisite/>
++                    <compile-dependency/>
++                    <run-dependency>
++                        <specification-version>6.2.1</specification-version>
++                    </run-dependency>
++                </dependency>
++            </module-dependencies>
++            <public-packages/>
++        </data>
++    </configuration>
++</project>
+
+Added: TableLayout/trunk/src/de/berlios/nblayoutpack/tablelayout/nb5.x/layer.xml
+===================================================================
+--- TableLayout/trunk/src/de/berlios/nblayoutpack/tablelayout/nb5.x/layer.xml	2005-10-06 19:56:51 UTC (rev 17)
++++ TableLayout/trunk/src/de/berlios/nblayoutpack/tablelayout/nb5.x/layer.xml	2005-10-07 06:24:51 UTC (rev 18)
+@@ -0,0 +1,19 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<?xml-stylesheet type="text/xml" href="http://openide.netbeans.org/fs/filesystem.xsl"?>
++<!DOCTYPE filesystem PUBLIC "-//NetBeans//DTD Filesystem 1.1//EN" "http://www.netbeans.org/dtds/filesystem-1_1.dtd">
++<filesystem>
++
++  <folder name="FormDesignerPalette">
++    <folder name="Layouts">
++      <attr name="SystemFileSystem.localizingBundle" stringvalue="de.berlios.nblayoutpack.tablelayout.Bundle"/>
++      <file name="TableLayout.palette_item" url="palette/TableLayout.palette_item" />
++    </folder>
++  </folder>
++
++  <folder name="org-netbeans-api-project-libraries">
++    <folder name="Libraries">
++      <file name="tablelayout.xml" url="tablelayout.xml"/>
++    </folder>
++  </folder>
++
++</filesystem>
+
+Added: TableLayout/trunk/src/de/berlios/nblayoutpack/tablelayout/nb5.x/palette/TableLayout.palette_item
+===================================================================
+--- TableLayout/trunk/src/de/berlios/nblayoutpack/tablelayout/nb5.x/palette/TableLayout.palette_item	2005-10-06 19:56:51 UTC (rev 17)
++++ TableLayout/trunk/src/de/berlios/nblayoutpack/tablelayout/nb5.x/palette/TableLayout.palette_item	2005-10-07 06:24:51 UTC (rev 18)
+@@ -0,0 +1,12 @@
++<?xml version="1.0" encoding="UTF-8"?>
++
++<palette_item version="1.0">
++  <component classname="info.clearthought.layout.TableLayout" type="layout" />
++  <icon16 urlvalue="nbres:/de/berlios/nblayoutpack/tablelayout/resources/tablelayout16.png" />
++  <icon32 urlvalue="nbres:/de/berlios/nblayoutpack/tablelayout/resources/tablelayout32.png" />
++  <description localizing-bundle="de.berlios.nblayoutpack.tablelayout.Bundle"
++               display-name-key="Palette/Layouts/info-clearthought-layout-TableLayout.instance" />
++  <classpath>
++      <resource type="library" name="tablelayout" />
++  </classpath>
++</palette_item>
+
+Added: TableLayout/trunk/src/de/berlios/nblayoutpack/tablelayout/nb5.x/tablelayout.xml
+===================================================================
+--- TableLayout/trunk/src/de/berlios/nblayoutpack/tablelayout/nb5.x/tablelayout.xml	2005-10-06 19:56:51 UTC (rev 17)
++++ TableLayout/trunk/src/de/berlios/nblayoutpack/tablelayout/nb5.x/tablelayout.xml	2005-10-07 06:24:51 UTC (rev 18)
+@@ -0,0 +1,17 @@
++<?xml version="1.0" encoding="UTF-8"?>
++
++<!DOCTYPE library PUBLIC "-//NetBeans//DTD Library Declaration 1.0//EN" "http://www.netbeans.org/dtds/library-declaration-1_0.dtd">
++
++<library version="1.0">
++    <name>TableLayout 3.4</name>
++    <type>j2se</type>
++    <localizing-bundle>de/berlios/nblayoutpack/tablelayout/Bundle</localizing-bundle>
++    <volume>
++        <type>classpath</type>
++        <resource>jar:nbinst:///modules/ext/nblayoutpack/TableLayout-3.4.jar!/</resource>
++    </volume>
++    <volume>
++        <type>javadoc</type>
++        <resource>jar:nbinst:///docs/nblayoutpack/TableLayout-3.4-javadoc.jar!/</resource>
++    </volume>
++</library>
+
+
+
+From ikysil at berlios.de  Fri Oct  7 21:29:39 2005
+From: ikysil at berlios.de (Illya Kysil at BerliOS)
+Date: Fri, 7 Oct 2005 21:29:39 +0200
+Subject: [nblayoutpack-svn] r19 - TableLayout/trunk/nb5.0/nblayoutpack
+Message-ID: <200510071929.j97JTdnH011458@sheep.berlios.de>
+
+Author: ikysil
+Date: 2005-10-07 21:29:37 +0200 (Fri, 07 Oct 2005)
+New Revision: 19
+
+Modified:
+   TableLayout/trunk/nb5.0/nblayoutpack/
+   TableLayout/trunk/nb5.0/nblayoutpack/build.xml
+   TableLayout/trunk/nb5.0/nblayoutpack/manifest.mf
+Log:
+[CHANGE] Module versions setup updated.
+
+
+Property changes on: TableLayout/trunk/nb5.0/nblayoutpack
+___________________________________________________________________
+Name: svn:ignore
+   + build
+
+
+Modified: TableLayout/trunk/nb5.0/nblayoutpack/build.xml
+===================================================================
+--- TableLayout/trunk/nb5.0/nblayoutpack/build.xml	2005-10-07 06:24:51 UTC (rev 18)
++++ TableLayout/trunk/nb5.0/nblayoutpack/build.xml	2005-10-07 19:29:37 UTC (rev 19)
+@@ -9,9 +9,10 @@
+ 
+     <property file="../../build.properties"/>
+     <tstamp>
+-      <format property="buildnumbertimestamp" pattern="yyyyMMdd.HHmm"/>
++      <format property="buildnumber" pattern="yyyyMMdd.HHmm"/>
+     </tstamp>
+-    <property name="impl.version" value="${spec.version}.${buildnumbertimestamp}"/>
++    <property name="impl.version" value="${spec.version}.${buildnumber}"/>
++    <property name="spec.version.base" value="${spec.version}"/>
+ 
+     <target name="netbeans-extra" depends="init">
+         <mkdir dir="${cluster}/modules/ext/nblayoutpack"/>
+
+Modified: TableLayout/trunk/nb5.0/nblayoutpack/manifest.mf
+===================================================================
+--- TableLayout/trunk/nb5.0/nblayoutpack/manifest.mf	2005-10-07 06:24:51 UTC (rev 18)
++++ TableLayout/trunk/nb5.0/nblayoutpack/manifest.mf	2005-10-07 19:29:37 UTC (rev 19)
+@@ -3,4 +3,4 @@
+ OpenIDE-Module-Localizing-Bundle: de/berlios/nblayoutpack/tablelayout/Bundle.properties
+ OpenIDE-Module-Layer: de/berlios/nblayoutpack/tablelayout/nb5.x/layer.xml
+ OpenIDE-Module-Install: de/berlios/nblayoutpack/tablelayout/TableLayoutModule.class
+-OpenIDE-Module-Specification-Version: 2.1.1
++
+
+
+
+From ikysil at berlios.de  Fri Oct  7 21:30:21 2005
+From: ikysil at berlios.de (Illya Kysil at BerliOS)
+Date: Fri, 7 Oct 2005 21:30:21 +0200
+Subject: [nblayoutpack-svn] r20 - in FormLayout/trunk: nb5.0/nblayoutpack src/de/berlios/nblayoutpack/formlayout/nb5.x
+Message-ID: <200510071930.j97JULr5011624@sheep.berlios.de>
+
+Author: ikysil
+Date: 2005-10-07 21:30:21 +0200 (Fri, 07 Oct 2005)
+New Revision: 20
+
+Modified:
+   FormLayout/trunk/nb5.0/nblayoutpack/
+   FormLayout/trunk/nb5.0/nblayoutpack/build.xml
+   FormLayout/trunk/nb5.0/nblayoutpack/manifest.mf
+   FormLayout/trunk/src/de/berlios/nblayoutpack/formlayout/nb5.x/layer.xml
+Log:
+[CHANGE] Module versions setup updated.
+[CHANGE] layer.xml reformatted.
+
+
+Property changes on: FormLayout/trunk/nb5.0/nblayoutpack
+___________________________________________________________________
+Name: svn:ignore
+   + build
+
+
+Modified: FormLayout/trunk/nb5.0/nblayoutpack/build.xml
+===================================================================
+--- FormLayout/trunk/nb5.0/nblayoutpack/build.xml	2005-10-07 19:29:37 UTC (rev 19)
++++ FormLayout/trunk/nb5.0/nblayoutpack/build.xml	2005-10-07 19:30:21 UTC (rev 20)
+@@ -9,9 +9,10 @@
+ 
+     <property file="../../build.properties"/>
+     <tstamp>
+-      <format property="buildnumbertimestamp" pattern="yyyyMMdd.HHmm"/>
++      <format property="buildnumber" pattern="yyyyMMdd.HHmm"/>
+     </tstamp>
+-    <property name="impl.version" value="${spec.version}.${buildnumbertimestamp}"/>
++    <property name="impl.version" value="${spec.version}.${buildnumber}"/>
++    <property name="spec.version.base" value="${spec.version}"/>
+ 
+     <target name="netbeans-extra" depends="init">
+         <mkdir dir="${cluster}/modules/ext/nblayoutpack"/>
+
+Modified: FormLayout/trunk/nb5.0/nblayoutpack/manifest.mf
+===================================================================
+--- FormLayout/trunk/nb5.0/nblayoutpack/manifest.mf	2005-10-07 19:29:37 UTC (rev 19)
++++ FormLayout/trunk/nb5.0/nblayoutpack/manifest.mf	2005-10-07 19:30:21 UTC (rev 20)
+@@ -3,5 +3,4 @@
+ OpenIDE-Module-Localizing-Bundle: de/berlios/nblayoutpack/formlayout/Bundle.properties
+ OpenIDE-Module-Layer: de/berlios/nblayoutpack/formlayout/nb5.x/layer.xml
+ OpenIDE-Module-Install: de/berlios/nblayoutpack/formlayout/FormLayoutModule.class
+-OpenIDE-Module-Specification-Version: 2.0.2
+ 
+
+Modified: FormLayout/trunk/src/de/berlios/nblayoutpack/formlayout/nb5.x/layer.xml
+===================================================================
+--- FormLayout/trunk/src/de/berlios/nblayoutpack/formlayout/nb5.x/layer.xml	2005-10-07 19:29:37 UTC (rev 19)
++++ FormLayout/trunk/src/de/berlios/nblayoutpack/formlayout/nb5.x/layer.xml	2005-10-07 19:30:21 UTC (rev 20)
+@@ -7,8 +7,9 @@
+     <folder name="Layouts">
+         <file name="FormLayout.palette_item" url="palette/FormLayout.palette_item"/>
+     </folder>
+-    </folder>
+-    <folder name="org-netbeans-api-project-libraries">
++  </folder>
++
++  <folder name="org-netbeans-api-project-libraries">
+     <folder name="Libraries">
+       <file name="formlayout.xml" url="formlayout.xml"/>
+     </folder>
+
+
+
+From ikysil at berlios.de  Fri Oct  7 22:00:41 2005
+From: ikysil at berlios.de (Illya Kysil at BerliOS)
+Date: Fri, 7 Oct 2005 22:00:41 +0200
+Subject: [nblayoutpack-svn] r21 - TableLayout/tag
+Message-ID: <200510072000.j97K0fnp014124@sheep.berlios.de>
+
+Author: ikysil
+Date: 2005-10-07 22:00:40 +0200 (Fri, 07 Oct 2005)
+New Revision: 21
+
+Added:
+   TableLayout/tag/20051007-2.1.1/
+Log:
+[NEW] 2.1.1.20051007 release.
+
+Copied: TableLayout/tag/20051007-2.1.1 (from rev 20, TableLayout/trunk)
+
+
+
+From ikysil at berlios.de  Fri Oct  7 22:02:08 2005
+From: ikysil at berlios.de (Illya Kysil at BerliOS)
+Date: Fri, 7 Oct 2005 22:02:08 +0200
+Subject: [nblayoutpack-svn] r22 - FormLayout/tag
+Message-ID: <200510072002.j97K284o014409@sheep.berlios.de>
+
+Author: ikysil
+Date: 2005-10-07 22:02:08 +0200 (Fri, 07 Oct 2005)
+New Revision: 22
+
+Added:
+   FormLayout/tag/20051007-2.0.2/
+Log:
+[NEW] 2.0.2.20051007 release.
+
+Copied: FormLayout/tag/20051007-2.0.2 (from rev 21, FormLayout/trunk)
+
+
+

@@ -1,0 +1,253 @@
+From ikysil at berlios.de  Tue Nov  8 22:42:12 2005
+From: ikysil at berlios.de (Illya Kysil at BerliOS)
+Date: Tue, 8 Nov 2005 22:42:12 +0100
+Subject: [nblayoutpack-svn] r23 - in TableLayout/trunk: . src/de/berlios/nblayoutpack/tablelayout/nb5.x src/de/berlios/nblayoutpack/tablelayout/nb5.x/palette
+Message-ID: <200511082142.jA8LgCpI016557@sheep.berlios.de>
+
+Author: ikysil
+Date: 2005-11-08 22:42:11 +0100 (Tue, 08 Nov 2005)
+New Revision: 23
+
+Added:
+   TableLayout/trunk/src/de/berlios/nblayoutpack/tablelayout/nb5.x/TableLayoutClasses.txt
+Modified:
+   TableLayout/trunk/build.properties
+   TableLayout/trunk/src/de/berlios/nblayoutpack/tablelayout/nb5.x/layer.xml
+   TableLayout/trunk/src/de/berlios/nblayoutpack/tablelayout/nb5.x/palette/TableLayout.palette_item
+Log:
+[CHANGE] Version bumped.
+[DEFECT] layer.xml and TableLayout.palette_item was incorrect for NB 5.0 - library reference corrected, layout registered in new invisible in palette category.
+[NEW]    Form editor classpath is updated.
+
+Modified: TableLayout/trunk/build.properties
+===================================================================
+--- TableLayout/trunk/build.properties	2005-10-07 20:02:08 UTC (rev 22)
++++ TableLayout/trunk/build.properties	2005-11-08 21:42:11 UTC (rev 23)
+@@ -2,4 +2,4 @@
+ name=nblayoutpack-tablelayout
+ src=src
+ 
+-spec.version=2.1.1
+\ No newline at end of file
++spec.version=2.1.2
+\ No newline at end of file
+
+Added: TableLayout/trunk/src/de/berlios/nblayoutpack/tablelayout/nb5.x/TableLayoutClasses.txt
+===================================================================
+--- TableLayout/trunk/src/de/berlios/nblayoutpack/tablelayout/nb5.x/TableLayoutClasses.txt	2005-10-07 20:02:08 UTC (rev 22)
++++ TableLayout/trunk/src/de/berlios/nblayoutpack/tablelayout/nb5.x/TableLayoutClasses.txt	2005-11-08 21:42:11 UTC (rev 23)
+@@ -0,0 +1 @@
++de.berlios.nblayoutpack.tablelayout.**
+\ No newline at end of file
+
+Modified: TableLayout/trunk/src/de/berlios/nblayoutpack/tablelayout/nb5.x/layer.xml
+===================================================================
+--- TableLayout/trunk/src/de/berlios/nblayoutpack/tablelayout/nb5.x/layer.xml	2005-10-07 20:02:08 UTC (rev 22)
++++ TableLayout/trunk/src/de/berlios/nblayoutpack/tablelayout/nb5.x/layer.xml	2005-11-08 21:42:11 UTC (rev 23)
+@@ -4,7 +4,7 @@
+ <filesystem>
+ 
+   <folder name="FormDesignerPalette">
+-    <folder name="Layouts">
++    <folder name="_Layouts_only_for_internal_use_">
+       <attr name="SystemFileSystem.localizingBundle" stringvalue="de.berlios.nblayoutpack.tablelayout.Bundle"/>
+       <file name="TableLayout.palette_item" url="palette/TableLayout.palette_item" />
+     </folder>
+@@ -16,4 +16,13 @@
+     </folder>
+   </folder>
+ 
++  <!-- form class loader type registration -->
++  <folder name="org-netbeans-modules-form">
++    <folder name="classloader">
++      <folder name="system">
++        <file name="TableLayoutClasses.txt" url="TableLayoutClasses.txt" />
++      </folder>
++    </folder>
++  </folder>
++
+ </filesystem>
+
+Modified: TableLayout/trunk/src/de/berlios/nblayoutpack/tablelayout/nb5.x/palette/TableLayout.palette_item
+===================================================================
+--- TableLayout/trunk/src/de/berlios/nblayoutpack/tablelayout/nb5.x/palette/TableLayout.palette_item	2005-10-07 20:02:08 UTC (rev 22)
++++ TableLayout/trunk/src/de/berlios/nblayoutpack/tablelayout/nb5.x/palette/TableLayout.palette_item	2005-11-08 21:42:11 UTC (rev 23)
+@@ -7,6 +7,6 @@
+   <description localizing-bundle="de.berlios.nblayoutpack.tablelayout.Bundle"
+                display-name-key="Palette/Layouts/info-clearthought-layout-TableLayout.instance" />
+   <classpath>
+-      <resource type="library" name="tablelayout" />
++      <resource type="library" name="TableLayout 3.4" />
+   </classpath>
+ </palette_item>
+
+
+
+From ikysil at berlios.de  Tue Nov  8 22:42:33 2005
+From: ikysil at berlios.de (Illya Kysil at BerliOS)
+Date: Tue, 8 Nov 2005 22:42:33 +0100
+Subject: [nblayoutpack-svn] r24 - in FormLayout/trunk: . src/de/berlios/nblayoutpack/formlayout/nb5.x src/de/berlios/nblayoutpack/formlayout/nb5.x/palette
+Message-ID: <200511082142.jA8LgXP2016587@sheep.berlios.de>
+
+Author: ikysil
+Date: 2005-11-08 22:42:32 +0100 (Tue, 08 Nov 2005)
+New Revision: 24
+
+Added:
+   FormLayout/trunk/src/de/berlios/nblayoutpack/formlayout/nb5.x/FormLayoutClasses.txt
+Modified:
+   FormLayout/trunk/build.properties
+   FormLayout/trunk/src/de/berlios/nblayoutpack/formlayout/nb5.x/layer.xml
+   FormLayout/trunk/src/de/berlios/nblayoutpack/formlayout/nb5.x/palette/FormLayout.palette_item
+Log:
+[CHANGE] Version bumped.
+[DEFECT] layer.xml and FormLayout.palette_item was incorrect for NB 5.0 - library reference corrected, layout registered in new invisible in palette category.
+[NEW]    Form editor classpath is updated.
+
+Modified: FormLayout/trunk/build.properties
+===================================================================
+--- FormLayout/trunk/build.properties	2005-11-08 21:42:11 UTC (rev 23)
++++ FormLayout/trunk/build.properties	2005-11-08 21:42:32 UTC (rev 24)
+@@ -2,4 +2,4 @@
+ name=nblayoutpack-formlayout
+ src=src
+ 
+-spec.version=2.0.2
+\ No newline at end of file
++spec.version=2.0.3
+\ No newline at end of file
+
+Added: FormLayout/trunk/src/de/berlios/nblayoutpack/formlayout/nb5.x/FormLayoutClasses.txt
+===================================================================
+--- FormLayout/trunk/src/de/berlios/nblayoutpack/formlayout/nb5.x/FormLayoutClasses.txt	2005-11-08 21:42:11 UTC (rev 23)
++++ FormLayout/trunk/src/de/berlios/nblayoutpack/formlayout/nb5.x/FormLayoutClasses.txt	2005-11-08 21:42:32 UTC (rev 24)
+@@ -0,0 +1 @@
++de.berlios.nblayoutpack.formlayout.**
+\ No newline at end of file
+
+Modified: FormLayout/trunk/src/de/berlios/nblayoutpack/formlayout/nb5.x/layer.xml
+===================================================================
+--- FormLayout/trunk/src/de/berlios/nblayoutpack/formlayout/nb5.x/layer.xml	2005-11-08 21:42:11 UTC (rev 23)
++++ FormLayout/trunk/src/de/berlios/nblayoutpack/formlayout/nb5.x/layer.xml	2005-11-08 21:42:32 UTC (rev 24)
+@@ -4,8 +4,9 @@
+ <filesystem>
+ 
+   <folder name="FormDesignerPalette">
+-    <folder name="Layouts">
+-        <file name="FormLayout.palette_item" url="palette/FormLayout.palette_item"/>
++    <folder name="_Layouts_only_for_internal_use_">
++      <attr name="SystemFileSystem.localizingBundle" stringvalue="de.berlios.nblayoutpack.formlayout.Bundle"/>
++      <file name="FormLayout.palette_item" url="palette/FormLayout.palette_item"/>
+     </folder>
+   </folder>
+ 
+@@ -15,4 +16,13 @@
+     </folder>
+   </folder>
+ 
++  <!-- form class loader type registration -->
++  <folder name="org-netbeans-modules-form">
++    <folder name="classloader">
++      <folder name="system">
++        <file name="FormLayoutClasses.txt" url="FormLayoutClasses.txt" />
++      </folder>
++    </folder>
++  </folder>
++
+ </filesystem>
+
+Modified: FormLayout/trunk/src/de/berlios/nblayoutpack/formlayout/nb5.x/palette/FormLayout.palette_item
+===================================================================
+--- FormLayout/trunk/src/de/berlios/nblayoutpack/formlayout/nb5.x/palette/FormLayout.palette_item	2005-11-08 21:42:11 UTC (rev 23)
++++ FormLayout/trunk/src/de/berlios/nblayoutpack/formlayout/nb5.x/palette/FormLayout.palette_item	2005-11-08 21:42:32 UTC (rev 24)
+@@ -7,6 +7,6 @@
+   <description localizing-bundle="de.berlios.nblayoutpack.formlayout.Bundle"
+                display-name-key="Palette/Layouts/com-jgoodies-forms-layout-FormLayout.instance" />
+   <classpath>
+-      <resource type="library" name="formlayout" />
++      <resource type="library" name="JGoodies Forms 1.0.5" />
+   </classpath>
+ </palette_item>
+
+
+
+From ikysil at berlios.de  Tue Nov  8 23:45:54 2005
+From: ikysil at berlios.de (Illya Kysil at BerliOS)
+Date: Tue, 8 Nov 2005 23:45:54 +0100
+Subject: [nblayoutpack-svn] r25 - TableLayout/tag
+Message-ID: <200511082245.jA8Mjsur022620@sheep.berlios.de>
+
+Author: ikysil
+Date: 2005-11-08 23:45:54 +0100 (Tue, 08 Nov 2005)
+New Revision: 25
+
+Added:
+   TableLayout/tag/20051108-2.1.2/
+Log:
+[NEW] Release 2.1.2.20051108
+
+Copied: TableLayout/tag/20051108-2.1.2 (from rev 24, TableLayout/trunk)
+
+
+
+From ikysil at berlios.de  Tue Nov  8 23:52:24 2005
+From: ikysil at berlios.de (Illya Kysil at BerliOS)
+Date: Tue, 8 Nov 2005 23:52:24 +0100
+Subject: [nblayoutpack-svn] r26 - FormLayout/tag
+Message-ID: <200511082252.jA8MqOKS023629@sheep.berlios.de>
+
+Author: ikysil
+Date: 2005-11-08 23:52:24 +0100 (Tue, 08 Nov 2005)
+New Revision: 26
+
+Added:
+   FormLayout/tag/20051108-2.0.3/
+Log:
+[NEW] Release 2.0.3.20051108
+
+Copied: FormLayout/tag/20051108-2.0.3 (from rev 25, FormLayout/trunk)
+
+
+
+From ikysil at berlios.de  Sat Nov 19 22:32:05 2005
+From: ikysil at berlios.de (ikysil at BerliOS)
+Date: Sat, 19 Nov 2005 22:32:05 +0100
+Subject: [nblayoutpack-svn] r27 - in FormLayout/trunk: nb4.1/nblayoutpack/nbproject nb5.0/nblayoutpack/nbproject
+Message-ID: <200511192132.jAJLW5OW008522@sheep.berlios.de>
+
+Author: ikysil
+Date: 2005-11-19 22:32:01 +0100 (Sat, 19 Nov 2005)
+New Revision: 27
+
+Removed:
+   FormLayout/trunk/nb4.1/nblayoutpack/nbproject/private/
+   FormLayout/trunk/nb5.0/nblayoutpack/nbproject/private/
+Log:
+[REMOVE] Removed private project files from VCS.
+
+
+
+From ikysil at berlios.de  Sat Nov 19 22:47:54 2005
+From: ikysil at berlios.de (ikysil at BerliOS)
+Date: Sat, 19 Nov 2005 22:47:54 +0100
+Subject: [nblayoutpack-svn] r28 - FormLayout/trunk/nb5.0/nblayoutpack/nbproject
+Message-ID: <200511192147.jAJLlskH009857@sheep.berlios.de>
+
+Author: ikysil
+Date: 2005-11-19 22:47:45 +0100 (Sat, 19 Nov 2005)
+New Revision: 28
+
+Modified:
+   FormLayout/trunk/nb5.0/nblayoutpack/nbproject/
+Log:
+[CHANGE] nbproject/private added to ignore list.
+
+
+Property changes on: FormLayout/trunk/nb5.0/nblayoutpack/nbproject
+___________________________________________________________________
+Name: svn:ignore
+   + private
+
+
+
+

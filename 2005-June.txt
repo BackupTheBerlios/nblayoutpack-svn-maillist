@@ -1,0 +1,481 @@
+From ikysil at sheep.berlios.de  Sat Jun 25 13:34:06 2005
+From: ikysil at sheep.berlios.de (Illya Kysil at BerliOS)
+Date: Sat, 25 Jun 2005 13:34:06 +0200
+Subject: [nblayoutpack-svn] r4 - TableLayout
+Message-ID: <200506251134.j5PBY6DD001648@sheep.berlios.de>
+
+Author: ikysil
+Date: 2005-06-25 13:33:58 +0200 (Sat, 25 Jun 2005)
+New Revision: 4
+
+Added:
+   TableLayout/tag/
+Log:
+[NEW] Root folder for tags.
+
+
+
+From ikysil at sheep.berlios.de  Sat Jun 25 13:37:37 2005
+From: ikysil at sheep.berlios.de (Illya Kysil at BerliOS)
+Date: Sat, 25 Jun 2005 13:37:37 +0200
+Subject: [nblayoutpack-svn] r5 - TableLayout/tag
+Message-ID: <200506251137.j5PBbbXa007938@sheep.berlios.de>
+
+Author: ikysil
+Date: 2005-06-25 13:37:34 +0200 (Sat, 25 Jun 2005)
+New Revision: 5
+
+Added:
+   TableLayout/tag/2.0.0.20050526.0031/
+Log:
+[NEW] Tagging build 2.0.0.20050526.0031 sources.
+
+Copied: TableLayout/tag/2.0.0.20050526.0031 (from rev 4, TableLayout/trunk)
+
+
+
+From ikysil at sheep.berlios.de  Sat Jun 25 13:39:06 2005
+From: ikysil at sheep.berlios.de (Illya Kysil at BerliOS)
+Date: Sat, 25 Jun 2005 13:39:06 +0200
+Subject: [nblayoutpack-svn] r6 - TableLayout/tag
+Message-ID: <200506251139.j5PBd6LG009198@sheep.berlios.de>
+
+Author: ikysil
+Date: 2005-06-25 13:38:59 +0200 (Sat, 25 Jun 2005)
+New Revision: 6
+
+Added:
+   TableLayout/tag/200505260031-2.0.0/
+Removed:
+   TableLayout/tag/2.0.0.20050526.0031/
+Log:
+[CHANGE] Renaming folder to allow better sorting in browser.
+
+Copied: TableLayout/tag/200505260031-2.0.0 (from rev 5, TableLayout/tag/2.0.0.20050526.0031)
+
+
+
+From ikysil at sheep.berlios.de  Sat Jun 25 16:39:44 2005
+From: ikysil at sheep.berlios.de (Illya Kysil at BerliOS)
+Date: Sat, 25 Jun 2005 16:39:44 +0200
+Subject: [nblayoutpack-svn] r7 - TableLayout/trunk/nb4.1/nblayoutpack/nbproject
+Message-ID: <200506251439.j5PEdia0006106@sheep.berlios.de>
+
+Author: ikysil
+Date: 2005-06-25 16:39:41 +0200 (Sat, 25 Jun 2005)
+New Revision: 7
+
+Removed:
+   TableLayout/trunk/nb4.1/nblayoutpack/nbproject/private/
+Log:
+[REMOVE] Private NB project directory removed.
+
+
+
+From ikysil at sheep.berlios.de  Sat Jun 25 16:43:03 2005
+From: ikysil at sheep.berlios.de (Illya Kysil at BerliOS)
+Date: Sat, 25 Jun 2005 16:43:03 +0200
+Subject: [nblayoutpack-svn] r8 - in TableLayout/trunk: . lib nb3.6 nb4.0/nblayoutpack nb4.0/nblayoutpack/nbproject nb4.1/nblayoutpack nb4.1/nblayoutpack/nbproject src/de/berlios/nblayoutpack/tablelayout src/de/berlios/nblayoutpack/tablelayout/nb3.6 src/de/berlios/nblayoutpack/tablelayout/nb4.x
+Message-ID: <200506251443.j5PEh3ct009415@sheep.berlios.de>
+
+Author: ikysil
+Date: 2005-06-25 16:43:01 +0200 (Sat, 25 Jun 2005)
+New Revision: 8
+
+Added:
+   TableLayout/trunk/lib/TableLayout-3.4-javadoc.jar
+   TableLayout/trunk/lib/TableLayout-3.4.jar
+   TableLayout/trunk/src/de/berlios/nblayoutpack/tablelayout/nb4.x/
+Removed:
+   TableLayout/trunk/lib/TableLayout-3.2.jar
+   TableLayout/trunk/src/de/berlios/nblayoutpack/tablelayout/nb4.0/
+Modified:
+   TableLayout/trunk/build.properties
+   TableLayout/trunk/nb3.6/build.xml
+   TableLayout/trunk/nb3.6/manifest.mf
+   TableLayout/trunk/nb4.0/nblayoutpack/build.xml
+   TableLayout/trunk/nb4.0/nblayoutpack/manifest.mf
+   TableLayout/trunk/nb4.0/nblayoutpack/nbproject/project.properties
+   TableLayout/trunk/nb4.1/nblayoutpack/build.xml
+   TableLayout/trunk/nb4.1/nblayoutpack/manifest.mf
+   TableLayout/trunk/nb4.1/nblayoutpack/nbproject/project.properties
+   TableLayout/trunk/src/de/berlios/nblayoutpack/tablelayout/Bundle.properties
+   TableLayout/trunk/src/de/berlios/nblayoutpack/tablelayout/nb3.6/layer.xml
+   TableLayout/trunk/src/de/berlios/nblayoutpack/tablelayout/nb3.6/tablelayout.xml
+   TableLayout/trunk/src/de/berlios/nblayoutpack/tablelayout/nb4.x/tablelayout.xml
+Log:
+[CHANGE] Upgrading TableLayout library to version 3.4.
+[NEW]    Javadoc documentation for TableLayout.
+[CHANGE] de/berlios/nblayoutpack/tablelayout/nb4.0 directory renamed to nb4.x since
+         it contains resources common for NetBeans 4.x series.
+
+Modified: TableLayout/trunk/build.properties
+===================================================================
+--- TableLayout/trunk/build.properties	2005-06-25 14:39:41 UTC (rev 7)
++++ TableLayout/trunk/build.properties	2005-06-25 14:43:01 UTC (rev 8)
+@@ -2,4 +2,4 @@
+ name=nblayoutpack-tablelayout
+ src=src
+ 
+-spec.version=2.0.0
+\ No newline at end of file
++spec.version=2.1.0
+\ No newline at end of file
+
+Deleted: TableLayout/trunk/lib/TableLayout-3.2.jar
+===================================================================
+(Binary files differ)
+
+Added: TableLayout/trunk/lib/TableLayout-3.4-javadoc.jar
+===================================================================
+(Binary files differ)
+
+
+Property changes on: TableLayout/trunk/lib/TableLayout-3.4-javadoc.jar
+___________________________________________________________________
+Name: svn:mime-type
+   + application/octet-stream
+
+Added: TableLayout/trunk/lib/TableLayout-3.4.jar
+===================================================================
+(Binary files differ)
+
+
+Property changes on: TableLayout/trunk/lib/TableLayout-3.4.jar
+___________________________________________________________________
+Name: svn:mime-type
+   + application/octet-stream
+
+Modified: TableLayout/trunk/nb3.6/build.xml
+===================================================================
+--- TableLayout/trunk/nb3.6/build.xml	2005-06-25 14:39:41 UTC (rev 7)
++++ TableLayout/trunk/nb3.6/build.xml	2005-06-25 14:43:01 UTC (rev 8)
+@@ -19,7 +19,7 @@
+     <!-- This might instead be in ${netbeans.user}/ant/extra/nbantext.jar: -->
+     <property name="nbantext.jar" location="${nb}/ant/extra/nbantext.jar"/>
+     <!-- Adjust to be the name of your module for JARs etc.: -->
+-    <property name="name" value="nblayoutpack"/>
++    <property name="name" value="nblayoutpack-tablelayout"/>
+     <!-- Location of sources (classpath root): -->
+     <property name="src" location="${basedir}/src"/>
+     <property name="output" location="${basedir}/../output"/>
+@@ -43,7 +43,7 @@
+                 <pathelement location="${nb}/lib/openide.jar"/>
+                 <pathelement location="${nb}/lib/openide-loaders.jar"/>
+                 <pathelement location="${nb}/modules/form.jar"/>
+-                <pathelement location="lib/TableLayout-3.2.jar"/>
++                <pathelement location="lib/TableLayout-3.4.jar"/>
+             </classpath>
+         </javac>
+     </target>
+@@ -66,11 +66,9 @@
+ 
+     <target name="all" depends="clean,jars" description="Build the module.">
+       <mkdir dir="${output}/netbeans/modules/ext/nblayoutpack"/>
+-      <copy todir="${output}/netbeans/modules/ext/nblayoutpack">
+-        <fileset dir="lib">
+-          <include name="*.jar"/>
+-        </fileset>
+-      </copy>
++      <copy todir="${output}/netbeans/modules/ext/nblayoutpack" file="lib/TableLayout-3.4.jar"/>
++      <mkdir dir="${output}/netbeans/docs/nblayoutpack"/>
++      <copy todir="${output}/netbeans/docs/nblayoutpack" file="lib/TableLayout-3.4-javadoc.jar"/>
+     </target>
+ 
+     <!-- This target will only work *inside* the IDE! -->
+@@ -83,7 +81,7 @@
+       <mkdir dir="${output}/reload"/>
+       <zip zipfile="${output}/reload/${name}.jar" compress="true">
+         <zipfileset src="${output}/netbeans/modules/${name}.jar"/>
+-        <zipfileset src="${output}/netbeans/modules/ext/nblayoutpack/TableLayout-3.2.jar">
++        <zipfileset src="${output}/netbeans/modules/ext/nblayoutpack/TableLayout-3.4.jar">
+           <exclude name="META-INF/MANIFEST.MF"/>
+         </zipfileset>
+       </zip>
+
+Modified: TableLayout/trunk/nb3.6/manifest.mf
+===================================================================
+--- TableLayout/trunk/nb3.6/manifest.mf	2005-06-25 14:39:41 UTC (rev 7)
++++ TableLayout/trunk/nb3.6/manifest.mf	2005-06-25 14:43:01 UTC (rev 8)
+@@ -4,4 +4,4 @@
+ OpenIDE-Module-Layer: de/berlios/nblayoutpack/tablelayout/nb3.6/layer.xml
+ OpenIDE-Module-Install: de/berlios/nblayoutpack/tablelayout/TableLayoutModule.class
+ OpenIDE-Module-Module-Dependencies: org.netbeans.modules.form/2
+-Class-Path: ext/nblayoutpack/TableLayout-3.2.jar
++Class-Path: ext/nblayoutpack/TableLayout-3.4.jar
+
+Modified: TableLayout/trunk/nb4.0/nblayoutpack/build.xml
+===================================================================
+--- TableLayout/trunk/nb4.0/nblayoutpack/build.xml	2005-06-25 14:39:41 UTC (rev 7)
++++ TableLayout/trunk/nb4.0/nblayoutpack/build.xml	2005-06-25 14:43:01 UTC (rev 8)
+@@ -42,13 +42,11 @@
+     Identifies all the files to be considered part of this module when deployed 
+     -->
+     <target name="files-init" depends="basic-init">
+-        <echo>${module.jar}</echo>
+-        <echo>${nb.system.dir}/Modules/${code.name.base.dashes}.xml</echo>
+-        <echo>${nb.modules.dir}/ext/nblayoutpack/TableLayout-3.2.jar</echo>
+         <patternset id="module.files">
+             <include name="${module.jar}"/>
+             <include name="${nb.system.dir}/Modules/${code.name.base.dashes}.xml"/>
+-            <include name="${nb.modules.dir}/ext/nblayoutpack/TableLayout-3.2.jar"/>
++            <include name="${nb.modules.dir}/ext/nblayoutpack/TableLayout-3.4.jar"/>
++            <include name="docs/nblayoutpack/TableLayout-3.4-javadoc.jar"/>
+         </patternset>
+     </target>
+ 
+@@ -60,12 +58,12 @@
+     -->
+          
+     <target name="netbeans-extra" depends="init">
+-        <mkdir dir="${netbeans.dest.dir}/${cluster.dir}/${nb.modules.dir}/ext/nblayoutpack"/>
+-        <copy todir="${netbeans.dest.dir}/${cluster.dir}/${nb.modules.dir}/ext/nblayoutpack">
+-          <fileset dir="../../lib">
+-            <include name="TableLayout-3.2.jar"/>
+-          </fileset>
+-        </copy>
++        <property name="modules.dir" value="${netbeans.dest.dir}/${cluster.dir}/${nb.modules.dir}"/>
++        <mkdir dir="${modules.dir}/ext/nblayoutpack"/>
++        <copy todir="${modules.dir}/ext/nblayoutpack" file="../../lib/TableLayout-3.4.jar"/>
++        <property name="module.cluster.dir" value="${netbeans.dest.dir}/${cluster.dir}"/>
++        <mkdir dir="${module.cluster.dir}/docs/nblayoutpack"/>
++        <copy todir="${module.cluster.dir}/docs/nblayoutpack" file="../../lib/TableLayout-3.4-javadoc.jar"/>
+     </target>
+ 
+ 
+
+Modified: TableLayout/trunk/nb4.0/nblayoutpack/manifest.mf
+===================================================================
+--- TableLayout/trunk/nb4.0/nblayoutpack/manifest.mf	2005-06-25 14:39:41 UTC (rev 7)
++++ TableLayout/trunk/nb4.0/nblayoutpack/manifest.mf	2005-06-25 14:43:01 UTC (rev 8)
+@@ -1,7 +1,7 @@
+ Manifest-Version: 1.0
+ OpenIDE-Module: de.berlios.nblayoutpack.tablelayout
+ OpenIDE-Module-Localizing-Bundle: de/berlios/nblayoutpack/tablelayout/Bundle.properties
+-OpenIDE-Module-Layer: de/berlios/nblayoutpack/tablelayout/nb4.0/layer.xml
++OpenIDE-Module-Layer: de/berlios/nblayoutpack/tablelayout/nb4.x/layer.xml
+ OpenIDE-Module-Install: de/berlios/nblayoutpack/tablelayout/TableLayoutModule.class
+ OpenIDE-Module-Module-Dependencies: org.netbeans.modules.form/2 = 200412081800
+ Class-Path: ext/nblayoutpack/TableLayout-3.2.jar
+
+Modified: TableLayout/trunk/nb4.0/nblayoutpack/nbproject/project.properties
+===================================================================
+--- TableLayout/trunk/nb4.0/nblayoutpack/nbproject/project.properties	2005-06-25 14:39:41 UTC (rev 7)
++++ TableLayout/trunk/nb4.0/nblayoutpack/nbproject/project.properties	2005-06-25 14:43:01 UTC (rev 8)
+@@ -10,7 +10,7 @@
+ # Microsystems, Inc. All Rights Reserved.
+ 
+ 
+-cp.extra=../../lib/TableLayout-3.2.jar
++cp.extra=../../lib/TableLayout-3.4.jar
+ 
+ src.dir=../../src
+ 
+
+Modified: TableLayout/trunk/nb4.1/nblayoutpack/build.xml
+===================================================================
+--- TableLayout/trunk/nb4.1/nblayoutpack/build.xml	2005-06-25 14:39:41 UTC (rev 7)
++++ TableLayout/trunk/nb4.1/nblayoutpack/build.xml	2005-06-25 14:43:01 UTC (rev 8)
+@@ -42,13 +42,11 @@
+     Identifies all the files to be considered part of this module when deployed 
+     -->
+     <target name="files-init" depends="basic-init">
+-        <echo>${module.jar}</echo>
+-        <echo>${nb.system.dir}/Modules/${code.name.base.dashes}.xml</echo>
+-        <echo>${nb.modules.dir}/ext/nblayoutpack/TableLayout-3.2.jar</echo>
+         <patternset id="module.files">
+             <include name="${module.jar}"/>
+             <include name="${nb.system.dir}/Modules/${code.name.base.dashes}.xml"/>
+-            <include name="${nb.modules.dir}/ext/nblayoutpack/TableLayout-3.2.jar"/>
++            <include name="${nb.modules.dir}/ext/nblayoutpack/TableLayout-3.4.jar"/>
++            <include name="docs/nblayoutpack/TableLayout-3.4-javadoc.jar"/>
+         </patternset>
+     </target>
+ 
+@@ -60,12 +58,12 @@
+     -->
+          
+     <target name="netbeans-extra" depends="init">
+-        <mkdir dir="${netbeans.dest.dir}/${cluster.dir}/${nb.modules.dir}/ext/nblayoutpack"/>
+-        <copy todir="${netbeans.dest.dir}/${cluster.dir}/${nb.modules.dir}/ext/nblayoutpack">
+-          <fileset dir="../../lib">
+-            <include name="TableLayout-3.2.jar"/>
+-          </fileset>
+-        </copy>
++        <property name="modules.dir" value="${netbeans.dest.dir}/${cluster.dir}/${nb.modules.dir}"/>
++        <mkdir dir="${modules.dir}/ext/nblayoutpack"/>
++        <copy todir="${modules.dir}/ext/nblayoutpack" file="../../lib/TableLayout-3.4.jar"/>
++        <property name="module.cluster.dir" value="${netbeans.dest.dir}/${cluster.dir}"/>
++        <mkdir dir="${module.cluster.dir}/docs/nblayoutpack"/>
++        <copy todir="${module.cluster.dir}/docs/nblayoutpack" file="../../lib/TableLayout-3.4-javadoc.jar"/>
+     </target>
+ 
+ 
+
+Modified: TableLayout/trunk/nb4.1/nblayoutpack/manifest.mf
+===================================================================
+--- TableLayout/trunk/nb4.1/nblayoutpack/manifest.mf	2005-06-25 14:39:41 UTC (rev 7)
++++ TableLayout/trunk/nb4.1/nblayoutpack/manifest.mf	2005-06-25 14:43:01 UTC (rev 8)
+@@ -1,7 +1,7 @@
+ Manifest-Version: 1.0
+ OpenIDE-Module: de.berlios.nblayoutpack.tablelayout
+ OpenIDE-Module-Localizing-Bundle: de/berlios/nblayoutpack/tablelayout/Bundle.properties
+-OpenIDE-Module-Layer: de/berlios/nblayoutpack/tablelayout/nb4.0/layer.xml
++OpenIDE-Module-Layer: de/berlios/nblayoutpack/tablelayout/nb4.x/layer.xml
+ OpenIDE-Module-Install: de/berlios/nblayoutpack/tablelayout/TableLayoutModule.class
+ OpenIDE-Module-Module-Dependencies: org.netbeans.modules.form/2 = 200505031930
+-Class-Path: ext/nblayoutpack/TableLayout-3.2.jar
++Class-Path: ext/nblayoutpack/TableLayout-3.4.jar
+
+Modified: TableLayout/trunk/nb4.1/nblayoutpack/nbproject/project.properties
+===================================================================
+--- TableLayout/trunk/nb4.1/nblayoutpack/nbproject/project.properties	2005-06-25 14:39:41 UTC (rev 7)
++++ TableLayout/trunk/nb4.1/nblayoutpack/nbproject/project.properties	2005-06-25 14:43:01 UTC (rev 8)
+@@ -10,7 +10,7 @@
+ # Microsystems, Inc. All Rights Reserved.
+ 
+ 
+-cp.extra=../../lib/TableLayout-3.2.jar
++cp.extra=../../lib/TableLayout-3.4.jar
+ 
+ src.dir=../../src
+ 
+
+Modified: TableLayout/trunk/src/de/berlios/nblayoutpack/tablelayout/Bundle.properties
+===================================================================
+--- TableLayout/trunk/src/de/berlios/nblayoutpack/tablelayout/Bundle.properties	2005-06-25 14:39:41 UTC (rev 7)
++++ TableLayout/trunk/src/de/berlios/nblayoutpack/tablelayout/Bundle.properties	2005-06-25 14:43:01 UTC (rev 8)
+@@ -1,9 +1,9 @@
+ ## Resource bundle for package de.berlios.nblayoutpack.tablelayout
+ #Sun Dec 19 18:53:08 EET 2004
+ OpenIDE-Module-Display-Category=NetBeans Layout Pack
+-OpenIDE-Module-Name=TableLayout 3.2 support
++OpenIDE-Module-Name=TableLayout 3.4 support
+ OpenIDE-Module-Long-Description=TableLayout layout manager support.
+-Mount/java/tablelayout.xml=TableLayout 3.2
++Mount/java/tablelayout.xml=TableLayout 3.4
+ Palette/Layouts/info-clearthought-layout-TableLayout.instance=TableLayout
+ 
+ PROP_hGap=Horizontal Gap
+
+Modified: TableLayout/trunk/src/de/berlios/nblayoutpack/tablelayout/nb3.6/layer.xml
+===================================================================
+--- TableLayout/trunk/src/de/berlios/nblayoutpack/tablelayout/nb3.6/layer.xml	2005-06-25 14:39:41 UTC (rev 7)
++++ TableLayout/trunk/src/de/berlios/nblayoutpack/tablelayout/nb3.6/layer.xml	2005-06-25 14:43:01 UTC (rev 8)
+@@ -10,6 +10,21 @@
+     </folder>
+   </folder>
+ 
++  <!-- Mount documentation automatically. -->
++  <folder name="Mount">
++    <folder name="Javadoc">
++      <file name="info-clearthought-layout-TableLayout-javadoc.xml">
++        <![CDATA[<?xml version="1.0"?>
++<!DOCTYPE Javadoc PUBLIC
++          "-//NetBeans IDE//DTD JavadocLibrary//EN"
++          "http://www.netbeans.org/dtds/JavadocLibrary-1_0.dtd">
++<Javadoc>
++  <Archive name="docs/nblayoutpack/TableLayout-3.4-javadoc.jar"/>
++</Javadoc>
++]]>
++      </file>
++    </folder>
++  </folder>
+   <folder name="Palette">
+     <folder name="Layouts">
+       <file name="info-clearthought-layout-TableLayout.instance">
+
+Modified: TableLayout/trunk/src/de/berlios/nblayoutpack/tablelayout/nb3.6/tablelayout.xml
+===================================================================
+--- TableLayout/trunk/src/de/berlios/nblayoutpack/tablelayout/nb3.6/tablelayout.xml	2005-06-25 14:39:41 UTC (rev 7)
++++ TableLayout/trunk/src/de/berlios/nblayoutpack/tablelayout/nb3.6/tablelayout.xml	2005-06-25 14:43:01 UTC (rev 8)
+@@ -2,5 +2,5 @@
+ 
+ <!DOCTYPE library PUBLIC "-//NetBeans//DTD Java Library 1.1//EN" "http://www.netbeans.org/dtds/java-library-1_1.dtd">
+ <library>
+-  <archive name="modules/ext/nblayoutpack/TableLayout-3.2.jar"/>
++  <archive name="modules/ext/nblayoutpack/TableLayout-3.4.jar"/>
+ </library>
+
+Copied: TableLayout/trunk/src/de/berlios/nblayoutpack/tablelayout/nb4.x (from rev 3, TableLayout/trunk/src/de/berlios/nblayoutpack/tablelayout/nb4.0)
+
+Modified: TableLayout/trunk/src/de/berlios/nblayoutpack/tablelayout/nb4.x/tablelayout.xml
+===================================================================
+--- TableLayout/trunk/src/de/berlios/nblayoutpack/tablelayout/nb4.0/tablelayout.xml	2005-05-25 06:54:07 UTC (rev 3)
++++ TableLayout/trunk/src/de/berlios/nblayoutpack/tablelayout/nb4.x/tablelayout.xml	2005-06-25 14:43:01 UTC (rev 8)
+@@ -3,11 +3,15 @@
+ <!DOCTYPE library PUBLIC "-//NetBeans//DTD Library Declaration 1.0//EN" "http://www.netbeans.org/dtds/library-declaration-1_0.dtd">
+ 
+ <library version="1.0">
+-    <name>TableLayout 3.2</name>
++    <name>TableLayout 3.4</name>
+     <type>j2se</type>
+     <localizing-bundle>de/berlios/nblayoutpack/tablelayout/Bundle</localizing-bundle>
+     <volume>
+         <type>classpath</type>
+-        <resource>jar:nbinst:///modules/ext/nblayoutpack/TableLayout-3.2.jar!/</resource>
++        <resource>jar:nbinst:///modules/ext/nblayoutpack/TableLayout-3.4.jar!/</resource>
+     </volume>
++    <volume>
++        <type>javadoc</type>
++        <resource>jar:nbinst:///docs/nblayoutpack/TableLayout-3.4-javadoc.jar!/</resource>
++    </volume>
+ </library>
+
+
+
+From ikysil at sheep.berlios.de  Sat Jun 25 18:32:02 2005
+From: ikysil at sheep.berlios.de (Illya Kysil at BerliOS)
+Date: Sat, 25 Jun 2005 18:32:02 +0200
+Subject: [nblayoutpack-svn] r9 - in FormLayout/trunk: . src/de/berlios/nblayoutpack/formlayout
+Message-ID: <200506251632.j5PGW2mU009249@sheep.berlios.de>
+
+Author: ikysil
+Date: 2005-06-25 18:31:47 +0200 (Sat, 25 Jun 2005)
+New Revision: 9
+
+Modified:
+   FormLayout/trunk/build.properties
+   FormLayout/trunk/src/de/berlios/nblayoutpack/formlayout/FormLayoutSupport.java
+Log:
+[BUG] #4210 FormLayout - GridX and GridY can't change.
+      acceptComponentLayoutChange doesn't accepted values of 1 - fixed.
+
+Modified: FormLayout/trunk/build.properties
+===================================================================
+--- FormLayout/trunk/build.properties	2005-06-25 14:43:01 UTC (rev 8)
++++ FormLayout/trunk/build.properties	2005-06-25 16:31:47 UTC (rev 9)
+@@ -2,4 +2,4 @@
+ name=nblayoutpack-formlayout
+ src=src
+ 
+-spec.version=2.0.0
+\ No newline at end of file
++spec.version=2.0.1
+\ No newline at end of file
+
+Modified: FormLayout/trunk/src/de/berlios/nblayoutpack/formlayout/FormLayoutSupport.java
+===================================================================
+--- FormLayout/trunk/src/de/berlios/nblayoutpack/formlayout/FormLayoutSupport.java	2005-06-25 14:43:01 UTC (rev 8)
++++ FormLayout/trunk/src/de/berlios/nblayoutpack/formlayout/FormLayoutSupport.java	2005-06-25 16:31:47 UTC (rev 9)
+@@ -663,7 +663,7 @@
+     boolean isValid = true;
+     if(ev.getPropertyName().equals("CellConstraints.gridX")){
+       int gridX = ((Integer)ev.getNewValue()).intValue();
+-      isValid = (gridX > 1) && (gridX + flConstr.gridWidth - 1 <= formLayout.getColumnCount());
++      isValid = (gridX > 0) && (gridX + flConstr.gridWidth - 1 <= formLayout.getColumnCount());
+     }
+     if(ev.getPropertyName().equals("CellConstraints.gridWidth")){
+       int gridWidth = ((Integer)ev.getNewValue()).intValue();
+@@ -671,7 +671,7 @@
+     }
+     if(ev.getPropertyName().equals("CellConstraints.gridY")){
+       int gridY = ((Integer)ev.getNewValue()).intValue();
+-      isValid = (gridY > 1) && (gridY + flConstr.gridHeight - 1 <= formLayout.getRowCount());
++      isValid = (gridY > 0) && (gridY + flConstr.gridHeight - 1 <= formLayout.getRowCount());
+     }
+     if(ev.getPropertyName().equals("CellConstraints.gridHeight")){
+       int gridHeight = ((Integer)ev.getNewValue()).intValue();
+
+
+

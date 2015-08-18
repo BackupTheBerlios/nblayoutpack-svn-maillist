@@ -1,0 +1,355 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [nblayoutpack-svn] r17 - in FormLayout/trunk: . nb5.0 nb5.0/nblayoutpack nb5.0/nblayoutpack/nbproject nb5.0/nblayoutpack/nbproject/private src/de/berlios/nblayoutpack/formlayout src/de/berlios/nblayoutpack/formlayout/nb5.x src/de/berlios/nblayoutpack/formlayout/nb5.x/palette
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/nblayoutpack-svn/2005-October/index.html" >
+   <LINK REL="made" HREF="mailto:nblayoutpack-svn%40lists.berlios.de?Subject=Re%3A%20%5Bnblayoutpack-svn%5D%20r17%20-%20in%20FormLayout/trunk%3A%20.%20nb5.0%20nb5.0/nblayoutpack%20nb5.0/nblayoutpack/nbproject%20nb5.0/nblayoutpack/nbproject/private%20src/de/berlios/nblayoutpack/formlayout%20src/de/berlios/nblayoutpack/formlayout/nb5.x%20src/de/berlios/nblayoutpack/formlayout/nb5.x/palette&In-Reply-To=%3C200510061956.j96Jup4v027218%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   
+   <LINK REL="Next"  HREF="000017.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[nblayoutpack-svn] r17 - in FormLayout/trunk: . nb5.0 nb5.0/nblayoutpack nb5.0/nblayoutpack/nbproject nb5.0/nblayoutpack/nbproject/private src/de/berlios/nblayoutpack/formlayout src/de/berlios/nblayoutpack/formlayout/nb5.x src/de/berlios/nblayoutpack/formlayout/nb5.x/palette</H1>
+    <B>Illya Kysil at BerliOS</B> 
+    <A HREF="mailto:nblayoutpack-svn%40lists.berlios.de?Subject=Re%3A%20%5Bnblayoutpack-svn%5D%20r17%20-%20in%20FormLayout/trunk%3A%20.%20nb5.0%20nb5.0/nblayoutpack%20nb5.0/nblayoutpack/nbproject%20nb5.0/nblayoutpack/nbproject/private%20src/de/berlios/nblayoutpack/formlayout%20src/de/berlios/nblayoutpack/formlayout/nb5.x%20src/de/berlios/nblayoutpack/formlayout/nb5.x/palette&In-Reply-To=%3C200510061956.j96Jup4v027218%40sheep.berlios.de%3E"
+       TITLE="[nblayoutpack-svn] r17 - in FormLayout/trunk: . nb5.0 nb5.0/nblayoutpack nb5.0/nblayoutpack/nbproject nb5.0/nblayoutpack/nbproject/private src/de/berlios/nblayoutpack/formlayout src/de/berlios/nblayoutpack/formlayout/nb5.x src/de/berlios/nblayoutpack/formlayout/nb5.x/palette">ikysil at berlios.de
+       </A><BR>
+    <I>Thu Oct  6 21:56:51 CEST 2005</I>
+    <P><UL>
+        
+        <LI>Next message: <A HREF="000017.html">[nblayoutpack-svn] r18 - in TableLayout/trunk: . nb5.0 nb5.0/nblayoutpack nb5.0/nblayoutpack/nbproject src/de/berlios/nblayoutpack/tablelayout src/de/berlios/nblayoutpack/tablelayout/nb5.x src/de/berlios/nblayoutpack/tablelayout/nb5.x/palette
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#16">[ date ]</a>
+              <a href="thread.html#16">[ thread ]</a>
+              <a href="subject.html#16">[ subject ]</a>
+              <a href="author.html#16">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: ikysil
+Date: 2005-10-06 21:56:51 +0200 (Thu, 06 Oct 2005)
+New Revision: 17
+
+Added:
+   FormLayout/trunk/nb5.0/
+   FormLayout/trunk/nb5.0/nblayoutpack/
+   FormLayout/trunk/nb5.0/nblayoutpack/build.xml
+   FormLayout/trunk/nb5.0/nblayoutpack/manifest.mf
+   FormLayout/trunk/nb5.0/nblayoutpack/nbproject/
+   FormLayout/trunk/nb5.0/nblayoutpack/nbproject/build-impl.xml
+   FormLayout/trunk/nb5.0/nblayoutpack/nbproject/genfiles.properties
+   FormLayout/trunk/nb5.0/nblayoutpack/nbproject/platform.properties
+   FormLayout/trunk/nb5.0/nblayoutpack/nbproject/private/
+   FormLayout/trunk/nb5.0/nblayoutpack/nbproject/private/platform-private.properties
+   FormLayout/trunk/nb5.0/nblayoutpack/nbproject/private/private.properties
+   FormLayout/trunk/nb5.0/nblayoutpack/nbproject/private/private.xml
+   FormLayout/trunk/nb5.0/nblayoutpack/nbproject/project.properties
+   FormLayout/trunk/nb5.0/nblayoutpack/nbproject/project.xml
+   FormLayout/trunk/src/de/berlios/nblayoutpack/formlayout/nb5.x/
+   FormLayout/trunk/src/de/berlios/nblayoutpack/formlayout/nb5.x/formlayout.xml
+   FormLayout/trunk/src/de/berlios/nblayoutpack/formlayout/nb5.x/layer.xml
+   FormLayout/trunk/src/de/berlios/nblayoutpack/formlayout/nb5.x/palette/
+   FormLayout/trunk/src/de/berlios/nblayoutpack/formlayout/nb5.x/palette/FormLayout.palette_item
+Log:
+[NEW] NetBeans 5.0 (beta) project and module configuration files.
+
+Added: FormLayout/trunk/nb5.0/nblayoutpack/build.xml
+===================================================================
+--- FormLayout/trunk/nb5.0/nblayoutpack/build.xml	2005-08-05 21:59:13 UTC (rev 16)
++++ FormLayout/trunk/nb5.0/nblayoutpack/build.xml	2005-10-06 19:56:51 UTC (rev 17)
+@@ -0,0 +1,25 @@
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
++&lt;!-- You may freely edit this file. See harness/README in the NetBeans platform --&gt;
++&lt;!-- for some information on what you could do (e.g. targets to override). --&gt;
++&lt;!-- If you delete this file and reopen the project it will be recreated. --&gt;
++&lt;project name=&quot;de.berlios.nblayoutpack.formlayout&quot; default=&quot;netbeans&quot; basedir=&quot;.&quot;&gt;
++    &lt;description&gt;Builds, tests, and runs the project de.berlios.nblayoutpack.formlayout.&lt;/description&gt;
++    &lt;import file=&quot;nbproject/build-impl.xml&quot;/&gt;
++
++
++    &lt;property file=&quot;../../build.properties&quot;/&gt;
++    &lt;tstamp&gt;
++      &lt;format property=&quot;buildnumbertimestamp&quot; pattern=&quot;yyyyMMdd.HHmm&quot;/&gt;
++    &lt;/tstamp&gt;
++    &lt;property name=&quot;impl.version&quot; value=&quot;${spec.version}.${buildnumbertimestamp}&quot;/&gt;
++
++    &lt;target name=&quot;netbeans-extra&quot; depends=&quot;init&quot;&gt;
++        &lt;mkdir dir=&quot;${cluster}/modules/ext/nblayoutpack&quot;/&gt;
++        &lt;copy todir=&quot;${cluster}/modules/ext/nblayoutpack&quot;&gt;
++          &lt;fileset dir=&quot;../../lib&quot;&gt;
++            &lt;include name=&quot;forms-1.0.5.jar&quot;/&gt;
++          &lt;/fileset&gt;
++        &lt;/copy&gt;
++    &lt;/target&gt;
++
++&lt;/project&gt;
+
+Added: FormLayout/trunk/nb5.0/nblayoutpack/manifest.mf
+===================================================================
+--- FormLayout/trunk/nb5.0/nblayoutpack/manifest.mf	2005-08-05 21:59:13 UTC (rev 16)
++++ FormLayout/trunk/nb5.0/nblayoutpack/manifest.mf	2005-10-06 19:56:51 UTC (rev 17)
+@@ -0,0 +1,7 @@
++Manifest-Version: 1.0
++OpenIDE-Module: de.berlios.nblayoutpack.formlayout/2
++OpenIDE-Module-Localizing-Bundle: de/berlios/nblayoutpack/formlayout/Bundle.properties
++OpenIDE-Module-Layer: de/berlios/nblayoutpack/formlayout/nb5.x/layer.xml
++OpenIDE-Module-Install: de/berlios/nblayoutpack/formlayout/FormLayoutModule.class
++OpenIDE-Module-Specification-Version: 2.0.2
++
+
+Added: FormLayout/trunk/nb5.0/nblayoutpack/nbproject/build-impl.xml
+===================================================================
+--- FormLayout/trunk/nb5.0/nblayoutpack/nbproject/build-impl.xml	2005-08-05 21:59:13 UTC (rev 16)
++++ FormLayout/trunk/nb5.0/nblayoutpack/nbproject/build-impl.xml	2005-10-06 19:56:51 UTC (rev 17)
+@@ -0,0 +1,27 @@
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
++&lt;!--
++*** GENERATED FROM project.xml - DO NOT EDIT  ***
++***         EDIT ../build.xml INSTEAD         ***
++--&gt;
++&lt;project name=&quot;de.berlios.nblayoutpack.formlayout-impl&quot; basedir=&quot;..&quot; xmlns:nbmproject=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-project/2">http://www.netbeans.org/ns/nb-module-project/2</A>&quot;&gt;
++    &lt;property file=&quot;nbproject/private/platform-private.properties&quot;/&gt;
++    &lt;property file=&quot;nbproject/platform.properties&quot;/&gt;
++    &lt;macrodef name=&quot;property&quot; uri=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-project/2">http://www.netbeans.org/ns/nb-module-project/2</A>&quot;&gt;
++        &lt;attribute name=&quot;name&quot;/&gt;
++        &lt;attribute name=&quot;value&quot;/&gt;
++        &lt;sequential&gt;
++            &lt;property name=&quot;@{name}&quot; value=&quot;${@{value}}&quot;/&gt;
++        &lt;/sequential&gt;
++    &lt;/macrodef&gt;
++    &lt;property file=&quot;${user.properties.file}&quot;/&gt;
++    &lt;nbmproject:property name=&quot;harness.dir&quot; value=&quot;nbplatform.${nbplatform.active}.harness.dir&quot;/&gt;
++    &lt;nbmproject:property name=&quot;netbeans.dest.dir&quot; value=&quot;nbplatform.${nbplatform.active}.netbeans.dest.dir&quot;/&gt;
++    &lt;fail message=&quot;You must define 'nbplatform.${nbplatform.active}.harness.dir'&quot;&gt;
++        &lt;condition&gt;
++            &lt;not&gt;
++                &lt;available file=&quot;${harness.dir}&quot; type=&quot;dir&quot;/&gt;
++            &lt;/not&gt;
++        &lt;/condition&gt;
++    &lt;/fail&gt;
++    &lt;import file=&quot;${harness.dir}/build.xml&quot;/&gt;
++&lt;/project&gt;
+
+Added: FormLayout/trunk/nb5.0/nblayoutpack/nbproject/genfiles.properties
+===================================================================
+--- FormLayout/trunk/nb5.0/nblayoutpack/nbproject/genfiles.properties	2005-08-05 21:59:13 UTC (rev 16)
++++ FormLayout/trunk/nb5.0/nblayoutpack/nbproject/genfiles.properties	2005-10-06 19:56:51 UTC (rev 17)
+@@ -0,0 +1,8 @@
++build.xml.data.CRC32=0bd5dd98
++build.xml.script.CRC32=0f678541
++build.xml.stylesheet.CRC32=1101b4cf
++# This file is used by a NetBeans-based IDE to track changes in generated files such as build-impl.xml.
++# Do not edit this file. You may delete it but then the IDE will never regenerate such files for you.
++nbproject/build-impl.xml.data.CRC32=943f078a
++nbproject/build-impl.xml.script.CRC32=eafe6218
++nbproject/build-impl.xml.stylesheet.CRC32=d126b16b
+
+Added: FormLayout/trunk/nb5.0/nblayoutpack/nbproject/platform.properties
+===================================================================
+--- FormLayout/trunk/nb5.0/nblayoutpack/nbproject/platform.properties	2005-08-05 21:59:13 UTC (rev 16)
++++ FormLayout/trunk/nb5.0/nblayoutpack/nbproject/platform.properties	2005-10-06 19:56:51 UTC (rev 17)
+@@ -0,0 +1,2 @@
++nbplatform.active=default
++nbplatform.default.harness.dir=T:/NetBeans/5.0 Beta/harness
+\ No newline at end of file
+
+Added: FormLayout/trunk/nb5.0/nblayoutpack/nbproject/private/platform-private.properties
+===================================================================
+--- FormLayout/trunk/nb5.0/nblayoutpack/nbproject/private/platform-private.properties	2005-08-05 21:59:13 UTC (rev 16)
++++ FormLayout/trunk/nb5.0/nblayoutpack/nbproject/private/platform-private.properties	2005-10-06 19:56:51 UTC (rev 17)
+@@ -0,0 +1 @@
++user.properties.file=C:\\Documents and Settings\\Illya Kysil\\.netbeans\\5.0beta\\build.properties
+
+Added: FormLayout/trunk/nb5.0/nblayoutpack/nbproject/private/private.properties
+===================================================================
+
+Added: FormLayout/trunk/nb5.0/nblayoutpack/nbproject/private/private.xml
+===================================================================
+--- FormLayout/trunk/nb5.0/nblayoutpack/nbproject/private/private.xml	2005-08-05 21:59:13 UTC (rev 16)
++++ FormLayout/trunk/nb5.0/nblayoutpack/nbproject/private/private.xml	2005-10-06 19:56:51 UTC (rev 17)
+@@ -0,0 +1,5 @@
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
++&lt;project-private xmlns=&quot;<A HREF="http://www.netbeans.org/ns/project-private/1">http://www.netbeans.org/ns/project-private/1</A>&quot;&gt;
++    
++&lt;editor-bookmarks xmlns=&quot;<A HREF="http://www.netbeans.org/ns/editor-bookmarks/1">http://www.netbeans.org/ns/editor-bookmarks/1</A>&quot;/&gt;
++&lt;/project-private&gt;
+
+Added: FormLayout/trunk/nb5.0/nblayoutpack/nbproject/project.properties
+===================================================================
+--- FormLayout/trunk/nb5.0/nblayoutpack/nbproject/project.properties	2005-08-05 21:59:13 UTC (rev 16)
++++ FormLayout/trunk/nb5.0/nblayoutpack/nbproject/project.properties	2005-10-06 19:56:51 UTC (rev 17)
+@@ -0,0 +1,14 @@
++license.file=../../license.txt
++
++nbm.module.author=Illya Kysil
++src.dir=../../src
++
++build.package.compress=true
++build.package.index=true
++
++nbm.homepage=<A HREF="http://nblayoutpack.berlios.de">http://nblayoutpack.berlios.de</A>
++nbm.distribution=<A HREF="http://nblayoutpack.berlios.de">http://nblayoutpack.berlios.de</A>
++
++extra.module.files=modules/ext/nblayoutpack/forms-1.0.5.jar
++
++nbm=${name}-nb5.0beta-${impl.version}.nbm
+
+Added: FormLayout/trunk/nb5.0/nblayoutpack/nbproject/project.xml
+===================================================================
+--- FormLayout/trunk/nb5.0/nblayoutpack/nbproject/project.xml	2005-08-05 21:59:13 UTC (rev 16)
++++ FormLayout/trunk/nb5.0/nblayoutpack/nbproject/project.xml	2005-10-06 19:56:51 UTC (rev 17)
+@@ -0,0 +1,62 @@
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
++&lt;project xmlns=&quot;<A HREF="http://www.netbeans.org/ns/project/1">http://www.netbeans.org/ns/project/1</A>&quot;&gt;
++    &lt;type&gt;org.netbeans.modules.apisupport.project&lt;/type&gt;
++    &lt;configuration&gt;
++        
++    &lt;data xmlns=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-project/2">http://www.netbeans.org/ns/nb-module-project/2</A>&quot;&gt;
++            &lt;code-name-base&gt;de.berlios.nblayoutpack.formlayout&lt;/code-name-base&gt;
++            &lt;standalone/&gt;
++            
++            &lt;module-dependencies&gt;
++                &lt;dependency&gt;
++                    &lt;code-name-base&gt;org.netbeans.modules.form&lt;/code-name-base&gt;
++                    &lt;build-prerequisite/&gt;
++                    &lt;compile-dependency/&gt;
++                    &lt;run-dependency&gt;
++                        &lt;release-version&gt;2&lt;/release-version&gt;
++                        &lt;implementation-version/&gt;
++                    &lt;/run-dependency&gt;
++                &lt;/dependency&gt;
++                &lt;dependency&gt;
++                    &lt;code-name-base&gt;org.openide.explorer&lt;/code-name-base&gt;
++                    &lt;build-prerequisite/&gt;
++                    &lt;compile-dependency/&gt;
++                    &lt;run-dependency&gt;
++                        &lt;specification-version&gt;6.2&lt;/specification-version&gt;
++                    &lt;/run-dependency&gt;
++                &lt;/dependency&gt;
++                &lt;dependency&gt;
++                    &lt;code-name-base&gt;org.openide.modules&lt;/code-name-base&gt;
++                    &lt;build-prerequisite/&gt;
++                    &lt;compile-dependency/&gt;
++                    &lt;run-dependency&gt;
++                        &lt;specification-version&gt;6.2&lt;/specification-version&gt;
++                    &lt;/run-dependency&gt;
++                &lt;/dependency&gt;
++                &lt;dependency&gt;
++                    &lt;code-name-base&gt;org.openide.nodes&lt;/code-name-base&gt;
++                    &lt;build-prerequisite/&gt;
++                    &lt;compile-dependency/&gt;
++                    &lt;run-dependency&gt;
++                        &lt;specification-version&gt;6.2&lt;/specification-version&gt;
++                    &lt;/run-dependency&gt;
++                &lt;/dependency&gt;
++                &lt;dependency&gt;
++                    &lt;code-name-base&gt;org.openide.util&lt;/code-name-base&gt;
++                    &lt;build-prerequisite/&gt;
++                    &lt;compile-dependency/&gt;
++                    &lt;run-dependency&gt;
++                        &lt;specification-version&gt;6.2&lt;/specification-version&gt;
++                    &lt;/run-dependency&gt;
++                &lt;/dependency&gt;
++            &lt;/module-dependencies&gt;
++            &lt;class-path-extension&gt;
++              &lt;!-- Deployed path, relative to dir containing module: --&gt;
++              &lt;runtime-relative-path&gt;ext/nblayoutpack/forms-1.0.5.jar&lt;/runtime-relative-path&gt;
++              &lt;!-- Path of library in your own sources, relative to project basedir: --&gt;
++              &lt;binary-origin&gt;../../lib/forms-1.0.5.jar&lt;/binary-origin&gt;
++            &lt;/class-path-extension&gt;
++            &lt;public-packages/&gt;
++        &lt;/data&gt;
++    &lt;/configuration&gt;
++&lt;/project&gt;
+
+Added: FormLayout/trunk/src/de/berlios/nblayoutpack/formlayout/nb5.x/formlayout.xml
+===================================================================
+--- FormLayout/trunk/src/de/berlios/nblayoutpack/formlayout/nb5.x/formlayout.xml	2005-08-05 21:59:13 UTC (rev 16)
++++ FormLayout/trunk/src/de/berlios/nblayoutpack/formlayout/nb5.x/formlayout.xml	2005-10-06 19:56:51 UTC (rev 17)
+@@ -0,0 +1,13 @@
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
++
++&lt;!DOCTYPE library PUBLIC &quot;-//NetBeans//DTD Library Declaration 1.0//EN&quot; &quot;<A HREF="http://www.netbeans.org/dtds/library-declaration-1_0.dtd">http://www.netbeans.org/dtds/library-declaration-1_0.dtd</A>&quot;&gt;
++
++&lt;library version=&quot;1.0&quot;&gt;
++    &lt;name&gt;JGoodies Forms 1.0.5&lt;/name&gt;
++    &lt;type&gt;j2se&lt;/type&gt;
++    &lt;localizing-bundle&gt;de/berlios/nblayoutpack/formlayout/Bundle&lt;/localizing-bundle&gt;
++    &lt;volume&gt;
++        &lt;type&gt;classpath&lt;/type&gt;
++        &lt;resource&gt;jar:<A HREF="nbinst:///modules/ext/nblayoutpack/forms-1.0.5.jar!/&lt;/resource">nbinst:///modules/ext/nblayoutpack/forms-1.0.5.jar!/&lt;/resource</A>&gt;
++    &lt;/volume&gt;
++&lt;/library&gt;
+
+Added: FormLayout/trunk/src/de/berlios/nblayoutpack/formlayout/nb5.x/layer.xml
+===================================================================
+--- FormLayout/trunk/src/de/berlios/nblayoutpack/formlayout/nb5.x/layer.xml	2005-08-05 21:59:13 UTC (rev 16)
++++ FormLayout/trunk/src/de/berlios/nblayoutpack/formlayout/nb5.x/layer.xml	2005-10-06 19:56:51 UTC (rev 17)
+@@ -0,0 +1,17 @@
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
++&lt;?xml-stylesheet type=&quot;text/xml&quot; href=&quot;<A HREF="http://openide.netbeans.org/fs/filesystem.xsl">http://openide.netbeans.org/fs/filesystem.xsl</A>&quot;?&gt;
++&lt;!DOCTYPE filesystem PUBLIC &quot;-//NetBeans//DTD Filesystem 1.1//EN&quot; &quot;<A HREF="http://www.netbeans.org/dtds/filesystem-1_1.dtd">http://www.netbeans.org/dtds/filesystem-1_1.dtd</A>&quot;&gt;
++&lt;filesystem&gt;
++
++  &lt;folder name=&quot;FormDesignerPalette&quot;&gt;
++    &lt;folder name=&quot;Layouts&quot;&gt;
++        &lt;file name=&quot;FormLayout.palette_item&quot; url=&quot;palette/FormLayout.palette_item&quot;/&gt;
++    &lt;/folder&gt;
++    &lt;/folder&gt;
++    &lt;folder name=&quot;org-netbeans-api-project-libraries&quot;&gt;
++    &lt;folder name=&quot;Libraries&quot;&gt;
++      &lt;file name=&quot;formlayout.xml&quot; url=&quot;formlayout.xml&quot;/&gt;
++    &lt;/folder&gt;
++  &lt;/folder&gt;
++
++&lt;/filesystem&gt;
+
+Added: FormLayout/trunk/src/de/berlios/nblayoutpack/formlayout/nb5.x/palette/FormLayout.palette_item
+===================================================================
+--- FormLayout/trunk/src/de/berlios/nblayoutpack/formlayout/nb5.x/palette/FormLayout.palette_item	2005-08-05 21:59:13 UTC (rev 16)
++++ FormLayout/trunk/src/de/berlios/nblayoutpack/formlayout/nb5.x/palette/FormLayout.palette_item	2005-10-06 19:56:51 UTC (rev 17)
+@@ -0,0 +1,12 @@
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
++
++&lt;palette_item version=&quot;1.0&quot;&gt;
++  &lt;component classname=&quot;com.jgoodies.forms.layout.FormLayout&quot; type=&quot;layout&quot; /&gt;
++  &lt;icon16 urlvalue=&quot;nbres:/de/berlios/nblayoutpack/formlayout/resources/formlayout16.png&quot; /&gt;
++  &lt;icon32 urlvalue=&quot;nbres:/de/berlios/nblayoutpack/formlayout/resources/formlayout32.png&quot; /&gt;
++  &lt;description localizing-bundle=&quot;de.berlios.nblayoutpack.formlayout.Bundle&quot;
++               display-name-key=&quot;Palette/Layouts/com-jgoodies-forms-layout-FormLayout.instance&quot; /&gt;
++  &lt;classpath&gt;
++      &lt;resource type=&quot;library&quot; name=&quot;formlayout&quot; /&gt;
++  &lt;/classpath&gt;
++&lt;/palette_item&gt;
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	<LI>Next message: <A HREF="000017.html">[nblayoutpack-svn] r18 - in TableLayout/trunk: . nb5.0 nb5.0/nblayoutpack nb5.0/nblayoutpack/nbproject src/de/berlios/nblayoutpack/tablelayout src/de/berlios/nblayoutpack/tablelayout/nb5.x src/de/berlios/nblayoutpack/tablelayout/nb5.x/palette
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#16">[ date ]</a>
+              <a href="thread.html#16">[ thread ]</a>
+              <a href="subject.html#16">[ subject ]</a>
+              <a href="author.html#16">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/nblayoutpack-svn">More information about the nblayoutpack-svn
+mailing list</a><br>
+</body></html>

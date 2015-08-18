@@ -1,0 +1,256 @@
+From ikysil at berlios.de  Fri Aug  5 23:14:28 2005
+From: ikysil at berlios.de (Illya Kysil at BerliOS)
+Date: Fri, 5 Aug 2005 23:14:28 +0200
+Subject: [nblayoutpack-svn] r10 - in FormLayout/trunk: . images
+Message-ID: <200508052114.j75LESjF023925@sheep.berlios.de>
+
+Author: ikysil
+Date: 2005-08-05 23:14:26 +0200 (Fri, 05 Aug 2005)
+New Revision: 10
+
+Added:
+   FormLayout/trunk/images/
+   FormLayout/trunk/images/formlayout16.xcf
+   FormLayout/trunk/images/formlayout32.xcf
+Log:
+[NEW] Icons for Palette (created with GIMP).
+
+Added: FormLayout/trunk/images/formlayout16.xcf
+===================================================================
+(Binary files differ)
+
+
+Property changes on: FormLayout/trunk/images/formlayout16.xcf
+___________________________________________________________________
+Name: svn:mime-type
+   + application/octet-stream
+
+Added: FormLayout/trunk/images/formlayout32.xcf
+===================================================================
+(Binary files differ)
+
+
+Property changes on: FormLayout/trunk/images/formlayout32.xcf
+___________________________________________________________________
+Name: svn:mime-type
+   + application/octet-stream
+
+
+
+From ikysil at berlios.de  Fri Aug  5 23:15:36 2005
+From: ikysil at berlios.de (Illya Kysil at BerliOS)
+Date: Fri, 5 Aug 2005 23:15:36 +0200
+Subject: [nblayoutpack-svn] r11 - in TableLayout/trunk/src/de/berlios/nblayoutpack/tablelayout: nb4.x/palette resources
+Message-ID: <200508052115.j75LFag3024009@sheep.berlios.de>
+
+Author: ikysil
+Date: 2005-08-05 23:15:34 +0200 (Fri, 05 Aug 2005)
+New Revision: 11
+
+Modified:
+   TableLayout/trunk/src/de/berlios/nblayoutpack/tablelayout/nb4.x/palette/TableLayout.palette_item
+   TableLayout/trunk/src/de/berlios/nblayoutpack/tablelayout/resources/tablelayout16.png
+   TableLayout/trunk/src/de/berlios/nblayoutpack/tablelayout/resources/tablelayout32.png
+Log:
+[BUG] #4398 Big icon in Palette is incorrect - fixed.
+
+Modified: TableLayout/trunk/src/de/berlios/nblayoutpack/tablelayout/nb4.x/palette/TableLayout.palette_item
+===================================================================
+--- TableLayout/trunk/src/de/berlios/nblayoutpack/tablelayout/nb4.x/palette/TableLayout.palette_item	2005-08-05 21:14:26 UTC (rev 10)
++++ TableLayout/trunk/src/de/berlios/nblayoutpack/tablelayout/nb4.x/palette/TableLayout.palette_item	2005-08-05 21:15:34 UTC (rev 11)
+@@ -3,6 +3,7 @@
+ <palette_item version="1.0">
+   <component classname="info.clearthought.layout.TableLayout" type="layout" />
+   <icon16 urlvalue="nbres:/de/berlios/nblayoutpack/tablelayout/resources/tablelayout16.png" />
++  <icon32 urlvalue="nbres:/de/berlios/nblayoutpack/tablelayout/resources/tablelayout32.png" />
+   <description localizing-bundle="de.berlios.nblayoutpack.tablelayout.Bundle"
+                display-name-key="Palette/Layouts/info-clearthought-layout-TableLayout.instance" />
+   <classpath>
+
+Modified: TableLayout/trunk/src/de/berlios/nblayoutpack/tablelayout/resources/tablelayout16.png
+===================================================================
+(Binary files differ)
+
+Modified: TableLayout/trunk/src/de/berlios/nblayoutpack/tablelayout/resources/tablelayout32.png
+===================================================================
+(Binary files differ)
+
+
+
+From ikysil at berlios.de  Fri Aug  5 23:17:06 2005
+From: ikysil at berlios.de (Illya Kysil at BerliOS)
+Date: Fri, 5 Aug 2005 23:17:06 +0200
+Subject: [nblayoutpack-svn] r12 - in FormLayout/trunk: . nb4.0/nblayoutpack nb4.1/nblayoutpack src/de/berlios/nblayoutpack/formlayout src/de/berlios/nblayoutpack/formlayout/nb4.x/palette src/de/berlios/nblayoutpack/formlayout/resources
+Message-ID: <200508052117.j75LH6nZ024076@sheep.berlios.de>
+
+Author: ikysil
+Date: 2005-08-05 23:17:05 +0200 (Fri, 05 Aug 2005)
+New Revision: 12
+
+Added:
+   FormLayout/trunk/src/de/berlios/nblayoutpack/formlayout/nb4.x/
+Removed:
+   FormLayout/trunk/src/de/berlios/nblayoutpack/formlayout/nb4.0/
+Modified:
+   FormLayout/trunk/build.properties
+   FormLayout/trunk/nb4.0/nblayoutpack/manifest.mf
+   FormLayout/trunk/nb4.1/nblayoutpack/manifest.mf
+   FormLayout/trunk/src/de/berlios/nblayoutpack/formlayout/nb4.x/palette/FormLayout.palette_item
+   FormLayout/trunk/src/de/berlios/nblayoutpack/formlayout/resources/formlayout16.png
+   FormLayout/trunk/src/de/berlios/nblayoutpack/formlayout/resources/formlayout32.png
+Log:
+[CHANGE] de/berlios/nblayoutpack/formlayout/nb4.0 directory renamed to nb4.x since
+         it contains resources common for NetBeans 4.x series.
+[BUG]    #4398 Big icon in Palette is incorrect - fixed.
+
+Modified: FormLayout/trunk/build.properties
+===================================================================
+--- FormLayout/trunk/build.properties	2005-08-05 21:15:34 UTC (rev 11)
++++ FormLayout/trunk/build.properties	2005-08-05 21:17:05 UTC (rev 12)
+@@ -2,4 +2,4 @@
+ name=nblayoutpack-formlayout
+ src=src
+ 
+-spec.version=2.0.1
+\ No newline at end of file
++spec.version=2.0.2
+\ No newline at end of file
+
+Modified: FormLayout/trunk/nb4.0/nblayoutpack/manifest.mf
+===================================================================
+--- FormLayout/trunk/nb4.0/nblayoutpack/manifest.mf	2005-08-05 21:15:34 UTC (rev 11)
++++ FormLayout/trunk/nb4.0/nblayoutpack/manifest.mf	2005-08-05 21:17:05 UTC (rev 12)
+@@ -1,7 +1,7 @@
+ Manifest-Version: 1.0
+ OpenIDE-Module: de.berlios.nblayoutpack.formlayout
+ OpenIDE-Module-Localizing-Bundle: de/berlios/nblayoutpack/formlayout/Bundle.properties
+-OpenIDE-Module-Layer: de/berlios/nblayoutpack/formlayout/nb4.0/layer.xml
++OpenIDE-Module-Layer: de/berlios/nblayoutpack/formlayout/nb4.x/layer.xml
+ OpenIDE-Module-Install: de/berlios/nblayoutpack/formlayout/FormLayoutModule.class
+ OpenIDE-Module-Module-Dependencies: org.netbeans.modules.form/2 = 200412081800
+ Class-Path: ext/nblayoutpack/forms-1.0.5.jar
+
+Modified: FormLayout/trunk/nb4.1/nblayoutpack/manifest.mf
+===================================================================
+--- FormLayout/trunk/nb4.1/nblayoutpack/manifest.mf	2005-08-05 21:15:34 UTC (rev 11)
++++ FormLayout/trunk/nb4.1/nblayoutpack/manifest.mf	2005-08-05 21:17:05 UTC (rev 12)
+@@ -1,7 +1,7 @@
+ Manifest-Version: 1.0
+ OpenIDE-Module: de.berlios.nblayoutpack.formlayout
+ OpenIDE-Module-Localizing-Bundle: de/berlios/nblayoutpack/formlayout/Bundle.properties
+-OpenIDE-Module-Layer: de/berlios/nblayoutpack/formlayout/nb4.0/layer.xml
++OpenIDE-Module-Layer: de/berlios/nblayoutpack/formlayout/nb4.x/layer.xml
+ OpenIDE-Module-Install: de/berlios/nblayoutpack/formlayout/FormLayoutModule.class
+ OpenIDE-Module-Module-Dependencies: org.netbeans.modules.form/2 = 200505031930
+ Class-Path: ext/nblayoutpack/forms-1.0.5.jar
+
+Copied: FormLayout/trunk/src/de/berlios/nblayoutpack/formlayout/nb4.x (from rev 9, FormLayout/trunk/src/de/berlios/nblayoutpack/formlayout/nb4.0)
+
+Modified: FormLayout/trunk/src/de/berlios/nblayoutpack/formlayout/nb4.x/palette/FormLayout.palette_item
+===================================================================
+--- FormLayout/trunk/src/de/berlios/nblayoutpack/formlayout/nb4.0/palette/FormLayout.palette_item	2005-06-25 16:31:47 UTC (rev 9)
++++ FormLayout/trunk/src/de/berlios/nblayoutpack/formlayout/nb4.x/palette/FormLayout.palette_item	2005-08-05 21:17:05 UTC (rev 12)
+@@ -3,6 +3,7 @@
+ <palette_item version="1.0">
+   <component classname="com.jgoodies.forms.layout.FormLayout" type="layout" />
+   <icon16 urlvalue="nbres:/de/berlios/nblayoutpack/formlayout/resources/formlayout16.png" />
++  <icon32 urlvalue="nbres:/de/berlios/nblayoutpack/formlayout/resources/formlayout32.png" />
+   <description localizing-bundle="de.berlios.nblayoutpack.formlayout.Bundle"
+                display-name-key="Palette/Layouts/com-jgoodies-forms-layout-FormLayout.instance" />
+   <classpath>
+
+Modified: FormLayout/trunk/src/de/berlios/nblayoutpack/formlayout/resources/formlayout16.png
+===================================================================
+(Binary files differ)
+
+Modified: FormLayout/trunk/src/de/berlios/nblayoutpack/formlayout/resources/formlayout32.png
+===================================================================
+(Binary files differ)
+
+
+
+From ikysil at berlios.de  Fri Aug  5 23:18:11 2005
+From: ikysil at berlios.de (Illya Kysil at BerliOS)
+Date: Fri, 5 Aug 2005 23:18:11 +0200
+Subject: [nblayoutpack-svn] r13 - TableLayout/trunk
+Message-ID: <200508052118.j75LIBqQ024211@sheep.berlios.de>
+
+Author: ikysil
+Date: 2005-08-05 23:18:10 +0200 (Fri, 05 Aug 2005)
+New Revision: 13
+
+Modified:
+   TableLayout/trunk/build.properties
+Log:
+[CHANGE] Version bumped.
+
+Modified: TableLayout/trunk/build.properties
+===================================================================
+--- TableLayout/trunk/build.properties	2005-08-05 21:17:05 UTC (rev 12)
++++ TableLayout/trunk/build.properties	2005-08-05 21:18:10 UTC (rev 13)
+@@ -2,4 +2,4 @@
+ name=nblayoutpack-tablelayout
+ src=src
+ 
+-spec.version=2.1.0
+\ No newline at end of file
++spec.version=2.1.1
+\ No newline at end of file
+
+
+
+From ikysil at berlios.de  Fri Aug  5 23:56:39 2005
+From: ikysil at berlios.de (Illya Kysil at BerliOS)
+Date: Fri, 5 Aug 2005 23:56:39 +0200
+Subject: [nblayoutpack-svn] r14 - TableLayout/tag
+Message-ID: <200508052156.j75LudvK005666@sheep.berlios.de>
+
+Author: ikysil
+Date: 2005-08-05 23:56:37 +0200 (Fri, 05 Aug 2005)
+New Revision: 14
+
+Added:
+   TableLayout/tag/20050806-2.1.1/
+Log:
+[NEW] Build 2.1.1
+
+Copied: TableLayout/tag/20050806-2.1.1 (from rev 13, TableLayout/trunk)
+
+
+
+From ikysil at berlios.de  Fri Aug  5 23:58:36 2005
+From: ikysil at berlios.de (Illya Kysil at BerliOS)
+Date: Fri, 5 Aug 2005 23:58:36 +0200
+Subject: [nblayoutpack-svn] r15 - FormLayout
+Message-ID: <200508052158.j75LwanT006184@sheep.berlios.de>
+
+Author: ikysil
+Date: 2005-08-05 23:58:35 +0200 (Fri, 05 Aug 2005)
+New Revision: 15
+
+Added:
+   FormLayout/tag/
+Log:
+[NEW] Folder for tags.
+
+
+
+From ikysil at berlios.de  Fri Aug  5 23:59:13 2005
+From: ikysil at berlios.de (Illya Kysil at BerliOS)
+Date: Fri, 5 Aug 2005 23:59:13 +0200
+Subject: [nblayoutpack-svn] r16 - FormLayout/tag
+Message-ID: <200508052159.j75LxDGr006234@sheep.berlios.de>
+
+Author: ikysil
+Date: 2005-08-05 23:59:13 +0200 (Fri, 05 Aug 2005)
+New Revision: 16
+
+Added:
+   FormLayout/tag/20050806-2.0.2/
+Log:
+[NEW] Build 2.0.2
+
+Copied: FormLayout/tag/20050806-2.0.2 (from rev 15, FormLayout/trunk)
+
+
+
